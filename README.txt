@@ -12,7 +12,7 @@ Contents:
 Pre-requisites:
 
 1.      Persistent Memory >= 24GB, mounted on /mnt/pmem_emul
-2.      Boost library (sudo apt-get install libboost-dev on Ubuntu)
+2.      Boost library (sudo yum install boost-devel on Fedora)
 3.      LevelDB dependencies (cmake version >= 3.12)
 
 -----------------
