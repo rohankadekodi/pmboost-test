@@ -9,7 +9,8 @@ root_path=$(pwd)/..
 # Go to kernel build path
 cd $kbuild_path
 
-yes "" | make -C `readlink -f ../linux-4.13/` O=$(pwd) config
+make -f Makefile.setup .config
+make -f Makefile.setup
 sleep 10
 make -j 4 # compile kernel
 sleep 10
