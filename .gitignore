@@ -1,0 +1,10 @@
+kbuild/*
+leveldb/ycsb_workloads/loada_5M
+levedb/ycsb_workloads/runa_5M_5M
+leveldb/build/*
+*.o
+cscope.*
+*~
+*.swp
+
+!kbuild/Makefile.setup
