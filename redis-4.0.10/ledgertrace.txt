@@ -1,0 +1,33 @@
+[pid 21927] --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+[pid 21927] rt_sigreturn({mask=[]})     = -1 EINTR (Interrupted system call)
+[pid 21927] read(4, 0x7ffd8af3cc67, 1)  = -1 EAGAIN (Resource temporarily unavailable)
+[pid 21927] epoll_wait(6, [], 10128, 76) = 0
+[pid 21927] access("/proc/21927/stat", F_OK) = 0
+[pid 21927] stat("/proc/21927/stat", {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid 21927] open("/proc/21927/stat", O_RDONLY) = 9
+[pid 21927] stat("/proc/21927/stat", {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid 21927] close(9)                    = 0
+[pid 21927] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=3585, ...}) = 0
+[pid 21927] write(1, "21927:M 13 Jun 15:54:07.998 # Us"..., 57) = 57
+[pid 21927] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=3585, ...}) = 0
+[pid 21927] write(1, "21927:M 13 Jun 15:54:07.998 * Sa"..., 76) = 76
+[pid 21927] open("temp-21927.rdb", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 9
+[pid 21927] fstat(9, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+[pid 21927] write(9, "REDIS0008\372\tredis-ver\0064.0.10\372\nred"..., 93) = 93
+[pid 21927] write(1, "rdbSave: doing fsync with fd = 9"..., 33) = 33
+[pid 21927] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=3585, ...}) = 0
+[pid 21927] write(1, "21927:M 13 Jun 15:54:07.999 # Wr"..., 81) = 81
+[pid 21927] close(9)                    = 0
+[pid 21927] stat("temp-21927.rdb", {st_mode=S_IFREG|0644, st_size=93, ...}) = 0
+[pid 21927] unlink("temp-21927.rdb")    = 0
+[pid 21927] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=3585, ...}) = 0
+[pid 21927] write(1, "21927:M 13 Jun 15:54:07.999 # Er"..., 71) = 71
+[pid 21927] stat("/etc/localtime", {st_mode=S_IFREG|0644, st_size=3585, ...}) = 0
+[pid 21927] write(1, "21927:M 13 Jun 15:54:07.999 # SI"..., 126) = 126
+[pid 21927] read(4, 0x7ffd8af3cc67, 1)  = -1 EAGAIN (Resource temporarily unavailable)
+[pid 21927] epoll_wait(6, [], 10128, 100) = 0
+[pid 21927] access("/proc/21927/stat", F_OK) = 0
+[pid 21927] stat("/proc/21927/stat", {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid 21927] open("/proc/21927/stat", O_RDONLY) = 9
+[pid 21927] stat("/proc/21927/stat", {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid 21927] close(9)                    = 0
