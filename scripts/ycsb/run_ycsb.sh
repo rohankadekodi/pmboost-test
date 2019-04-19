@@ -14,8 +14,6 @@ run_ycsb()
         sleep 5
         sudo ./run_fs.sh RunA $fs $run
         sleep 5
-        sudo ./run_fs.sh RunF $fs $run
-        sleep 5
         sudo ./run_fs.sh LoadE $fs $run
         sleep 5
         sudo ./run_fs.sh RunE $fs $run
@@ -32,8 +30,6 @@ run_ycsb_boost()
         sudo ./run_boost.sh LoadA $fs $run
         sleep 5
         sudo ./run_boost.sh RunA $fs $run
-        sleep 5
-        sudo ./run_boost.sh RunF $fs $run
         sleep 5
         sudo ./run_boost.sh LoadE $fs $run
         sleep 5
