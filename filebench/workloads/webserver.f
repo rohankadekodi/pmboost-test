@@ -23,11 +23,11 @@
 # Use is subject to license terms.
 #
 
-set $dir=/tmp
-set $nfiles=1000
+set $dir=/mnt/pmem_emul
+set $nfiles=500000
 set $meandirwidth=20
-set $filesize=cvar(type=cvar-gamma,parameters=mean:16384;gamma:1.5)
-set $nthreads=100
+set $filesize=cvar(type=cvar-gamma,parameters=mean:65536;gamma:1.5)
+set $nthreads=50
 set $iosize=1m
 set $meanappendsize=16k
 
