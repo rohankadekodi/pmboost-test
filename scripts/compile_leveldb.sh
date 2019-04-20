@@ -14,7 +14,6 @@ cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
 cd $workload_path
 tar -xf loada_5M.tar.gz
 tar -xf runa_5M_5M.tar.gz
-tar -xf runf_5M_5M.tar.gz
 tar -xf loade_5M.tar.gz
 tar -xf rune_5M_1M.tar.gz
 

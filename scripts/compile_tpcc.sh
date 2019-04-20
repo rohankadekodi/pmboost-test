@@ -14,4 +14,5 @@ cd $tpcc_path
 sudo cp ./tpcc.db /mnt/pmem_emul
 sudo ./tpcc_load -w 4
 
+mkdir ./database
 sudo cp /mnt/pmem_emul/tpcc.db ./database/
