@@ -1,0 +1,78 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+ERROR: ld.so: object 'libnvp.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+LevelDB:    version 1.20
+Date:       Sat Feb 24 06:17:34 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 1000000 operations.
+Thread 0: Replaying trace ...
+
+Completed 0 ops... finished 100 ops                              ... finished 200 ops                              ... finished 300 ops                              ... finished 400 ops                              ... finished 500 ops                              ... finished 600 ops                              ... finished 700 ops                              ... finished 800 ops                              ... finished 900 ops                              ... finished 1000 ops                              ... finished 1500 ops                              ... finished 2000 ops                              ... finished 2500 ops                              ... finished 3000 ops                              ... finished 3500 ops                              ... finished 4000 ops                              ... finished 4500 ops                              ... finished 5000 ops                              ... finished 6000 ops                              ... finished 7000 ops                              ... finished 8000 ops                              ... finished 9000 ops                              ... finished 10000 ops                              ... finished 15000 ops                              ... finished 20000 ops                              ... finished 25000 ops                              ... finished 30000 ops                              ... finished 35000 ops                              ... finished 40000 ops                              ... finished 45000 ops                              ... finished 50000 ops                              ... finished 60000 ops                              ... finished 70000 ops                              ... finished 80000 ops                              ... finished 90000 ops                              ... finished 100000 ops                              ... finished 150000 ops                              ... finished 200000 ops                              ... finished 250000 ops                              ... finished 300000 ops                              ... finished 350000 ops                              ... finished 400000 ops                              ... finished 450000 ops                              ... finished 500000 ops                              ... finished 600000 ops                              ... finished 700000 ops                              ... finished 800000 ops                              ... finished 900000 ops                              ... finished 1000000 ops                              
+
+Thread 0: Done replaying 1000000 operations.
+YCSB splitup: R = 0, D = 0, I = 49781, U = 0, S = 950219
+LevelDB/WiscKey splitup: P = 49781, G = 0, D = 0, ItSeek = 950219, ItNext = 47984965
+Thread 0: Time taken = 73.273 seconds
+Thread 0: Total data: YCSB = 48.443557 GB, HyperLevelDB = 48.443557 GB
+Thread 0: Ops/s = 13.328 Kops/s
+Thread 0: YCSB throughput = 677.006298 MB/s
+Thread 0: HyperLevelDB throughput = 677.006298 MB/s
+memtable_read: timing = 0 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 33610273945 nanoseconds
+file_open_during_read: timing = 8194427535 nanoseconds
+file_close_during_read: timing = 2433206800 nanoseconds
+get_files: timing = 0 nanoseconds
+after_get_files: timing = 0 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 0 nanoseconds
+read_block: timing = 47747981411 nanoseconds
+insert_block_cache: timing = 3598589413 nanoseconds
+new_iterator: timing = 861632860 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0        18
+  1        0        0         1       66       106
+  2       10       93         7     1495      1495
+  3       81      985        35     7267      7267
+  4      270     4241        13     2676      2676
+
+ycsb         :      73.694 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 0 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 33610279769 nanoseconds
+file_open_during_read: timing = 8194431416 nanoseconds
+file_close_during_read: timing = 2433207804 nanoseconds
+get_files: timing = 0 nanoseconds
+after_get_files: timing = 0 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 0 nanoseconds
+read_block: timing = 47747996794 nanoseconds
+insert_block_cache: timing = 3598589482 nanoseconds
+new_iterator: timing = 861632998 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0        18
+  1        0        0         1       66       106
+  2       10       93         7     1495      1495
+  3       81      985        35     7267      7267
+  4      270     4241        13     2676      2676
+
+printdb      :      20.000 micros/op;
