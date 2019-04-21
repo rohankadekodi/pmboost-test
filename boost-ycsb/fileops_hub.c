@@ -15,8 +15,8 @@
 #define ENV_TREE_FILE "NVP_TREE_FILE"
 
 //#define LIBC_SO_LOC "/lib64/libc-2.5.so"
-#define LIBC_SO_LOC "/lib/x86_64-linux-gnu/libc.so.6"
-
+// #define LIBC_SO_LOC "/lib/x86_64-linux-gnu/libc.so.6"
+#define LIBC_SO_LOC "/lib64/libc.so.6"
 // for a given file descriptor (index), stores the fileops to use on that fd
 // all vlaues initialized to the posix ops
 struct Fileops_p** _hub_fd_lookup;

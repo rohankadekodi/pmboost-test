@@ -7,7 +7,7 @@ pmem_dir=/mnt/pmem_emul
 run_tpcc()
 {
     fs=$1
-    for run in 1
+    for run in 1 2 3
     do
         sudo rm -rf $pmem_dir/*
         sudo ./run_fs.sh $fs $run
@@ -17,16 +17,22 @@ run_tpcc()
 
 run_tpcc_boost()
 {
-    for run in 1 2
+    fs=$1
+    for run in 1 2 3 4 5
     do
         sudo rm -rf $pmem_dir/*
-        sudo ./run_boost.sh boost $run
+        sudo ./run_boost.sh $fs $run
         sleep 5
     done
 }
 
 sudo $setup_dir/dax_config.sh
 run_tpcc dax
+
+cd $setup_dir
+sudo ./nova_relaxed_config.sh
+cd $current_dir
+run_tpcc relaxed_nova
 
 cd $setup_dir
 sudo ./nova_config.sh
@@ -39,4 +45,10 @@ cd $current_dir
 run_tpcc pmfs
 
 sudo $setup_dir/dax_config.sh
-run_tpcc_boost
+run_tpcc_boost boost
+
+sudo $setup_dir/dax_config.sh
+run_tpcc_boost sync_boost
+
+sudo $setup_dir/dax_config.sh
+run_tpcc_boost posix_boost

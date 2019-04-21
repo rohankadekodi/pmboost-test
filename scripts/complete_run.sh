@@ -1,8 +1,18 @@
 #!/bin/bash
 
-# Run YCSB
-cd ./ycsb
-sudo ./run_ycsb.sh
+# Run TAR
+cd ./tar
+sudo ./run_tar.sh
+cd ..
+
+# Run git
+cd ./git
+sudo ./run_git.sh
+cd ..
+
+# Run rsync
+cd ./rsync
+sudo ./run_rsync.sh
 cd ..
 
 # Run TPCC
@@ -15,7 +25,7 @@ cd ./redis
 sudo ./run_redis.sh
 cd ..
 
-# Run software overhead
-cd ./ycsb-soft
+# Run YCSB
+cd ./ycsb
 sudo ./run_ycsb.sh
 cd ..

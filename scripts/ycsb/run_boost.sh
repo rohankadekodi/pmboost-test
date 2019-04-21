@@ -14,14 +14,14 @@ current_dir=$(pwd)
 leveldb_dir=`readlink -f ../../leveldb`
 leveldb_build_dir=$leveldb_dir/build
 database_dir=/mnt/pmem_emul/leveldbtest-1000
-workload_dir=$leveldb_dir/ycsb_workloads
+workload_dir=/home/rohan/projects/ycsb_workloads
 pmem_dir=/mnt/pmem_emul
 result_dir=`readlink -f ../../results`
 boost_results=$result_dir/$setup/$workload
-
-if [ "$setup" = "boost_2M" ]; then
+boost_dir=`readlink -f ../../boost-ycsb`
+if [ "$setup" == "boost_new" ]; then
     boost_dir=`readlink -f ../../boost-ycsb`
-elif [ "$setup" = "sync_boost_2M" ]; then
+elif [ "$setup" == "sync_boost_new" ]; then
     boost_dir=`readlink -f ../../boost-ycsb-sync`
 else
     boost_dir=`readlink -f ../../boost-ycsb-posix`
