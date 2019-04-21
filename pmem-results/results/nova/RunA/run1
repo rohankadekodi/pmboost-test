@@ -1,5 +1,5 @@
 LevelDB:    version 1.20
-Date:       Sat Feb 24 05:55:16 2018
+Date:       Sat Feb 24 10:43:27 2018
 CPU:        96 * Genuine Intel(R) CPU 0000%@
 CPUCache:   33792 KB
 Keys:       16 bytes each
@@ -18,57 +18,57 @@ Completed 0 ops... finished 100 ops                              ... finished 2
 Thread 0: Done replaying 5000000 operations.
 YCSB splitup: R = 2499107, D = 0, I = 0, U = 2500893, S = 0
 LevelDB/WiscKey splitup: P = 2500893, G = 5000000, D = 0, ItSeek = 0, ItNext = 0
-Thread 0: Time taken = 133.854 seconds
-Thread 0: Total data: YCSB = 1.898090 GB, HyperLevelDB = 4.036239 GB
-Thread 0: Ops/s = 36.479 Kops/s
-Thread 0: YCSB throughput = 14.520577 MB/s
-Thread 0: HyperLevelDB throughput = 30.877626 MB/s
-memtable_read: timing = 1134223180 nanoseconds
-imm_memtable_read: timing = 52654005 nanoseconds
-file_read: timing = 14987740065 nanoseconds
-file_open_during_read: timing = 6166208955 nanoseconds
-file_close_during_read: timing = 1705256648 nanoseconds
-get_files: timing = 777001624 nanoseconds
-after_get_files: timing = 12965380617 nanoseconds
+Thread 0: Time taken = 121.200 seconds
+Thread 0: Total data: YCSB = 2.156727 GB, HyperLevelDB = 4.294876 GB
+Thread 0: Ops/s = 40.287 Kops/s
+Thread 0: YCSB throughput = 18.221874 MB/s
+Thread 0: HyperLevelDB throughput = 36.286781 MB/s
+memtable_read: timing = 983505386 nanoseconds
+imm_memtable_read: timing = 40262200 nanoseconds
+file_read: timing = 17305612786 nanoseconds
+file_open_during_read: timing = 5194142988 nanoseconds
+file_close_during_read: timing = 1446576929 nanoseconds
+get_files: timing = 769534074 nanoseconds
+after_get_files: timing = 14799866311 nanoseconds
 find_table: timing = 0 nanoseconds
-block_reader: timing = 7400768197 nanoseconds
-read_block: timing = 24639499948 nanoseconds
-insert_block_cache: timing = 536448654 nanoseconds
-new_iterator: timing = 317687948 nanoseconds
+block_reader: timing = 9207040446 nanoseconds
+read_block: timing = 25532825782 nanoseconds
+insert_block_cache: timing = 558118947 nanoseconds
+new_iterator: timing = 298871175 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        0        0        11        0      2550
-  1        3       29        14     3650      2831
-  2       18      192        48    10477     10209
-  3      135     1987        55    12599     12083
-  4      251     3944         7     1676      1618
+  0        0        0         9        0      2547
+  1        4       37        13     3619      2801
+  2       17      193        44    10218      9951
+  3      134     1985        49    12132     11623
+  4      250     3945         6     1523      1465
 
-ycsb         :      27.152 micros/op;
+ycsb         :      24.618 micros/op;
 ----------------------Current DB state-----------------------
 
 -------------------------------------------------------------
-memtable_read: timing = 1134223180 nanoseconds
-imm_memtable_read: timing = 52654005 nanoseconds
-file_read: timing = 14987753845 nanoseconds
-file_open_during_read: timing = 6166216763 nanoseconds
-file_close_during_read: timing = 1705258742 nanoseconds
-get_files: timing = 777001624 nanoseconds
-after_get_files: timing = 12965380617 nanoseconds
+memtable_read: timing = 983505386 nanoseconds
+imm_memtable_read: timing = 40262200 nanoseconds
+file_read: timing = 17305622756 nanoseconds
+file_open_during_read: timing = 5194146747 nanoseconds
+file_close_during_read: timing = 1446577943 nanoseconds
+get_files: timing = 769534074 nanoseconds
+after_get_files: timing = 14799866311 nanoseconds
 find_table: timing = 0 nanoseconds
-block_reader: timing = 7400768197 nanoseconds
-read_block: timing = 24639527685 nanoseconds
-insert_block_cache: timing = 536448810 nanoseconds
-new_iterator: timing = 317688266 nanoseconds
+block_reader: timing = 9207040446 nanoseconds
+read_block: timing = 25532885987 nanoseconds
+insert_block_cache: timing = 558119044 nanoseconds
+new_iterator: timing = 298871369 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        0        0        11        0      2550
-  1        3       29        14     3650      2831
-  2       18      192        48    10477     10209
-  3      135     1987        55    12599     12083
-  4      251     3944         7     1676      1618
+  0        0        0         9        0      2547
+  1        4       37        13     3619      2801
+  2       17      193        44    10218      9951
+  3      134     1985        49    12132     11623
+  4      250     3945         6     1523      1465
 
-printdb      :      23.000 micros/op;
+printdb      :      14.000 micros/op;

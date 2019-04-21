@@ -12,19 +12,19 @@ option t (number of transactions) with value '200000'
     [measure]: 20 (sec.)
 
 RAMP-UP TIME.(10 sec.)
-thread_main: opening db, thread id = 140348954031872
-thread_main: opened db, thread id = 140348954031872
+thread_main: opening db, thread id = 140084217374464
+thread_main: opened db, thread id = 140084217374464
 
 MEASURING START.
 
 
 STOPPING THREADS
  ----------------------
-neword: timing = 14112899300 nanoseconds
-payment: timing = 2850958760 nanoseconds
-ordstat: timing = 330782268 nanoseconds
-delivery: timing = 4288053026 nanoseconds
-slev: timing = 3126052476 nanoseconds
+neword: timing = 14380408698 nanoseconds
+payment: timing = 2905039214 nanoseconds
+ordstat: timing = 335710943 nanoseconds
+delivery: timing = 3904731652 nanoseconds
+slev: timing = 3276990286 nanoseconds
 .
 
 <Raw Results>
@@ -59,4 +59,4 @@ slev: timing = 3126052476 nanoseconds
                  0.000 TpmC
 
 Time taken
-                 40.921 seconds
+                 41.217 seconds

@@ -3,7 +3,7 @@ Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
 tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
 ERROR: ld.so: object 'libnvp.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
 LevelDB:    version 1.20
-Date:       Sat Feb 24 06:27:02 2018
+Date:       Sat Feb 24 11:14:49 2018
 CPU:        96 * Genuine Intel(R) CPU 0000%@
 CPUCache:   33792 KB
 Keys:       16 bytes each
@@ -22,57 +22,57 @@ Completed 0 ops... finished 100 ops                              ... finished 2
 Thread 0: Done replaying 5000000 operations.
 YCSB splitup: R = 0, D = 0, I = 5000000, U = 0, S = 0
 LevelDB/WiscKey splitup: P = 5000000, G = 0, D = 0, ItSeek = 0, ItNext = 0
-Thread 0: Time taken = 296.727 seconds
+Thread 0: Time taken = 295.341 seconds
 Thread 0: Total data: YCSB = 5.042551 GB, HyperLevelDB = 5.042551 GB
-Thread 0: Ops/s = 16.456 Kops/s
-Thread 0: YCSB throughput = 17.401752 MB/s
-Thread 0: HyperLevelDB throughput = 17.401752 MB/s
+Thread 0: Ops/s = 16.533 Kops/s
+Thread 0: YCSB throughput = 17.483430 MB/s
+Thread 0: HyperLevelDB throughput = 17.483430 MB/s
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 24253654152 nanoseconds
-file_open_during_read: timing = 12008057842 nanoseconds
-file_close_during_read: timing = 3366651241 nanoseconds
+file_read: timing = 24574802064 nanoseconds
+file_open_during_read: timing = 11991869294 nanoseconds
+file_close_during_read: timing = 3208509533 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 41776166081 nanoseconds
-insert_block_cache: timing = 272000275 nanoseconds
-new_iterator: timing = 549616739 nanoseconds
+read_block: timing = 42034194822 nanoseconds
+insert_block_cache: timing = 265512353 nanoseconds
+new_iterator: timing = 539885419 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        1        4        21        0      5266
-  1        4       46        35     7599      7600
-  2       19      192       110    24156     24158
-  3      134     1999       126    28061     28058
-  4      193     3024         3      704       704
+  0        0        0        21        0      5266
+  1        4       48        35     7623      7624
+  2       20      217       108    23812     23813
+  3      133     2023       126    28169     28166
+  4      189     2979         4      906       906
 
-ycsb         :      59.748 micros/op;
+ycsb         :      59.452 micros/op;
 ----------------------Current DB state-----------------------
 
 -------------------------------------------------------------
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 24253667735 nanoseconds
-file_open_during_read: timing = 12008081448 nanoseconds
-file_close_during_read: timing = 3366653586 nanoseconds
+file_read: timing = 24574812863 nanoseconds
+file_open_during_read: timing = 11991876455 nanoseconds
+file_close_during_read: timing = 3208511367 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 41776208112 nanoseconds
-insert_block_cache: timing = 272000436 nanoseconds
-new_iterator: timing = 549617113 nanoseconds
+read_block: timing = 42034215859 nanoseconds
+insert_block_cache: timing = 265512487 nanoseconds
+new_iterator: timing = 539885688 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        1        4        21        0      5266
-  1        4       46        35     7599      7600
-  2       19      192       110    24156     24158
-  3      134     1999       126    28061     28058
-  4      193     3024         3      704       704
+  0        0        0        21        0      5266
+  1        4       48        35     7623      7624
+  2       20      217       108    23812     23813
+  3      133     2023       126    28169     28166
+  4      189     2979         4      906       906
 
-printdb      :      30.000 micros/op;
+printdb      :      12.000 micros/op;

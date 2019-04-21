@@ -1,25 +1,25 @@
 Rohan here
 Quill path = /root/sanidhya/x/pmboost-test/boost-tpcc
 tree = /root/sanidhya/x/pmboost-test/boost-tpcc/bin/nvp_nvp.tree
-NVP_MSG (176684): _hub_init2: START
-NVP_MSG (176684): init_logs: Initializing append and op log
-NVP_MSG (176684): _nvp_init2: dr fd = 5, start addr = 0x7F340D600000
-NVP_MSG (176684): _nvp_init2: dr fd = 6, start addr = 0x7F3403400000
-NVP_MSG (176684): _nvp_init2: dr fd = 7, start addr = 0x7F33F9200000
-NVP_MSG (176684): _nvp_init2: dr fd = 8, start addr = 0x7F33EF000000
-NVP_MSG (176684): _nvp_init2: dr fd = 9, start addr = 0x7F33E4E00000
-NVP_MSG (176684): _nvp_init2: dr fd = 10, start addr = 0x7F33DAC00000
-NVP_MSG (176684): _nvp_init2: dr fd = 11, start addr = 0x7F33D0A00000
-NVP_MSG (176684): _nvp_init2: dr fd = 12, start addr = 0x7F33C6800000
-NVP_MSG (176684): _nvp_init2: dr fd = 13, start addr = 0x7F33BC600000
-NVP_MSG (176684): _nvp_init2: dr fd = 14, start addr = 0x7F33B2400000
-NVP_MSG (176684): _nvp_init2: dr fd = 15, start addr = 0x7F33AFA00000
-NVP_MSG (176684): _nvp_init2: Large regions set
-NVP_MSG (176684): _nvp_init2: Tbl over mmaps set
-NVP_MSG (176684): _nvp_init2: Tbl mmaps set
-NVP_MSG (176684): _nvp_init2: Global locks created
-NVP_MSG (176684): _nvp_init2: initialized environment, OPEN_MAX = 1024
-NVP_MSG (176684): _hub_init2: END
+NVP_MSG (59979): _hub_init2: START
+NVP_MSG (59979): init_logs: Initializing append and op log
+NVP_MSG (59979): _nvp_init2: dr fd = 5, start addr = 0x7F86DDE00000
+NVP_MSG (59979): _nvp_init2: dr fd = 6, start addr = 0x7F86D3C00000
+NVP_MSG (59979): _nvp_init2: dr fd = 7, start addr = 0x7F86C9A00000
+NVP_MSG (59979): _nvp_init2: dr fd = 8, start addr = 0x7F86BF800000
+NVP_MSG (59979): _nvp_init2: dr fd = 9, start addr = 0x7F86B5600000
+NVP_MSG (59979): _nvp_init2: dr fd = 10, start addr = 0x7F86AB400000
+NVP_MSG (59979): _nvp_init2: dr fd = 11, start addr = 0x7F86A1200000
+NVP_MSG (59979): _nvp_init2: dr fd = 12, start addr = 0x7F8697000000
+NVP_MSG (59979): _nvp_init2: dr fd = 13, start addr = 0x7F868CE00000
+NVP_MSG (59979): _nvp_init2: dr fd = 14, start addr = 0x7F8682C00000
+NVP_MSG (59979): _nvp_init2: dr fd = 15, start addr = 0x7F8680200000
+NVP_MSG (59979): _nvp_init2: Large regions set
+NVP_MSG (59979): _nvp_init2: Tbl over mmaps set
+NVP_MSG (59979): _nvp_init2: Tbl mmaps set
+NVP_MSG (59979): _nvp_init2: Global locks created
+NVP_MSG (59979): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (59979): _hub_init2: END
 CHECKING IF SQLITE IS THREADSAFE: RETURN VALUE = 1
 ***************************************
 *** ###easy### TPC-C Load Generator ***
@@ -34,42 +34,42 @@ option t (number of transactions) with value '200000'
     [measure]: 20 (sec.)
 
 RAMP-UP TIME.(10 sec.)
-thread_main: opening db, thread id = 139856497014528
-thread_main: opened db, thread id = 139856497014528
+thread_main: opening db, thread id = 140212181968640
+thread_main: opened db, thread id = 140212181968640
 
 MEASURING START.
 
 
 STOPPING THREADS
  ----------------------
-neword: timing = 14327954564 nanoseconds
-payment: timing = 3120854833 nanoseconds
-ordstat: timing = 325915221 nanoseconds
-delivery: timing = 3933358892 nanoseconds
-slev: timing = 3516813989 nanoseconds
-.NVP_MSG (176684): exit handler
-NVP_MSG (176684): Exit: print stats
-NVP_MSG (176684): ====================== NVP IO stats: ======================
-NVP_MSG (176684): open 2, close 0, async close 0
-NVP_MSG (176684): mmap 546, unlink 1, stat 1
-NVP_MSG (176684): dr mmap 525, dr mmap critical path 0
-NVP_MSG (176684): fsync 190000, appendfsync: count 187725 size 0 average 0
-NVP_MSG (176684): READ: count 6734850, size 27585933444, average 4095
-NVP_MSG (176684): WRITE: count 6520988, size 16558506848, average 2539
-NVP_MSG (176684): memcpy READ: count 6734313, size 27583733892, average 4095
-NVP_MSG (176684): anon READ: count 0, size 0, average 0
-NVP_MSG (176684): memcpy WRITE: count 26623, size 16558506848, average 621962
-NVP_MSG (176684): anon WRITE: count 26623, size 104727424, average 3933
-NVP_MSG (176684): posix READ: count 537, size 2199552, average 4096
-NVP_MSG (176684): posix WRITE: count 0, size 0, average 0
-NVP_MSG (176684): write extends 26623, total 6520988
-NVP_MSG (176684): MFENCE: count 6494365
-NVP_MSG (176684): CLFLUSHOPT: count 0
-NVP_MSG (176684): NON_TEMPORAL_WRITES: count 6520988, size 16558506848, average 2539
-NVP_MSG (176684): TEMPORAL WRITES: count 0, size 0, average 0
-NVP_MSG (176684): TOTAL SYSCALLS (open + close + read + write + fsync): count 539
-NVP_MSG (176684): calling cleanup
-NVP_MSG (176684): nvp_cleanup: Done Cleaning up
+neword: timing = 14107275450 nanoseconds
+payment: timing = 3067776737 nanoseconds
+ordstat: timing = 324668150 nanoseconds
+delivery: timing = 3792442751 nanoseconds
+slev: timing = 3414792192 nanoseconds
+.NVP_MSG (59979): exit handler
+NVP_MSG (59979): Exit: print stats
+NVP_MSG (59979): ====================== NVP IO stats: ======================
+NVP_MSG (59979): open 2, close 0, async close 0
+NVP_MSG (59979): mmap 540, unlink 1, stat 1
+NVP_MSG (59979): dr mmap 519, dr mmap critical path 0
+NVP_MSG (59979): fsync 189997, appendfsync: count 187734 size 0 average 0
+NVP_MSG (59979): READ: count 6722364, size 27534790788, average 4095
+NVP_MSG (59979): WRITE: count 6514595, size 16534813176, average 2538
+NVP_MSG (59979): memcpy READ: count 6721852, size 27532693636, average 4095
+NVP_MSG (59979): anon READ: count 0, size 0, average 0
+NVP_MSG (59979): memcpy WRITE: count 26603, size 16534813176, average 621539
+NVP_MSG (59979): anon WRITE: count 26603, size 104645504, average 3933
+NVP_MSG (59979): posix READ: count 512, size 2097152, average 4096
+NVP_MSG (59979): posix WRITE: count 0, size 0, average 0
+NVP_MSG (59979): write extends 26603, total 6514595
+NVP_MSG (59979): MFENCE: count 6487992
+NVP_MSG (59979): CLFLUSHOPT: count 0
+NVP_MSG (59979): NON_TEMPORAL_WRITES: count 6514595, size 16534813176, average 2538
+NVP_MSG (59979): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (59979): TOTAL SYSCALLS (open + close + read + write + fsync): count 514
+NVP_MSG (59979): calling cleanup
+NVP_MSG (59979): nvp_cleanup: Done Cleaning up
 
 
 <Raw Results>
@@ -104,4 +104,4 @@ NVP_MSG (176684): nvp_cleanup: Done Cleaning up
                  0.000 TpmC
 
 Time taken
-                 83.512 seconds
+                 86.880 seconds

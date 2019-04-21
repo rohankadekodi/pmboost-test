@@ -3,7 +3,7 @@ Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-softover-boost
 tree = /root/sanidhya/x/pmboost-test/boost-ycsb-softover-boost/bin/nvp_nvp.tree
 ERROR: ld.so: object 'libnvp.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
 LevelDB:    version 1.20
-Date:       Sat Feb 24 06:44:31 2018
+Date:       Sat Feb 24 09:40:41 2018
 CPU:        96 * Genuine Intel(R) CPU 0000%@
 CPUCache:   33792 KB
 Keys:       16 bytes each
@@ -22,58 +22,58 @@ Completed 0 ops... finished 100 ops                              ... finished 2
 Thread 0: Done replaying 5000000 operations.
 YCSB splitup: R = 0, D = 0, I = 5000000, U = 0, S = 0
 LevelDB/WiscKey splitup: P = 5000000, G = 0, D = 0, ItSeek = 0, ItNext = 0
-Thread 0: Time taken = 300.803 seconds
+Thread 0: Time taken = 297.601 seconds
 Thread 0: Total data: YCSB = 5.042551 GB, HyperLevelDB = 5.042551 GB
-Thread 0: Ops/s = 16.233 Kops/s
-Thread 0: YCSB throughput = 17.165975 MB/s
-Thread 0: HyperLevelDB throughput = 17.165975 MB/s
+Thread 0: Ops/s = 16.407 Kops/s
+Thread 0: YCSB throughput = 17.350657 MB/s
+Thread 0: HyperLevelDB throughput = 17.350657 MB/s
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 24562248100 nanoseconds
-file_open_during_read: timing = 12194534890 nanoseconds
-file_close_during_read: timing = 3360824562 nanoseconds
+file_read: timing = 24285640883 nanoseconds
+file_open_during_read: timing = 12187139818 nanoseconds
+file_close_during_read: timing = 3309331596 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 42389998452 nanoseconds
-insert_block_cache: timing = 276954113 nanoseconds
-new_iterator: timing = 565433350 nanoseconds
+read_block: timing = 41992678173 nanoseconds
+insert_block_cache: timing = 269120692 nanoseconds
+new_iterator: timing = 548585267 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        5       20        21        0      5262
-  1        4       46        34     7541      7542
-  2       20      189       110    24115     24116
-  3      131     1995       130    28939     28937
-  4      191     3012         4      914       914
+  0        2        8        21        0      5262
+  1        4       47        35     7615      7616
+  2       20      192       110    24052     24053
+  3      133     1994       127    28112     28110
+  4      191     3021         4      795       795
 
-ycsb         :      60.556 micros/op;
+ycsb         :      59.904 micros/op;
 ----------------------Current DB state-----------------------
 
 -------------------------------------------------------------
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 24562248100 nanoseconds
-file_open_during_read: timing = 12194534890 nanoseconds
-file_close_during_read: timing = 3360824562 nanoseconds
+file_read: timing = 24285640883 nanoseconds
+file_open_during_read: timing = 12187139818 nanoseconds
+file_close_during_read: timing = 3309331596 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 42389998452 nanoseconds
-insert_block_cache: timing = 276954113 nanoseconds
-new_iterator: timing = 565433350 nanoseconds
+read_block: timing = 41992678173 nanoseconds
+insert_block_cache: timing = 269120692 nanoseconds
+new_iterator: timing = 548585267 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        5       20        21        0      5262
-  1        4       46        34     7541      7542
-  2       20      189       110    24115     24116
-  3      131     1995       130    28939     28937
-  4      191     3012         4      914       914
+  0        2        8        21        0      5262
+  1        4       47        35     7615      7616
+  2       20      192       110    24052     24053
+  3      133     1994       127    28112     28110
+  4      191     3021         4      795       795
 
-printdb      :      27.000 micros/op;
+printdb      :      10.000 micros/op;
 CompactMemTable: recording background error

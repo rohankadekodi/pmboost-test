@@ -1,27 +1,27 @@
 Rohan here
 Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-softover
 tree = /root/sanidhya/x/pmboost-test/boost-ycsb-softover/bin/nvp_nvp.tree
-NVP_MSG (188784): _hub_init2: START
-NVP_MSG (188784): init_logs: Initializing append and op log
-NVP_MSG (188784): _nvp_init2: dr fd = 5, start addr = 0x7F1AA7C00000
-NVP_MSG (188784): _nvp_init2: dr fd = 6, start addr = 0x7F1A9DA00000
-NVP_MSG (188784): _nvp_init2: dr fd = 7, start addr = 0x7F1A93800000
-NVP_MSG (188784): _nvp_init2: dr fd = 8, start addr = 0x7F1A89600000
-NVP_MSG (188784): _nvp_init2: dr fd = 9, start addr = 0x7F1A7F400000
-NVP_MSG (188784): _nvp_init2: dr fd = 10, start addr = 0x7F1A75200000
-NVP_MSG (188784): _nvp_init2: dr fd = 11, start addr = 0x7F1A6B000000
-NVP_MSG (188784): _nvp_init2: dr fd = 12, start addr = 0x7F1A60E00000
-NVP_MSG (188784): _nvp_init2: dr fd = 13, start addr = 0x7F1A56C00000
-NVP_MSG (188784): _nvp_init2: dr fd = 14, start addr = 0x7F1A4CA00000
-NVP_MSG (188784): _nvp_init2: dr fd = 15, start addr = 0x7F1A4A000000
-NVP_MSG (188784): _nvp_init2: Large regions set
-NVP_MSG (188784): _nvp_init2: Tbl over mmaps set
-NVP_MSG (188784): _nvp_init2: Tbl mmaps set
-NVP_MSG (188784): _nvp_init2: Global locks created
-NVP_MSG (188784): _nvp_init2: initialized environment, OPEN_MAX = 1024
-NVP_MSG (188784): _hub_init2: END
+NVP_MSG (64118): _hub_init2: START
+NVP_MSG (64118): init_logs: Initializing append and op log
+NVP_MSG (64118): _nvp_init2: dr fd = 5, start addr = 0x7F2542000000
+NVP_MSG (64118): _nvp_init2: dr fd = 6, start addr = 0x7F2537E00000
+NVP_MSG (64118): _nvp_init2: dr fd = 7, start addr = 0x7F252DC00000
+NVP_MSG (64118): _nvp_init2: dr fd = 8, start addr = 0x7F2523A00000
+NVP_MSG (64118): _nvp_init2: dr fd = 9, start addr = 0x7F2519800000
+NVP_MSG (64118): _nvp_init2: dr fd = 10, start addr = 0x7F250F600000
+NVP_MSG (64118): _nvp_init2: dr fd = 11, start addr = 0x7F2505400000
+NVP_MSG (64118): _nvp_init2: dr fd = 12, start addr = 0x7F24FB200000
+NVP_MSG (64118): _nvp_init2: dr fd = 13, start addr = 0x7F24F1000000
+NVP_MSG (64118): _nvp_init2: dr fd = 14, start addr = 0x7F24E6E00000
+NVP_MSG (64118): _nvp_init2: dr fd = 15, start addr = 0x7F24E4400000
+NVP_MSG (64118): _nvp_init2: Large regions set
+NVP_MSG (64118): _nvp_init2: Tbl over mmaps set
+NVP_MSG (64118): _nvp_init2: Tbl mmaps set
+NVP_MSG (64118): _nvp_init2: Global locks created
+NVP_MSG (64118): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (64118): _hub_init2: END
 LevelDB:    version 1.20
-Date:       Sat Feb 24 07:00:21 2018
+Date:       Sat Feb 24 11:32:15 2018
 CPU:        96 * Genuine Intel(R) CPU 0000%@
 CPUCache:   33792 KB
 Keys:       16 bytes each
@@ -40,82 +40,82 @@ Completed 0 ops... finished 100 ops                              ... finished 2
 Thread 0: Done replaying 5000000 operations.
 YCSB splitup: R = 0, D = 0, I = 5000000, U = 0, S = 0
 LevelDB/WiscKey splitup: P = 5000000, G = 0, D = 0, ItSeek = 0, ItNext = 0
-Thread 0: Time taken = 304.295 seconds
+Thread 0: Time taken = 300.540 seconds
 Thread 0: Total data: YCSB = 5.042551 GB, HyperLevelDB = 5.042551 GB
-Thread 0: Ops/s = 16.046 Kops/s
-Thread 0: YCSB throughput = 16.968972 MB/s
-Thread 0: HyperLevelDB throughput = 16.968972 MB/s
+Thread 0: Ops/s = 16.247 Kops/s
+Thread 0: YCSB throughput = 17.180997 MB/s
+Thread 0: HyperLevelDB throughput = 17.180997 MB/s
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 25242556651 nanoseconds
-file_open_during_read: timing = 13165216516 nanoseconds
-file_close_during_read: timing = 4136338833 nanoseconds
+file_read: timing = 25578786354 nanoseconds
+file_open_during_read: timing = 12701997126 nanoseconds
+file_close_during_read: timing = 4291073950 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 44682141139 nanoseconds
-insert_block_cache: timing = 271470519 nanoseconds
-new_iterator: timing = 545525845 nanoseconds
+read_block: timing = 44835693672 nanoseconds
+insert_block_cache: timing = 267150344 nanoseconds
+new_iterator: timing = 539635017 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        3       12        22        0      5262
-  1        4       50        35     7552      7553
-  2       22      185       112    24051     24052
-  3      131     1998       132    28596     28593
-  4      190     3017         2      435       435
+  0        6       24        21        0      5262
+  1        4       49        35     7544      7545
+  2       18      193       110    24023     24024
+  3      132     2007       129    28618     28616
+  4      189     2990         4      949       949
 
-ycsb         :      61.247 micros/op;
+ycsb         :      60.492 micros/op;
 ----------------------Current DB state-----------------------
 
 -------------------------------------------------------------
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 25242556651 nanoseconds
-file_open_during_read: timing = 13165216516 nanoseconds
-file_close_during_read: timing = 4136338833 nanoseconds
+file_read: timing = 25578786354 nanoseconds
+file_open_during_read: timing = 12701997126 nanoseconds
+file_close_during_read: timing = 4291073950 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 44682141139 nanoseconds
-insert_block_cache: timing = 271470519 nanoseconds
-new_iterator: timing = 545525845 nanoseconds
+read_block: timing = 44835693672 nanoseconds
+insert_block_cache: timing = 267150344 nanoseconds
+new_iterator: timing = 539635017 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        3       12        22        0      5262
-  1        4       50        35     7552      7553
-  2       22      185       112    24051     24052
-  3      131     1998       132    28596     28593
-  4      190     3017         2      435       435
+  0        6       24        21        0      5262
+  1        4       49        35     7544      7545
+  2       18      193       110    24023     24024
+  3      132     2007       129    28618     28616
+  4      189     2990         4      949       949
 
-printdb      :      28.000 micros/op;
+printdb      :      14.000 micros/op;
 CompactMemTable: recording background error
-NVP_MSG (188784): exit handler
-NVP_MSG (188784): Exit: print stats
-NVP_MSG (188784): ====================== NVP IO stats: ======================
-NVP_MSG (188784): open 12603907, close 12603706, async close 0
-NVP_MSG (188784): mmap 11, unlink 6949, stat 0
-NVP_MSG (188784): dr mmap 11, dr mmap critical path 0
-NVP_MSG (188784): fsync 10776, appendfsync: count 0 size 0 average 0
-NVP_MSG (188784): READ: count 14406678, size 0, average 0
-NVP_MSG (188784): WRITE: count 20817643, size 0, average 0
-NVP_MSG (188784): memcpy READ: count 0, size 0, average 0
-NVP_MSG (188784): anon READ: count 0, size 0, average 0
-NVP_MSG (188784): memcpy WRITE: count 0, size 0, average 0
-NVP_MSG (188784): anon WRITE: count 0, size 0, average 0
-NVP_MSG (188784): posix READ: count 0, size 0, average 0
-NVP_MSG (188784): posix WRITE: count 0, size 0, average 0
-NVP_MSG (188784): write extends 0, total 0
-NVP_MSG (188784): MFENCE: count 0
-NVP_MSG (188784): CLFLUSHOPT: count 0
-NVP_MSG (188784): NON_TEMPORAL_WRITES: count 0, size 0, average 0
-NVP_MSG (188784): TEMPORAL WRITES: count 0, size 0, average 0
-NVP_MSG (188784): TOTAL SYSCALLS (open + close + read + write + fsync): count 25207613
-NVP_MSG (188784): soft_overhead: timing = 279992 ms
-NVP_MSG (188784): calling cleanup
-NVP_MSG (188784): nvp_cleanup: Done Cleaning up
+NVP_MSG (64118): exit handler
+NVP_MSG (64118): Exit: print stats
+NVP_MSG (64118): ====================== NVP IO stats: ======================
+NVP_MSG (64118): open 12518341, close 12518147, async close 0
+NVP_MSG (64118): mmap 11, unlink 6997, stat 0
+NVP_MSG (64118): dr mmap 11, dr mmap critical path 0
+NVP_MSG (64118): fsync 10812, appendfsync: count 0 size 0 average 0
+NVP_MSG (64118): READ: count 14527692, size 0, average 0
+NVP_MSG (64118): WRITE: count 20938891, size 0, average 0
+NVP_MSG (64118): memcpy READ: count 0, size 0, average 0
+NVP_MSG (64118): anon READ: count 0, size 0, average 0
+NVP_MSG (64118): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (64118): anon WRITE: count 0, size 0, average 0
+NVP_MSG (64118): posix READ: count 0, size 0, average 0
+NVP_MSG (64118): posix WRITE: count 0, size 0, average 0
+NVP_MSG (64118): write extends 0, total 0
+NVP_MSG (64118): MFENCE: count 0
+NVP_MSG (64118): CLFLUSHOPT: count 0
+NVP_MSG (64118): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (64118): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (64118): TOTAL SYSCALLS (open + close + read + write + fsync): count 25036488
+NVP_MSG (64118): soft_overhead: timing = 275873 ms
+NVP_MSG (64118): calling cleanup
+NVP_MSG (64118): nvp_cleanup: Done Cleaning up

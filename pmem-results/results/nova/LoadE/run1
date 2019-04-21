@@ -1,5 +1,5 @@
 LevelDB:    version 1.20
-Date:       Sat Feb 24 05:57:47 2018
+Date:       Sat Feb 24 10:45:46 2018
 CPU:        96 * Genuine Intel(R) CPU 0000%@
 CPUCache:   33792 KB
 Keys:       16 bytes each
@@ -18,58 +18,57 @@ Completed 0 ops... finished 100 ops                              ... finished 2
 Thread 0: Done replaying 5000000 operations.
 YCSB splitup: R = 0, D = 0, I = 5000000, U = 0, S = 0
 LevelDB/WiscKey splitup: P = 5000000, G = 0, D = 0, ItSeek = 0, ItNext = 0
-Thread 0: Time taken = 297.865 seconds
+Thread 0: Time taken = 285.022 seconds
 Thread 0: Total data: YCSB = 5.042551 GB, HyperLevelDB = 5.042551 GB
-Thread 0: Ops/s = 16.393 Kops/s
-Thread 0: YCSB throughput = 17.335276 MB/s
-Thread 0: HyperLevelDB throughput = 17.335276 MB/s
+Thread 0: Ops/s = 17.131 Kops/s
+Thread 0: YCSB throughput = 18.116382 MB/s
+Thread 0: HyperLevelDB throughput = 18.116382 MB/s
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 24444790091 nanoseconds
-file_open_during_read: timing = 11848945044 nanoseconds
-file_close_during_read: timing = 3343088735 nanoseconds
+file_read: timing = 26959091177 nanoseconds
+file_open_during_read: timing = 11126265794 nanoseconds
+file_close_during_read: timing = 3032334149 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 41945611916 nanoseconds
-insert_block_cache: timing = 274309362 nanoseconds
-new_iterator: timing = 555572443 nanoseconds
+read_block: timing = 43180134604 nanoseconds
+insert_block_cache: timing = 275237121 nanoseconds
+new_iterator: timing = 537217921 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        2        8        21        0      5262
-  1        4       46        35     7602      7603
-  2       20      185       110    24223     24224
-  3      134     1993       129    28736     28733
-  4      192     3030         2      519       519
+  0        8       32        18        0      5266
+  1        2       19        33     7569      7570
+  2       20      227       106    24732     24733
+  3      133     1993       121    28371     28368
+  4      191     2996         2      486       486
 
-ycsb         :      59.961 micros/op;
+ycsb         :      57.390 micros/op;
 ----------------------Current DB state-----------------------
 
 -------------------------------------------------------------
 memtable_read: timing = 0 nanoseconds
 imm_memtable_read: timing = 0 nanoseconds
-file_read: timing = 24444790091 nanoseconds
-file_open_during_read: timing = 11848945044 nanoseconds
-file_close_during_read: timing = 3343088735 nanoseconds
+file_read: timing = 26959102107 nanoseconds
+file_open_during_read: timing = 11126271346 nanoseconds
+file_close_during_read: timing = 3032335560 nanoseconds
 get_files: timing = 0 nanoseconds
 after_get_files: timing = 0 nanoseconds
 find_table: timing = 0 nanoseconds
 block_reader: timing = 0 nanoseconds
-read_block: timing = 41945611916 nanoseconds
-insert_block_cache: timing = 274309362 nanoseconds
-new_iterator: timing = 555572443 nanoseconds
+read_block: timing = 43180154361 nanoseconds
+insert_block_cache: timing = 275237236 nanoseconds
+new_iterator: timing = 537218153 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        2        8        21        0      5262
-  1        4       46        35     7602      7603
-  2       20      185       110    24223     24224
-  3      134     1993       129    28736     28733
-  4      192     3030         2      519       519
+  0        8       32        18        0      5266
+  1        2       19        33     7569      7570
+  2       20      227       106    24732     24733
+  3      133     1993       121    28371     28368
+  4      191     2996         2      486       486
 
-printdb      :      29.000 micros/op;
-CompactMemTable: recording background error
+printdb      :       9.000 micros/op;

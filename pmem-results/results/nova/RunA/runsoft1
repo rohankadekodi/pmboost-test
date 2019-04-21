@@ -3,7 +3,7 @@ Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-softover-boost
 tree = /root/sanidhya/x/pmboost-test/boost-ycsb-softover-boost/bin/nvp_nvp.tree
 ERROR: ld.so: object 'libnvp.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
 LevelDB:    version 1.20
-Date:       Sat Feb 24 06:57:48 2018
+Date:       Sat Feb 24 09:53:35 2018
 CPU:        96 * Genuine Intel(R) CPU 0000%@
 CPUCache:   33792 KB
 Keys:       16 bytes each
@@ -22,57 +22,57 @@ Completed 0 ops... finished 100 ops                              ... finished 2
 Thread 0: Done replaying 5000000 operations.
 YCSB splitup: R = 2499107, D = 0, I = 0, U = 2500893, S = 0
 LevelDB/WiscKey splitup: P = 2500893, G = 5000000, D = 0, ItSeek = 0, ItNext = 0
-Thread 0: Time taken = 129.699 seconds
-Thread 0: Total data: YCSB = 1.895937 GB, HyperLevelDB = 4.034086 GB
-Thread 0: Ops/s = 37.647 Kops/s
-Thread 0: YCSB throughput = 14.968806 MB/s
-Thread 0: HyperLevelDB throughput = 31.849922 MB/s
-memtable_read: timing = 1139490469 nanoseconds
-imm_memtable_read: timing = 53032531 nanoseconds
-file_read: timing = 14545946381 nanoseconds
-file_open_during_read: timing = 6029047925 nanoseconds
-file_close_during_read: timing = 1634041719 nanoseconds
-get_files: timing = 769939891 nanoseconds
-after_get_files: timing = 12944714091 nanoseconds
+Thread 0: Time taken = 124.472 seconds
+Thread 0: Total data: YCSB = 2.144982 GB, HyperLevelDB = 4.283131 GB
+Thread 0: Ops/s = 39.228 Kops/s
+Thread 0: YCSB throughput = 17.646299 MB/s
+Thread 0: HyperLevelDB throughput = 35.236380 MB/s
+memtable_read: timing = 1006613722 nanoseconds
+imm_memtable_read: timing = 41349655 nanoseconds
+file_read: timing = 17303508754 nanoseconds
+file_open_during_read: timing = 5540654873 nanoseconds
+file_close_during_read: timing = 1551212919 nanoseconds
+get_files: timing = 775135168 nanoseconds
+after_get_files: timing = 14816113295 nanoseconds
 find_table: timing = 0 nanoseconds
-block_reader: timing = 7411669501 nanoseconds
-read_block: timing = 23904127869 nanoseconds
-insert_block_cache: timing = 531294515 nanoseconds
-new_iterator: timing = 305709703 nanoseconds
+block_reader: timing = 9196874565 nanoseconds
+read_block: timing = 26028464713 nanoseconds
+insert_block_cache: timing = 554747606 nanoseconds
+new_iterator: timing = 303572180 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        6       24        11        0      2547
-  1        3       27        14     3627      2815
-  2       18      189        48    10268     10003
-  3      134     1995        52    12074     11557
-  4      248     3930         7     1535      1482
+  0        0        0         9        0      2547
+  1        4       39        13     3588      2770
+  2       18      193        46    10426     10158
+  3      135     1974        50    11992     11484
+  4      253     3960         6     1459      1405
 
-ycsb         :      26.320 micros/op;
+ycsb         :      25.267 micros/op;
 ----------------------Current DB state-----------------------
 
 -------------------------------------------------------------
-memtable_read: timing = 1139490469 nanoseconds
-imm_memtable_read: timing = 53032531 nanoseconds
-file_read: timing = 14545958631 nanoseconds
-file_open_during_read: timing = 6029056479 nanoseconds
-file_close_during_read: timing = 1634043892 nanoseconds
-get_files: timing = 769939891 nanoseconds
-after_get_files: timing = 12944714091 nanoseconds
+memtable_read: timing = 1006613722 nanoseconds
+imm_memtable_read: timing = 41349655 nanoseconds
+file_read: timing = 17303518909 nanoseconds
+file_open_during_read: timing = 5540659282 nanoseconds
+file_close_during_read: timing = 1551214259 nanoseconds
+get_files: timing = 775135168 nanoseconds
+after_get_files: timing = 14816113295 nanoseconds
 find_table: timing = 0 nanoseconds
-block_reader: timing = 7411669501 nanoseconds
-read_block: timing = 23904157465 nanoseconds
-insert_block_cache: timing = 531294668 nanoseconds
-new_iterator: timing = 305710016 nanoseconds
+block_reader: timing = 9196874565 nanoseconds
+read_block: timing = 26028491705 nanoseconds
+insert_block_cache: timing = 554747702 nanoseconds
+new_iterator: timing = 303572365 nanoseconds
 
                                Compactions
 Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
 --------------------------------------------------
-  0        6       24        11        0      2547
-  1        3       27        14     3627      2815
-  2       18      189        48    10268     10003
-  3      134     1995        52    12074     11557
-  4      248     3930         7     1535      1482
+  0        0        0         9        0      2547
+  1        4       39        13     3588      2770
+  2       18      193        46    10426     10158
+  3      135     1974        50    11992     11484
+  4      253     3960         6     1459      1405
 
-printdb      :      27.000 micros/op;
+printdb      :      13.000 micros/op;
