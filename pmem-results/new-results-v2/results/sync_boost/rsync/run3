@@ -1,0 +1,58 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-rsync-sync
+tree = /root/sanidhya/x/pmboost-test/boost-rsync-sync/bin/nvp_nvp.tree
+NVP_MSG (137401): _hub_init2: START
+NVP_MSG (137401): init_logs: Initializing append and op log
+NVP_MSG (137401): _nvp_init2: dr fd = 5, start addr = 0x7F6E12200000
+NVP_MSG (137401): _nvp_init2: dr fd = 6, start addr = 0x7F6E08000000
+NVP_MSG (137401): _nvp_init2: dr fd = 7, start addr = 0x7F6DFDE00000
+NVP_MSG (137401): _nvp_init2: Tbl mmaps set
+NVP_MSG (137401): _nvp_init2: Global locks created
+NVP_MSG (137401): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (137401): _hub_init2: END
+NVP_MSG (137403): exit handler
+NVP_MSG (137403): Exit: print stats
+NVP_MSG (137403): ====================== NVP IO stats: ======================
+NVP_MSG (137403): open 0, close 0, async close 0
+NVP_MSG (137403): mmap 3, unlink 0, stat 0
+NVP_MSG (137403): dr mmap 3, dr mmap critical path 0
+NVP_MSG (137403): fsync 0, appendfsync: count 0 size 0 average 0
+NVP_MSG (137403): READ: count 0, size 0, average 0
+NVP_MSG (137403): WRITE: count 0, size 0, average 0
+NVP_MSG (137403): memcpy READ: count 0, size 0, average 0
+NVP_MSG (137403): anon READ: count 0, size 0, average 0
+NVP_MSG (137403): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (137403): anon WRITE: count 0, size 0, average 0
+NVP_MSG (137403): posix READ: count 0, size 0, average 0
+NVP_MSG (137403): posix WRITE: count 0, size 0, average 0
+NVP_MSG (137403): write extends 0, total 0
+NVP_MSG (137403): MFENCE: count 0
+NVP_MSG (137403): CLFLUSHOPT: count 0
+NVP_MSG (137403): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (137403): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (137403): TOTAL SYSCALLS (open + close + read + write + fsync): count 0
+NVP_MSG (137403): calling cleanup
+NVP_MSG (137403): nvp_cleanup: Done Cleaning up
+NVP_MSG (137401): exit handler
+NVP_MSG (137401): Exit: print stats
+NVP_MSG (137401): ====================== NVP IO stats: ======================
+NVP_MSG (137401): open 1210, close 1210, async close 0
+NVP_MSG (137401): mmap 193, unlink 0, stat 0
+NVP_MSG (137401): dr mmap 3, dr mmap critical path 0
+NVP_MSG (137401): fsync 0, appendfsync: count 0 size 0 average 0
+NVP_MSG (137401): READ: count 29000, size 7602176000, average 262144
+NVP_MSG (137401): WRITE: count 0, size 0, average 0
+NVP_MSG (137401): memcpy READ: count 12160, size 3187671040, average 262144
+NVP_MSG (137401): anon READ: count 0, size 0, average 0
+NVP_MSG (137401): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (137401): anon WRITE: count 0, size 0, average 0
+NVP_MSG (137401): posix READ: count 16840, size 4414504960, average 262144
+NVP_MSG (137401): posix WRITE: count 0, size 0, average 0
+NVP_MSG (137401): write extends 0, total 0
+NVP_MSG (137401): MFENCE: count 0
+NVP_MSG (137401): CLFLUSHOPT: count 0
+NVP_MSG (137401): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (137401): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (137401): TOTAL SYSCALLS (open + close + read + write + fsync): count 19260
+NVP_MSG (137401): calling cleanup
+NVP_MSG (137401): nvp_cleanup: Done Cleaning up

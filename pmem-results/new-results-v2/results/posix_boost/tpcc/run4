@@ -1,0 +1,103 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-tpcc-posix
+tree = /root/sanidhya/x/pmboost-test/boost-tpcc-posix/bin/nvp_nvp.tree
+NVP_MSG (138057): _hub_init2: START
+NVP_MSG (138057): _nvp_init2: dr fd = 3, start addr = 0x7FE269800000
+NVP_MSG (138057): _nvp_init2: dr fd = 4, start addr = 0x7FE25F600000
+NVP_MSG (138057): _nvp_init2: dr fd = 5, start addr = 0x7FE255400000
+NVP_MSG (138057): _nvp_init2: dr fd = 6, start addr = 0x7FE24B200000
+NVP_MSG (138057): _nvp_init2: dr fd = 7, start addr = 0x7FE241000000
+NVP_MSG (138057): _nvp_init2: dr fd = 8, start addr = 0x7FE236E00000
+NVP_MSG (138057): _nvp_init2: dr fd = 9, start addr = 0x7FE22CC00000
+NVP_MSG (138057): _nvp_init2: dr fd = 10, start addr = 0x7FE222A00000
+NVP_MSG (138057): _nvp_init2: dr fd = 11, start addr = 0x7FE218800000
+NVP_MSG (138057): _nvp_init2: dr fd = 12, start addr = 0x7FE20E600000
+NVP_MSG (138057): _nvp_init2: Tbl mmaps set
+NVP_MSG (138057): _nvp_init2: Global locks created
+NVP_MSG (138057): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (138057): _hub_init2: END
+CHECKING IF SQLITE IS THREADSAFE: RETURN VALUE = 1
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option w with value '4'
+option c with value '1'
+option t (number of transactions) with value '200000'
+<Parameters>
+  [warehouse]: 4
+ [connection]: 1
+     [rampup]: 10 (sec.)
+    [measure]: 20 (sec.)
+
+RAMP-UP TIME.(10 sec.)
+thread_main: opening db, thread id = 140607148803840
+thread_main: opened db, thread id = 140607148803840
+
+MEASURING START.
+
+
+STOPPING THREADS
+ ----------------------
+neword: timing = 12102910232 nanoseconds
+payment: timing = 2589093247 nanoseconds
+ordstat: timing = 263257508 nanoseconds
+delivery: timing = 4138025093 nanoseconds
+slev: timing = 3091467042 nanoseconds
+.NVP_MSG (138057): exit handler
+NVP_MSG (138057): Exit: print stats
+NVP_MSG (138057): ====================== NVP IO stats: ======================
+NVP_MSG (138057): open 2, close 0, async close 0
+NVP_MSG (138057): mmap 31, unlink 1, stat 1
+NVP_MSG (138057): dr mmap 10, dr mmap critical path 0
+NVP_MSG (138057): fsync 190012, appendfsync: count 2543 size 0 average 0
+NVP_MSG (138057): READ: count 6738953, size 27602739332, average 4095
+NVP_MSG (138057): WRITE: count 6535548, size 16600219696, average 2539
+NVP_MSG (138057): memcpy READ: count 6736623, size 27593195652, average 4095
+NVP_MSG (138057): anon READ: count 0, size 0, average 0
+NVP_MSG (138057): memcpy WRITE: count 26699, size 16600219696, average 621754
+NVP_MSG (138057): anon WRITE: count 26699, size 105034648, average 3934
+NVP_MSG (138057): posix READ: count 2330, size 9543680, average 4096
+NVP_MSG (138057): posix WRITE: count 1643, size 6729728, average 4096
+NVP_MSG (138057): write extends 26699, total 6535548
+NVP_MSG (138057): MFENCE: count 6507206
+NVP_MSG (138057): CLFLUSHOPT: count 0
+NVP_MSG (138057): NON_TEMPORAL_WRITES: count 6533905, size 16593489968, average 2539
+NVP_MSG (138057): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (138057): TOTAL SYSCALLS (open + close + read + write + fsync): count 3975
+NVP_MSG (138057): calling cleanup
+NVP_MSG (138057): nvp_cleanup: Done Cleaning up
+
+
+<Raw Results>
+  [0] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [1] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [2] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [3] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (80)
+  [4] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (20)
+ in 20 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:0  rt:0  fl:0 
+  [1] sc:0  lt:0  rt:0  fl:0 
+  [2] sc:0  lt:0  rt:0  fl:0 
+  [3] sc:0  lt:0  rt:0  fl:0 
+  [4] sc:0  lt:0  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: -nan% (>=43.0%) [NG] *
+   Order-Status: -nan% (>= 4.0%) [NG] *
+       Delivery: -nan% (>= 4.0%) [NG] *
+    Stock-Level: -nan% (>= 4.0%) [NG] *
+ [response time (at least 90% passed)]
+      New-Order: -nan%  [NG] *
+        Payment: -nan%  [NG] *
+   Order-Status: -nan%  [NG] *
+       Delivery: -nan%  [NG] *
+    Stock-Level: -nan%  [NG] *
+
+<TpmC>
+                 0.000 TpmC
+
+Time taken
+                 36.728 seconds
