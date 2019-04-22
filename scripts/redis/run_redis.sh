@@ -26,6 +26,7 @@ run_redis_boost()
     done
 }
 
+:'
 sudo $setup_dir/dax_config.sh
 run_redis dax
 
@@ -43,6 +44,7 @@ cd $setup_dir
 sudo $setup_dir/pmfs_config.sh
 cd $current_dir
 run_redis pmfs
+'
 
 sudo $setup_dir/dax_config.sh
 run_redis_boost boost

@@ -19,9 +19,9 @@ pmem_dir=/mnt/pmem_emul
 result_dir=`readlink -f ../../results`
 boost_results=$result_dir/$setup/$workload
 boost_dir=`readlink -f ../../boost-ycsb`
-if [ "$setup" == "boost_new" ]; then
+if [ "$setup" == "boost" ]; then
     boost_dir=`readlink -f ../../boost-ycsb`
-elif [ "$setup" == "sync_boost_new" ]; then
+elif [ "$setup" == "sync_boost" ]; then
     boost_dir=`readlink -f ../../boost-ycsb-sync`
 else
     boost_dir=`readlink -f ../../boost-ycsb-posix`

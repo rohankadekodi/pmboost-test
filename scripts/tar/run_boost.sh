@@ -14,9 +14,9 @@ current_dir=$(pwd)
 tar_dir=`readlink -f ../../tar`
 workload_dir=$tar_dir/workload
 pmem_dir=/mnt/pmem_emul
-if [ "$fs" == "boost_new" ]; then
+if [ "$fs" == "boost" ]; then
     boost_dir=`readlink -f ../../boost-tar`
-elif [ "$fs" == "sync_boost_new" ]; then
+elif [ "$fs" == "sync_boost" ]; then
     boost_dir=`readlink -f ../../boost-tar-sync`
 else
     boost_dir=`readlink -f ../../boost-tar-posix`

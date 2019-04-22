@@ -14,9 +14,9 @@ current_dir=$(pwd)
 tpcc_dir=`readlink -f ../../tpcc-sqlite`
 workload_dir=$tpcc_dir/database
 pmem_dir=/mnt/pmem_emul
-if [ "$fs" == "boost_new" ]; then
+if [ "$fs" == "boost" ]; then
     boost_dir=`readlink -f ../../boost-tpcc`
-elif [ "$fs" == "sync_boost_new" ]; then
+elif [ "$fs" == "sync_boost" ]; then
     boost_dir=`readlink -f ../../boost-tpcc-sync`
 else
     boost_dir=`readlink -f ../../boost-tpcc-posix`

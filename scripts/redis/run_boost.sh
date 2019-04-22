@@ -14,9 +14,9 @@ current_dir=$(pwd)
 redis_dir=`readlink -f ../../redis-4.0.10`
 workload_dir=$redis_dir/workload
 pmem_dir=/mnt/pmem_emul
-if [ "$fs" == "boost_new" ]; then
+if [ "$fs" == "boost" ]; then
     boost_dir=`readlink -f ../../boost-redis`
-elif [ "$fs" == "sync_boost_new" ]; then
+elif [ "$fs" == "sync_boost" ]; then
     boost_dir=`readlink -f ../../boost-redis-sync`
 else
     boost_dir=`readlink -f ../../boost-redis-posix`

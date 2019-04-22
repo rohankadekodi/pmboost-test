@@ -26,6 +26,7 @@ run_git_boost()
     done
 }
 
+:'
 cd $setup_dir
 sudo ./nova_config.sh
 cd $current_dir
@@ -46,6 +47,7 @@ cd $setup_dir
 sudo $setup_dir/pmfs_config.sh
 cd $current_dir
 run_git pmfs
+'
 
 sudo $setup_dir/dax_config.sh
 run_git_boost boost

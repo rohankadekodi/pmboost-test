@@ -14,9 +14,9 @@ current_dir=$(pwd)
 git_dir=`readlink -f ../../git`
 workload_dir=$git_dir/workload
 pmem_dir=/mnt/pmem_emul
-if [ "$fs" == "boost_new" ]; then
+if [ "$fs" == "boost" ]; then
     boost_dir=`readlink -f ../../boost-git`
-elif [ "$fs" == "sync_boost_new" ]; then
+elif [ "$fs" == "sync_boost" ]; then
     boost_dir=`readlink -f ../../boost-git-sync`
 else
     boost_dir=`readlink -f ../../boost-git-posix`

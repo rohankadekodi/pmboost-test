@@ -14,9 +14,9 @@ current_dir=$(pwd)
 rsync_dir=`readlink -f ../../rsync`
 workload_dir=$rsync_dir/workload
 pmem_dir=/mnt/pmem_emul
-if [ "$fs" == "boost_new" ]; then
+if [ "$fs" == "boost" ]; then
     boost_dir=`readlink -f ../../boost-rsync`
-elif [ "$fs" == "sync_boost_new" ]; then
+elif [ "$fs" == "sync_boost" ]; then
     boost_dir=`readlink -f ../../boost-rsync-sync`
 else
     boost_dir=`readlink -f ../../boost-rsync-posix`
