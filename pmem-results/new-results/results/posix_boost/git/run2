@@ -1,0 +1,37 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-git-posix
+tree = /root/sanidhya/x/pmboost-test/boost-git-posix/bin/nvp_nvp.tree
+NVP_MSG (188791): _hub_init2: START
+NVP_MSG (188791): _nvp_init2: dr fd = 3, start addr = 0x7F2714A00000
+NVP_MSG (188791): _nvp_init2: dr fd = 4, start addr = 0x7F270A800000
+NVP_MSG (188791): _nvp_init2: dr fd = 5, start addr = 0x7F2700600000
+NVP_MSG (188791): _nvp_init2: Tbl mmaps set
+NVP_MSG (188791): _nvp_init2: Global locks created
+NVP_MSG (188791): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (188791): _hub_SHM_COPY: No such file or directory
+ASSERT FAILED ROHAN
+[01;33mNVP_ERROR[m (pid 188791): NVP_ASSERT(0) failed!
+ROHAN HERE
+NVP_MSG (188791): exit handler
+NVP_MSG (188791): Exit: print stats
+NVP_MSG (188791): ====================== NVP IO stats: ======================
+NVP_MSG (188791): open 0, close 0, async close 0
+NVP_MSG (188791): mmap 3, unlink 0, stat 0
+NVP_MSG (188791): dr mmap 3, dr mmap critical path 0
+NVP_MSG (188791): fsync 0, appendfsync: count 0 size 0 average 0
+NVP_MSG (188791): READ: count 0, size 0, average 0
+NVP_MSG (188791): WRITE: count 0, size 0, average 0
+NVP_MSG (188791): memcpy READ: count 0, size 0, average 0
+NVP_MSG (188791): anon READ: count 0, size 0, average 0
+NVP_MSG (188791): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (188791): anon WRITE: count 0, size 0, average 0
+NVP_MSG (188791): posix READ: count 0, size 0, average 0
+NVP_MSG (188791): posix WRITE: count 0, size 0, average 0
+NVP_MSG (188791): write extends 0, total 0
+NVP_MSG (188791): MFENCE: count 0
+NVP_MSG (188791): CLFLUSHOPT: count 0
+NVP_MSG (188791): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (188791): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (188791): TOTAL SYSCALLS (open + close + read + write + fsync): count 0
+NVP_MSG (188791): calling cleanup
+NVP_MSG (188791): nvp_cleanup: Done Cleaning up
