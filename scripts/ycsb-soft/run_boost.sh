@@ -18,10 +18,14 @@ workload_dir=$leveldb_dir/ycsb_workloads
 pmem_dir=/mnt/pmem_emul
 result_dir=`readlink -f ../../results`
 boost_results=$result_dir/$setup/$workload
-if [ "$setup" = "boost" ]; then
-    boost_dir=`readlink -f ../../boost-ycsb-softover`
-else
+if [ "$setup" == "posix_boost" ]; then
+    boost_dir=`readlink -f ../../boost-ycsb-softover-boost-posix`
+elif [ "$setup" == "sync_boost" ]; then
+    boost_dir=`readlink -f ../../boost-ycsb-softover-boost-sync`
+elif [ "$setup" == "posix_boost" ]; then
     boost_dir=`readlink -f ../../boost-ycsb-softover-boost`
+else
+    boost_dir=`readlink -f ../../boost-ycsb-softover`
 fi
 ulimit -c unlimited
 
