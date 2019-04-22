@@ -1,0 +1,36 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-tar
+tree = /root/sanidhya/x/pmboost-test/boost-tar/bin/nvp_nvp.tree
+NVP_MSG (240836): _nvp_init2: dr fd = 5, start addr = 0x7F82D8A00000
+NVP_MSG (240836): _nvp_init2: dr fd = 6, start addr = 0x7F82CE800000
+NVP_MSG (240836): _nvp_init2: dr fd = 7, start addr = 0x7F82C4600000
+NVP_MSG (240836): _nvp_init2: dr fd = 8, start addr = 0x7F82C1C00000
+NVP_MSG (240836): _nvp_init2: Large regions set
+NVP_MSG (240836): _nvp_init2: Tbl over mmaps set
+NVP_MSG (240836): _nvp_init2: Tbl mmaps set
+NVP_MSG (240836): _nvp_init2: Global locks created
+NVP_MSG (240836): _nvp_init2: initialized environment, OPEN_MAX = 1024
+/root/sanidhya/x/pmboost-test/tar/src/tar: Child died with signal 11
+/root/sanidhya/x/pmboost-test/tar/src/tar: Error is not recoverable: exiting now
+NVP_MSG (240836): exit handler
+NVP_MSG (240836): Exit: print stats
+NVP_MSG (240836): ====================== NVP IO stats: ======================
+NVP_MSG (240836): open 1, close 1, async close 0
+NVP_MSG (240836): mmap 5, unlink 0, stat 0
+NVP_MSG (240836): dr mmap 4, dr mmap critical path 0
+NVP_MSG (240836): fsync 0, appendfsync: count 0 size 0 average 0
+NVP_MSG (240836): READ: count 1, size 10240, average 10240
+NVP_MSG (240836): WRITE: count 0, size 0, average 0
+NVP_MSG (240836): memcpy READ: count 1, size 10240, average 10240
+NVP_MSG (240836): anon READ: count 0, size 0, average 0
+NVP_MSG (240836): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (240836): anon WRITE: count 0, size 0, average 0
+NVP_MSG (240836): posix READ: count 0, size 0, average 0
+NVP_MSG (240836): posix WRITE: count 0, size 0, average 0
+NVP_MSG (240836): write extends 0, total 0
+NVP_MSG (240836): MFENCE: count 0
+NVP_MSG (240836): CLFLUSHOPT: count 0
+NVP_MSG (240836): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (240836): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (240836): TOTAL SYSCALLS (open + close + read + write + fsync): count 2
+NVP_MSG (240836): calling cleanup

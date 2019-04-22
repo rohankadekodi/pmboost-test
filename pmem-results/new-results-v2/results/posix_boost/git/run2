@@ -1,0 +1,34 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-git-posix
+tree = /root/sanidhya/x/pmboost-test/boost-git-posix/bin/nvp_nvp.tree
+NVP_MSG (137025): _hub_init2: START
+NVP_MSG (137025): _nvp_init2: dr fd = 3, start addr = 0x7F55D6E00000
+NVP_MSG (137025): _nvp_init2: dr fd = 4, start addr = 0x7F55CCC00000
+NVP_MSG (137025): _nvp_init2: dr fd = 5, start addr = 0x7F55C2A00000
+NVP_MSG (137025): _nvp_init2: Tbl mmaps set
+NVP_MSG (137025): _nvp_init2: Global locks created
+NVP_MSG (137025): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (137025): _hub_init2: END
+NVP_MSG (137025): exit handler
+NVP_MSG (137025): Exit: print stats
+NVP_MSG (137025): ====================== NVP IO stats: ======================
+NVP_MSG (137025): open 640249, close 639993, async close 0
+NVP_MSG (137025): mmap 4, unlink 60682, stat 60682
+NVP_MSG (137025): dr mmap 4, dr mmap critical path 0
+NVP_MSG (137025): fsync 0, appendfsync: count 60684 size 0 average 0
+NVP_MSG (137025): READ: count 534225, size 3309829886, average 6195
+NVP_MSG (137025): WRITE: count 101436, size 290037805, average 2859
+NVP_MSG (137025): memcpy READ: count 0, size 0, average 0
+NVP_MSG (137025): anon READ: count 0, size 0, average 0
+NVP_MSG (137025): memcpy WRITE: count 101436, size 290037805, average 2859
+NVP_MSG (137025): anon WRITE: count 101436, size 290037805, average 2859
+NVP_MSG (137025): posix READ: count 534224, size 3309829886, average 6195
+NVP_MSG (137025): posix WRITE: count 0, size 0, average 0
+NVP_MSG (137025): write extends 101436, total 101436
+NVP_MSG (137025): MFENCE: count 0
+NVP_MSG (137025): CLFLUSHOPT: count 0
+NVP_MSG (137025): NON_TEMPORAL_WRITES: count 101436, size 290037805, average 2859
+NVP_MSG (137025): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (137025): TOTAL SYSCALLS (open + close + read + write + fsync): count 1814466
+NVP_MSG (137025): calling cleanup
+NVP_MSG (137025): nvp_cleanup: Done Cleaning up

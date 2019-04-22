@@ -1,0 +1,41 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb/bin/nvp_nvp.tree
+NVP_MSG (197041): _hub_init2: START
+NVP_MSG (197041): init_logs: Initializing append and op log
+NVP_MSG (197041): _nvp_init2: dr fd = 5, start addr = 0x7F85BAA00000
+NVP_MSG (197041): _nvp_init2: dr fd = 6, start addr = 0x7F85B0800000
+NVP_MSG (197041): _nvp_init2: dr fd = 7, start addr = 0x7F85A6600000
+NVP_MSG (197041): _nvp_init2: dr fd = 8, start addr = 0x7F859C400000
+NVP_MSG (197041): _nvp_init2: dr fd = 9, start addr = 0x7F8592200000
+NVP_MSG (197041): _nvp_init2: dr fd = 10, start addr = 0x7F8588000000
+NVP_MSG (197041): _nvp_init2: dr fd = 11, start addr = 0x7F857DE00000
+NVP_MSG (197041): _nvp_init2: dr fd = 12, start addr = 0x7F8573C00000
+NVP_MSG (197041): _nvp_init2: dr fd = 13, start addr = 0x7F8569A00000
+NVP_MSG (197041): _nvp_init2: dr fd = 14, start addr = 0x7F855F800000
+NVP_MSG (197041): _nvp_init2: dr fd = 15, start addr = 0x7F855CE00000
+NVP_MSG (197041): _nvp_init2: Large regions set
+NVP_MSG (197041): _nvp_init2: Tbl over mmaps set
+NVP_MSG (197041): _nvp_init2: Tbl mmaps set
+NVP_MSG (197041): _nvp_init2: Global locks created
+NVP_MSG (197041): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (197041): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Thu Feb 22 10:07:54 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (197041): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (197041): Does not support mmap, use posix instead.
+NVP_MSG (197041): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000001 is opened O_WRONLY.
+NVP_MSG (197041): Does not support mmap, use posix instead.
+NVP_MSG (197041): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000002 is opened O_WRONLY.
+NVP_MSG (197041): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+/root/sanidhya/x/pmboost-test/boost-ycsb/run_boost.sh: line 45: 197041 Segmentation fault      (core dumped) $@
