@@ -14,6 +14,7 @@ run_ycsb_boost()
         sleep 5
         sudo ./run_boost.sh RunA $fs $run
         sleep 5
+        sudo ./run_boost.sh RunC $fs $run
     done
 }
 
@@ -26,6 +27,9 @@ sudo $setup_dir/pmfs_config.sh
 cd $current_dir
 run_ycsb_boost pmfs
 '
+
+sudo $setup_dir/dax_config.sh
+run_ycsb_boost dax
 
 cd $setup_dir
 sudo $setup_dir/nova_config.sh
