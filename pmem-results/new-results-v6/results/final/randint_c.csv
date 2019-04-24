@@ -1,0 +1,50 @@
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 1
+Throughput: load, 1.913593 ,ops/us
+Throughput: run, 16.135990 ,ops/us
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 16
+Throughput: load, 4.151200 ,ops/us
+Throughput: run, 283.184588 ,ops/us
+
+
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 1
+Throughput: load, 2.013642 ,ops/us
+Throughput: run, 15.092766 ,ops/us
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 16
+Throughput: load, 4.170046 ,ops/us
+Throughput: run, 297.749202 ,ops/us
+
+
+Loaded 64000000 keys
+fastfair, workloadc, randint, uniform, threads 1
+Throughput: load, 0.484840 ,ops/us
+Throughput: run, 1.333063 ,ops/us
+Loaded 64000000 keys
+fastfair, workloadc, randint, uniform, threads 16
+Throughput: load, 7.811222 ,ops/us
+Throughput: run, 19.419190 ,ops/us
+
+
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 1
+Throughput: load, 0.940705 ,ops/us
+Throughput: run, 6.932581 ,ops/us
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 16
+Throughput: load, 2.369345 ,ops/us
+Throughput: run, 97.435765 ,ops/us
+
+
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 1
+Throughput: load, 0.935977 ,ops/us
+Throughput: run, 6.931500 ,ops/us
+Loaded 64000000 keys
+clht, workloadc, randint, uniform, threads 16
+Throughput: load, 2.359792 ,ops/us
+Throughput: run, 97.278335 ,ops/us
+
+
