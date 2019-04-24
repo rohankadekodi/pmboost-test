@@ -1,0 +1,123 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214468): _hub_init2: START
+NVP_MSG (214468): init_logs: Initializing append and op log
+NVP_MSG (214468): _nvp_init2: dr fd = 5, start addr = 0x7F9A62000000
+NVP_MSG (214468): _nvp_init2: dr fd = 6, start addr = 0x7F9A57E00000
+NVP_MSG (214468): _nvp_init2: dr fd = 7, start addr = 0x7F9A4DC00000
+NVP_MSG (214468): _nvp_init2: dr fd = 8, start addr = 0x7F9A43A00000
+NVP_MSG (214468): _nvp_init2: dr fd = 9, start addr = 0x7F9A39800000
+NVP_MSG (214468): _nvp_init2: dr fd = 10, start addr = 0x7F9A2F600000
+NVP_MSG (214468): _nvp_init2: dr fd = 11, start addr = 0x7F9A25400000
+NVP_MSG (214468): _nvp_init2: dr fd = 12, start addr = 0x7F9A1B200000
+NVP_MSG (214468): _nvp_init2: dr fd = 13, start addr = 0x7F9A11000000
+NVP_MSG (214468): _nvp_init2: dr fd = 14, start addr = 0x7F9A06E00000
+NVP_MSG (214468): _nvp_init2: dr fd = 15, start addr = 0x7F9A04400000
+NVP_MSG (214468): _nvp_init2: Large regions set
+NVP_MSG (214468): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214468): _nvp_init2: Tbl mmaps set
+NVP_MSG (214468): _nvp_init2: Global locks created
+NVP_MSG (214468): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214468): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:44:22 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214468): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214468): Does not support mmap, use posix instead.
+NVP_MSG (214468): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-009205 is opened O_WRONLY.
+NVP_MSG (214468): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 7500020 operations.
+Thread 0: Replaying trace ...
+
+Completed 0 ops... finished 100 ops                              ... finished 200 ops                              ... finished 300 ops                              ... finished 400 ops                              ... finished 500 ops                              ... finished 600 ops                              ... finished 700 ops                              ... finished 800 ops                              ... finished 900 ops                              ... finished 1000 ops                              ... finished 1500 ops                              ... finished 2000 ops                              ... finished 2500 ops                              ... finished 3000 ops                              ... finished 3500 ops                              ... finished 4000 ops                              ... finished 4500 ops                              ... finished 5000 ops                              ... finished 6000 ops                              ... finished 7000 ops                              ... finished 8000 ops                              ... finished 9000 ops                              ... finished 10000 ops                              ... finished 15000 ops                              ... finished 20000 ops                              ... finished 25000 ops                              ... finished 30000 ops                              ... finished 35000 ops                              ... finished 40000 ops                              ... finished 45000 ops                              ... finished 50000 ops                              ... finished 60000 ops                              ... finished 70000 ops                              ... finished 80000 ops                              ... finished 90000 ops                              ... finished 100000 ops                              ... finished 150000 ops                              ... finished 200000 ops                              ... finished 250000 ops                              ... finished 300000 ops                              ... finished 350000 ops                              ... finished 400000 ops                              ... finished 450000 ops                              ... finished 500000 ops                              ... finished 600000 ops                              ... finished 700000 ops                              ... finished 800000 ops                              ... finished 900000 ops                              ... finished 1000000 ops                              ... finished 1100000 ops                              ... finished 1200000 ops                              ... finished 1300000 ops                              ... finished 1400000 ops                              ... finished 1500000 ops                              ... finished 1600000 ops                              ... finished 1700000 ops                              ... finished 1800000 ops                              ... finished 1900000 ops                              ... finished 2000000 ops                              ... finished 2100000 ops                              ... finished 2200000 ops                              ... finished 2300000 ops                              ... finished 2400000 ops                              ... finished 2500000 ops                              ... finished 2600000 ops                              ... finished 2700000 ops                              ... finished 2800000 ops                              ... finished 2900000 ops                              ... finished 3000000 ops                              ... finished 3100000 ops                              ... finished 3200000 ops                              ... finished 3300000 ops                              ... finished 3400000 ops                              ... finished 3500000 ops                              ... finished 3600000 ops                              ... finished 3700000 ops                              ... finished 3800000 ops                              ... finished 3900000 ops                              ... finished 4000000 ops                              ... finished 4100000 ops                              ... finished 4200000 ops                              ... finished 4300000 ops                              ... finished 4400000 ops                              ... finished 4500000 ops                              ... finished 4600000 ops                              ... finished 4700000 ops                              ... finished 4800000 ops                              ... finished 4900000 ops                              ... finished 5000000 ops                              ... finished 5100000 ops                              ... finished 5200000 ops                              ... finished 5300000 ops                              ... finished 5400000 ops                              ... finished 5500000 ops                              ... finished 5600000 ops                              ... finished 5700000 ops                              ... finished 5800000 ops                              ... finished 5900000 ops                              ... finished 6000000 ops                              ... finished 6100000 ops                              ... finished 6200000 ops                              ... finished 6300000 ops                              ... finished 6400000 ops                              ... finished 6500000 ops                              ... finished 6600000 ops                              ... finished 6700000 ops                              ... finished 6800000 ops                              ... finished 6900000 ops                              ... finished 7000000 ops                              ... finished 7100000 ops                              ... finished 7200000 ops                              ... finished 7300000 ops                              ... finished 7400000 ops                              ... finished 7500000 ops                              
+
+Thread 0: Done replaying 7500020 operations.
+YCSB splitup: R = 5000000, D = 0, I = 0, U = 2500020, S = 0
+LevelDB/WiscKey splitup: P = 2500020, G = 7500020, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 106.460 seconds
+Thread 0: Total data: YCSB = 4.163892 GB, HyperLevelDB = 6.301294 GB
+Thread 0: Ops/s = 68.798 Kops/s
+Thread 0: YCSB throughput = 40.050892 MB/s
+Thread 0: HyperLevelDB throughput = 60.609754 MB/s
+memtable_read: timing = 2346135850 nanoseconds
+imm_memtable_read: timing = 75806829 nanoseconds
+file_read: timing = 14042272078 nanoseconds
+file_open_during_read: timing = 39986091682 nanoseconds
+file_close_during_read: timing = 44113956672 nanoseconds
+get_files: timing = 1538797313 nanoseconds
+after_get_files: timing = 52992398768 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 41275249159 nanoseconds
+read_block: timing = 100134684446 nanoseconds
+insert_block_cache: timing = 1065616053 nanoseconds
+new_iterator: timing = 300671440 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        3       12         5        0      2490
+  1        3       27        15     3230      2493
+  2       16      189        56    10277     10024
+  3       76     1045        29     5766      5539
+  4      338     5262         0        0         0
+
+ycsb         :      14.538 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 2346135850 nanoseconds
+imm_memtable_read: timing = 75806829 nanoseconds
+file_read: timing = 14042282246 nanoseconds
+file_open_during_read: timing = 39986117811 nanoseconds
+file_close_during_read: timing = 44113994661 nanoseconds
+get_files: timing = 1538797313 nanoseconds
+after_get_files: timing = 52992398768 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 41275249159 nanoseconds
+read_block: timing = 100134777245 nanoseconds
+insert_block_cache: timing = 1065616171 nanoseconds
+new_iterator: timing = 300671698 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        3       12         5        0      2490
+  1        3       27        15     3230      2493
+  2       16      189        56    10277     10024
+  3       76     1045        29     5766      5539
+  4      338     5262         0        0         0
+
+printdb      :      12.000 micros/op;
+NVP_MSG (214468): exit handler
+NVP_MSG (214468): Exit: print stats
+NVP_MSG (214468): ====================== NVP IO stats: ======================
+NVP_MSG (214468): open 6464566, close 6462473, async close 0
+NVP_MSG (214468): mmap 482, unlink 2970, stat 2970
+NVP_MSG (214468): dr mmap 183, dr mmap critical path 0
+NVP_MSG (214468): fsync 4406, appendfsync: count 3186 size 0 average 0
+NVP_MSG (214468): READ: count 7472508, size 32064157838, average 4290
+NVP_MSG (214468): WRITE: count 7636026, size 24155421406, average 3163
+NVP_MSG (214468): memcpy READ: count 7327503, size 31374417452, average 4281
+NVP_MSG (214468): anon READ: count 0, size 0, average 0
+NVP_MSG (214468): memcpy WRITE: count 7629778, size 24255876095, average 3179
+NVP_MSG (214468): anon WRITE: count 7628542, size 24254836876, average 3179
+NVP_MSG (214468): posix READ: count 131114, size 633285686, average 4830
+NVP_MSG (214468): posix WRITE: count 8157, size 757851, average 92
+NVP_MSG (214468): write extends 7631283, total 7633479
+NVP_MSG (214468): MFENCE: count 0
+NVP_MSG (214468): CLFLUSHOPT: count 0
+NVP_MSG (214468): NON_TEMPORAL_WRITES: count 7139191, size 23033322327, average 3226
+NVP_MSG (214468): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214468): TOTAL SYSCALLS (open + close + read + write + fsync): count 13066310
+NVP_MSG (214468): calling cleanup
+NVP_MSG (214468): nvp_cleanup: Done Cleaning up

@@ -1,0 +1,1944 @@
+taskset -c 0-23 ./run_ycsb.sh
+performance
+mke2fs 1.43.5 (04-Aug-2017)
+/dev/pmem12 contains a ext4 file system
+        last mounted on /mnt/pmem_emul on Fri Feb 23 23:16:22 2018
+Creating filesystem with 195083776 4k blocks and 48775168 inodes
+Filesystem UUID: d4dd743c-221d-4bf5-8f6c-7efb98a64efd
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+        4096000, 7962624, 11239424, 20480000, 23887872, 71663616, 78675968,
+        102400000
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (262144 blocks): done
+Writing superblocks and filesystem accounting information: done
+
++ workload=LoadA
++ setup=posix_boost
++ run_id=1
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ load_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo ----------------------- LevelDB YCSB Load ---------------------------
+----------------------- LevelDB YCSB Load ---------------------------
++ rm -rf /mnt/pmem_emul/leveldbtest-1000
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run1
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run1': No such file or directory
++ date
+Fri Feb 23 23:26:10 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=0 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run1
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214333): _hub_init2: START
+NVP_MSG (214333): init_logs: Initializing append and op log
+NVP_MSG (214333): _nvp_init2: dr fd = 5, start addr = 0x7F4BB0400000
+NVP_MSG (214333): _nvp_init2: dr fd = 6, start addr = 0x7F4BA6200000
+NVP_MSG (214333): _nvp_init2: dr fd = 7, start addr = 0x7F4B9C000000
+NVP_MSG (214333): _nvp_init2: dr fd = 8, start addr = 0x7F4B91E00000
+NVP_MSG (214333): _nvp_init2: dr fd = 9, start addr = 0x7F4B87C00000
+NVP_MSG (214333): _nvp_init2: dr fd = 10, start addr = 0x7F4B7DA00000
+NVP_MSG (214333): _nvp_init2: dr fd = 11, start addr = 0x7F4B73800000
+NVP_MSG (214333): _nvp_init2: dr fd = 12, start addr = 0x7F4B69600000
+NVP_MSG (214333): _nvp_init2: dr fd = 13, start addr = 0x7F4B5F400000
+NVP_MSG (214333): _nvp_init2: dr fd = 14, start addr = 0x7F4B55200000
+NVP_MSG (214333): _nvp_init2: dr fd = 15, start addr = 0x7F4B52800000
+NVP_MSG (214333): _nvp_init2: Large regions set
+NVP_MSG (214333): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214333): _nvp_init2: Tbl mmaps set
+NVP_MSG (214333): _nvp_init2: Global locks created
+NVP_MSG (214333): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214333): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:26:12 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214333): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214333): Does not support mmap, use posix instead.
+NVP_MSG (214333): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000001 is opened O_WRONLY.
+NVP_MSG (214333): Does not support mmap, use posix instead.
+NVP_MSG (214333): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000002 is opened O_WRONLY.
+NVP_MSG (214333): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 3100000 ops
+^C
+[root@JF1121-080201T ycsb]# taskset -c 0-23 ./run_ycsb.sh
+performance
+mke2fs 1.43.5 (04-Aug-2017)
+/dev/pmem12 contains a ext4 file system
+        last mounted on /mnt/pmem_emul on Fri Feb 23 23:26:05 2018
+Creating filesystem with 195083776 4k blocks and 48775168 inodes
+Filesystem UUID: f493f25e-c9ea-4e68-a81f-32e046d02b8f
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+        4096000, 7962624, 11239424, 20480000, 23887872, 71663616, 78675968,
+        102400000
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (262144 blocks): done
+Writing superblocks and filesystem accounting information: done
+
++ workload=LoadA
++ setup=posix_boost
++ run_id=1
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ load_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo ----------------------- LevelDB YCSB Load ---------------------------
+----------------------- LevelDB YCSB Load ---------------------------
++ rm -rf /mnt/pmem_emul/leveldbtest-1000
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run1
++ date
+Fri Feb 23 23:36:48 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=0 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run1
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214390): _hub_init2: START
+NVP_MSG (214390): init_logs: Initializing append and op log
+NVP_MSG (214390): _nvp_init2: dr fd = 5, start addr = 0x7F589E000000
+NVP_MSG (214390): _nvp_init2: dr fd = 6, start addr = 0x7F5893E00000
+NVP_MSG (214390): _nvp_init2: dr fd = 7, start addr = 0x7F5889C00000
+NVP_MSG (214390): _nvp_init2: dr fd = 8, start addr = 0x7F587FA00000
+NVP_MSG (214390): _nvp_init2: dr fd = 9, start addr = 0x7F5875800000
+NVP_MSG (214390): _nvp_init2: dr fd = 10, start addr = 0x7F586B600000
+NVP_MSG (214390): _nvp_init2: dr fd = 11, start addr = 0x7F5861400000
+NVP_MSG (214390): _nvp_init2: dr fd = 12, start addr = 0x7F5857200000
+NVP_MSG (214390): _nvp_init2: dr fd = 13, start addr = 0x7F584D000000
+NVP_MSG (214390): _nvp_init2: dr fd = 14, start addr = 0x7F5842E00000
+NVP_MSG (214390): _nvp_init2: dr fd = 15, start addr = 0x7F5840400000
+NVP_MSG (214390): _nvp_init2: Large regions set
+NVP_MSG (214390): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214390): _nvp_init2: Tbl mmaps set
+NVP_MSG (214390): _nvp_init2: Global locks created
+NVP_MSG (214390): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214390): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:36:49 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214390): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214390): Does not support mmap, use posix instead.
+NVP_MSG (214390): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000001 is opened O_WRONLY.
+NVP_MSG (214390): Does not support mmap, use posix instead.
+NVP_MSG (214390): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000002 is opened O_WRONLY.
+NVP_MSG (214390): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 3500000 ops
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 0, D = 0, I = 5000000, U = 0, S = 0
+LevelDB/WiscKey splitup: P = 5000000, G = 0, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 287.734 seconds
+Thread 0: Total data: YCSB = 5.042551 GB, HyperLevelDB = 5.042551 GB
+Thread 0: Ops/s = 16.970 Kops/s
+Thread 0: YCSB throughput = 17.945642 MB/s
+Thread 0: HyperLevelDB throughput = 17.945642 MB/s
+memtable_read: timing = 0 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 20663466754 nanoseconds
+file_open_during_read: timing = 61390112923 nanoseconds
+file_close_during_read: timing = 78422586759 nanoseconds
+get_files: timing = 0 nanoseconds
+after_get_files: timing = 0 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 0 nanoseconds
+read_block: timing = 162240708232 nanoseconds
+insert_block_cache: timing = 281037603 nanoseconds
+new_iterator: timing = 571030583 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        7       28        10        0      5266
+  1        4       52        34     7557      7558
+  2       19      187       108    24581     24583
+  3      133     2019       131    28990     28987
+  4      189     2980         4      801       801
+
+ycsb         :      57.934 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 0 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 20663477194 nanoseconds
+file_open_during_read: timing = 61390147917 nanoseconds
+file_close_during_read: timing = 78422624560 nanoseconds
+get_files: timing = 0 nanoseconds
+after_get_files: timing = 0 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 0 nanoseconds
+read_block: timing = 162240787517 nanoseconds
+insert_block_cache: timing = 281037721 nanoseconds
+new_iterator: timing = 571030819 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        7       28        10        0      5266
+  1        4       52        34     7557      7558
+  2       19      187       108    24581     24583
+  3      133     2019       131    28990     28987
+  4      189     2980         4      801       801
+
+printdb      :      13.000 micros/op;
+NVP_MSG (214390): exit handler
+NVP_MSG (214390): Exit: print stats
+NVP_MSG (214390): ====================== NVP IO stats: ======================
+NVP_MSG (214390): open 12759076, close 12758880, async close 0
+NVP_MSG (214390): mmap 589, unlink 7086, stat 7086
+NVP_MSG (214390): dr mmap 589, dr mmap critical path 0
+NVP_MSG (214390): fsync 10945, appendfsync: count 7811 size 0 average 0
+NVP_MSG (214390): READ: count 14715982, size 65025054020, average 4418
+NVP_MSG (214390): WRITE: count 21112425, size 75672087940, average 3584
+NVP_MSG (214390): memcpy READ: count 14715981, size 65025053979, average 4418
+NVP_MSG (214390): anon READ: count 0, size 0, average 0
+NVP_MSG (214390): memcpy WRITE: count 21102274, size 75954518869, average 3599
+NVP_MSG (214390): anon WRITE: count 21098135, size 75949151261, average 3599
+NVP_MSG (214390): posix READ: count 1, size 41, average 41
+NVP_MSG (214390): posix WRITE: count 19938, size 1845713, average 92
+NVP_MSG (214390): write extends 21109795, total 21116901
+NVP_MSG (214390): MFENCE: count 0
+NVP_MSG (214390): CLFLUSHOPT: count 0
+NVP_MSG (214390): NON_TEMPORAL_WRITES: count 19834793, size 72602309034, average 3660
+NVP_MSG (214390): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214390): TOTAL SYSCALLS (open + close + read + write + fsync): count 25537895
+NVP_MSG (214390): calling cleanup
+NVP_MSG (214390): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:41:40 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-03oy2s /mnt/pmem_emul/DR-0CHdvU /mnt/pmem_emul/DR-0CSD8C /mnt/pmem_emul/DR-0DhWWb /mnt/pmem_emul/DR-0f60pR /mnt/pmem_emul/DR-0Gh2sH /mnt/pmem_emul/DR-0htxLs /mnt/pmem_emul/DR-0iwc0d /mnt/pmem_emul/DR-0nHEXA /mnt/pmem_emul/DR-0O7INn /mnt/pmem_emul/DR-0o94fU /mnt/pmem_emul/DR-0O9OL6 /mnt/pmem_emul/DR-0pyxWS /mnt/pmem_emul/DR-0QzGxT /mnt/pmem_emul/DR-0RsHVG /mnt/pmem_emul/DR-0Snglf /mnt/pmem_emul/DR-0SNKzM /mnt/pmem_emul/DR-0uhAKE /mnt/pmem_emul/DR-0VmRR9 /mnt/pmem_emul/DR-0vTXo2 /mnt/pmem_emul/DR-0VXslP /mnt/pmem_emul/DR-0WKIMw /mnt/pmem_emul/DR-0xl2TG /mnt/pmem_emul/DR-0Yerdq /mnt/pmem_emul/DR-21O5js /mnt/pmem_emul/DR-23UkLn /mnt/pmem_emul/DR-2A12tO /mnt/pmem_emul/DR-2ANoKq /mnt/pmem_emul/DR-2dXuBh /mnt/pmem_emul/DR-2LtQoD /mnt/pmem_emul/DR-2LZSLn /mnt/pmem_emul/DR-2mqahW /mnt/pmem_emul/DR-2nhoAH /mnt/pmem_emul/DR-2OIeie /mnt/pmem_emul/DR-2PQvld /mnt/pmem_emul/DR-2QZKCm /mnt/pmem_emul/DR-2rjW3A /mnt/pmem_emul/DR-2RmEp8 /mnt/pmem_emul/DR-2rnhPA /mnt/pmem_emul/DR-2s1zni /mnt/pmem_emul/DR-2tlrvT /mnt/pmem_emul/DR-2XvjsF /mnt/pmem_emul/DR-2xWOJS /mnt/pmem_emul/DR-2z5juH /mnt/pmem_emul/DR-2ZhcW7 /mnt/pmem_emul/DR-40WJQl /mnt/pmem_emul/DR-45xdJE /mnt/pmem_emul/DR-468nSA /mnt/pmem_emul/DR-4CGYrb /mnt/pmem_emul/DR-4CkV59 /mnt/pmem_emul/DR-4DaU6w /mnt/pmem_emul/DR-4DoyCl /mnt/pmem_emul/DR-4H6IXy /mnt/pmem_emul/DR-4j6EZc /mnt/pmem_emul/DR-4kV4R8 /mnt/pmem_emul/DR-4l46xg /mnt/pmem_emul/DR-4NlKn0 /mnt/pmem_emul/DR-4O4S5w /mnt/pmem_emul/DR-4PiqOx /mnt/pmem_emul/DR-4RZY3e /mnt/pmem_emul/DR-4sbgau /mnt/pmem_emul/DR-4sEwRR /mnt/pmem_emul/DR-4vPpst /mnt/pmem_emul/DR-4vRYqx /mnt/pmem_emul/DR-4vyNad /mnt/pmem_emul/DR-4XdMl9 /mnt/pmem_emul/DR-4xM1Ny /mnt/pmem_emul/DR-4xrF5s /mnt/pmem_emul/DR-4YgayV /mnt/pmem_emul/DR-4YspNP /mnt/pmem_emul/DR-62GWk0 /mnt/pmem_emul/DR-64uj7C /mnt/pmem_emul/DR-65jj6Y /mnt/pmem_emul/DR-6A5s0n /mnt/pmem_emul/DR-6FkLwy /mnt/pmem_emul/DR-6FyaPm /mnt/pmem_emul/DR-6IqWsD /mnt/pmem_emul/DR-6kspun /mnt/pmem_emul/DR-6Q6IWK /mnt/pmem_emul/DR-6TEM0D /mnt/pmem_emul/DR-6usybm /mnt/pmem_emul/DR-6w3Dq7 /mnt/pmem_emul/DR-6Y5xMw /mnt/pmem_emul/DR-6YUlmZ /mnt/pmem_emul/DR-6zUttM /mnt/pmem_emul/DR-816v92 /mnt/pmem_emul/DR-8BGiId /mnt/pmem_emul/DR-8Bkr6x /mnt/pmem_emul/DR-8cJrB7 /mnt/pmem_emul/DR-8fjEi2 /mnt/pmem_emul/DR-8I29DF /mnt/pmem_emul/DR-8lRXvL /mnt/pmem_emul/DR-8MDiF5 /mnt/pmem_emul/DR-8mFQMx /mnt/pmem_emul/DR-8MQATN /mnt/pmem_emul/DR-8NaFQy /mnt/pmem_emul/DR-8NRPWw /mnt/pmem_emul/DR-8OfEUe /mnt/pmem_emul/DR-8U8KKh /mnt/pmem_emul/DR-8uLX0A /mnt/pmem_emul/DR-8uoPFM /mnt/pmem_emul/DR-8VefML /mnt/pmem_emul/DR-8xOhvk /mnt/pmem_emul/DR-8xusye /mnt/pmem_emul/DR-8xVRQs /mnt/pmem_emul/DR-8yQAMf /mnt/pmem_emul/DR-A3JNv8 /mnt/pmem_emul/DR-a3vILD /mnt/pmem_emul/DR-a5fQaz /mnt/pmem_emul/DR-a5Je3M /mnt/pmem_emul/DR-A5ODYX /mnt/pmem_emul/DR-a8ARSg /mnt/pmem_emul/DR-Aacgsm /mnt/pmem_emul/DR-AAqanT /mnt/pmem_emul/DR-AEdQTM /mnt/pmem_emul/DR-afb9Tp /mnt/pmem_emul/DR-AFDJEe /mnt/pmem_emul/DR-AFGaeS /mnt/pmem_emul/DR-Agdl4K /mnt/pmem_emul/DR-AGNXKs /mnt/pmem_emul/DR-AhQ8Pp /mnt/pmem_emul/DR-AiWTQa /mnt/pmem_emul/DR-akob1z /mnt/pmem_emul/DR-akvVCg /mnt/pmem_emul/DR-AKY2p5 /mnt/pmem_emul/DR-AL59r0 /mnt/pmem_emul/DR-Am965i /mnt/pmem_emul/DR-aMhjL1 /mnt/pmem_emul/DR-AMXwvy /mnt/pmem_emul/DR-ANdlDL /mnt/pmem_emul/DR-ANRENs /mnt/pmem_emul/DR-AnwSWw /mnt/pmem_emul/DR-ANzJTS /mnt/pmem_emul/DR-Aoufij /mnt/pmem_emul/DR-aoZkPz /mnt/pmem_emul/DR-APtvWR /mnt/pmem_emul/DR-aPZgY2 /mnt/pmem_emul/DR-aruseI /mnt/pmem_emul/DR-aSE3tu /mnt/pmem_emul/DR-Atc5jr /mnt/pmem_emul/DR-Au7GXQ /mnt/pmem_emul/DR-AUKtuB /mnt/pmem_emul/DR-AUQGQc /mnt/pmem_emul/DR-AuZWqf /mnt/pmem_emul/DR-Av6GAC /mnt/pmem_emul/DR-aWaZwD /mnt/pmem_emul/DR-AWsjww /mnt/pmem_emul/DR-aXmjNy /mnt/pmem_emul/DR-ay2ThC /mnt/pmem_emul/DR-aY8vIE /mnt/pmem_emul/DR-aYAGTD /mnt/pmem_emul/DR-aYzV8V /mnt/pmem_emul/DR-Az4w7C /mnt/pmem_emul/DR-C11ssx /mnt/pmem_emul/DR-c1Ri7U /mnt/pmem_emul/DR-C2YKrv /mnt/pmem_emul/DR-c3DLZS /mnt/pmem_emul/DR-C3fsVR /mnt/pmem_emul/DR-c3lGtz /mnt/pmem_emul/DR-c8PoJt /mnt/pmem_emul/DR-cbSdTe /mnt/pmem_emul/DR-cDFNsQ /mnt/pmem_emul/DR-CdiAYk /mnt/pmem_emul/DR-CFCNKi /mnt/pmem_emul/DR-CFTCim /mnt/pmem_emul/DR-cgi9N2 /mnt/pmem_emul/DR-CGIVE5 /mnt/pmem_emul/DR-cHKNpf /mnt/pmem_emul/DR-CHmp59 /mnt/pmem_emul/DR-CHzqxp /mnt/pmem_emul/DR-cKBUOJ /mnt/pmem_emul/DR-CMJiyk /mnt/pmem_emul/DR-cmlFFg /mnt/pmem_emul/DR-CMQF3A /mnt/pmem_emul/DR-cOTzZE /mnt/pmem_emul/DR-CPC1J1 /mnt/pmem_emul/DR-CPqrzz /mnt/pmem_emul/DR-CpTYCj /mnt/pmem_emul/DR-cq0gbs /mnt/pmem_emul/DR-CQJgUN /mnt/pmem_emul/DR-cR1KdS /mnt/pmem_emul/DR-cR7bcr /mnt/pmem_emul/DR-crCeEV /mnt/pmem_emul/DR-cRoIHo /mnt/pmem_emul/DR-cRvL8k /mnt/pmem_emul/DR-cs4Pmj /mnt/pmem_emul/DR-cScg64 /mnt/pmem_emul/DR-CsEpH2 /mnt/pmem_emul/DR-CSHNqk /mnt/pmem_emul/DR-CUSnWa /mnt/pmem_emul/DR-CvN0JM /mnt/pmem_emul/DR-CW7gvk /mnt/pmem_emul/DR-cxrniV /mnt/pmem_emul/DR-e00wn4 /mnt/pmem_emul/DR-e1Hens /mnt/pmem_emul/DR-E2YAmA /mnt/pmem_emul/DR-ecw34x /mnt/pmem_emul/DR-ecX2bl /mnt/pmem_emul/DR-egg2DZ /mnt/pmem_emul/DR-egjxas /mnt/pmem_emul/DR-ehWNCv /mnt/pmem_emul/DR-eIkCc0 /mnt/pmem_emul/DR-eJ9JTw /mnt/pmem_emul/DR-EJN5b7 /mnt/pmem_emul/DR-EJocMi /mnt/pmem_emul/DR-ekgDBX /mnt/pmem_emul/DR-ELfYRf /mnt/pmem_emul/DR-ELlrLS /mnt/pmem_emul/DR-emqgPd /mnt/pmem_emul/DR-eMRwQS /mnt/pmem_emul/DR-epRFB8 /mnt/pmem_emul/DR-EQ3DPY /mnt/pmem_emul/DR-eQLS0n /mnt/pmem_emul/DR-EQr622 /mnt/pmem_emul/DR-ER6mUE /mnt/pmem_emul/DR-eRi3Z9 /mnt/pmem_emul/DR-ErPhLK /mnt/pmem_emul/DR-ErRq7N /mnt/pmem_emul/DR-eS4I6b /mnt/pmem_emul/DR-Et2wvE /mnt/pmem_emul/DR-ETAesl /mnt/pmem_emul/DR-EuhwCx /mnt/pmem_emul/DR-eVja6d /mnt/pmem_emul/DR-EVWLvW /mnt/pmem_emul/DR-ew67sJ /mnt/pmem_emul/DR-ewd2ik /mnt/pmem_emul/DR-eWnVm1 /mnt/pmem_emul/DR-exhaVK /mnt/pmem_emul/DR-EzqlvP /mnt/pmem_emul/DR-eZt7cV /mnt/pmem_emul/DR-g0c5dF /mnt/pmem_emul/DR-G0N1cn /mnt/pmem_emul/DR-G2nlr1 /mnt/pmem_emul/DR-g3U19D /mnt/pmem_emul/DR-g3YodK /mnt/pmem_emul/DR-G9BV4V /mnt/pmem_emul/DR-GCad2k /mnt/pmem_emul/DR-gD4rz3 /mnt/pmem_emul/DR-GDIMwN /mnt/pmem_emul/DR-gfFzl9 /mnt/pmem_emul/DR-gHGsnb /mnt/pmem_emul/DR-gHICCl /mnt/pmem_emul/DR-GKHwiZ /mnt/pmem_emul/DR-GlQl5W /mnt/pmem_emul/DR-Gng4Cr /mnt/pmem_emul/DR-GNUXkL /mnt/pmem_emul/DR-GNYPNm /mnt/pmem_emul/DR-GOPLhZ /mnt/pmem_emul/DR-GovIrI /mnt/pmem_emul/DR-GOxAgA /mnt/pmem_emul/DR-gOxH46 /mnt/pmem_emul/DR-gQ9mlg /mnt/pmem_emul/DR-GQCdne /mnt/pmem_emul/DR-gRbyYI /mnt/pmem_emul/DR-grFnjo /mnt/pmem_emul/DR-gsGeHR /mnt/pmem_emul/DR-GSOP5i /mnt/pmem_emul/DR-gsWamO /mnt/pmem_emul/DR-Gt3qnP /mnt/pmem_emul/DR-GVdcZp /mnt/pmem_emul/DR-gvgg0W /mnt/pmem_emul/DR-gvw4iW /mnt/pmem_emul/DR-gwn6aU /mnt/pmem_emul/DR-gwTydF /mnt/pmem_emul/DR-Gxaedp /mnt/pmem_emul/DR-GyTLvh /mnt/pmem_emul/DR-GzuieD /mnt/pmem_emul/DR-I0cCk0 /mnt/pmem_emul/DR-i3Cm6i /mnt/pmem_emul/DR-i9IAyY /mnt/pmem_emul/DR-iBGEQG /mnt/pmem_emul/DR-iboDVB /mnt/pmem_emul/DR-IeTH7U /mnt/pmem_emul/DR-IhRorO /mnt/pmem_emul/DR-iHZauq /mnt/pmem_emul/DR-ii5WfQ /mnt/pmem_emul/DR-imIBL3 /mnt/pmem_emul/DR-iNyQ3w /mnt/pmem_emul/DR-IqxGnI /mnt/pmem_emul/DR-iR3Xe7 /mnt/pmem_emul/DR-IrE6B6 /mnt/pmem_emul/DR-iSIgko /mnt/pmem_emul/DR-iVnZ79 /mnt/pmem_emul/DR-IWMfO1 /mnt/pmem_emul/DR-iWXOKu /mnt/pmem_emul/DR-iXOAIc /mnt/pmem_emul/DR-iZbK3S /mnt/pmem_emul/DR-IZPin4 /mnt/pmem_emul/DR-k0g49L /mnt/pmem_emul/DR-k2qxiJ /mnt/pmem_emul/DR-K4d9ya /mnt/pmem_emul/DR-k4vtSs /mnt/pmem_emul/DR-KAJnDl /mnt/pmem_emul/DR-kApfyD /mnt/pmem_emul/DR-kBCxqZ /mnt/pmem_emul/DR-KBtlo3 /mnt/pmem_emul/DR-KC3Qbj /mnt/pmem_emul/DR-KcnuVo /mnt/pmem_emul/DR-KcoksV /mnt/pmem_emul/DR-KF6P7S /mnt/pmem_emul/DR-kfJYGY /mnt/pmem_emul/DR-Kfw1RL /mnt/pmem_emul/DR-Kg64PU /mnt/pmem_emul/DR-kghojH /mnt/pmem_emul/DR-kGKWva /mnt/pmem_emul/DR-kGpuS6 /mnt/pmem_emul/DR-KHqgne /mnt/pmem_emul/DR-khTSoh /mnt/pmem_emul/DR-KjmEom /mnt/pmem_emul/DR-KJz8aE /mnt/pmem_emul/DR-KK6Lit /mnt/pmem_emul/DR-KKhOdN /mnt/pmem_emul/DR-KKhzge /mnt/pmem_emul/DR-KKVvsF /mnt/pmem_emul/DR-kkyikr /mnt/pmem_emul/DR-kLEbL6 /mnt/pmem_emul/DR-KlWL3V /mnt/pmem_emul/DR-kojUtm /mnt/pmem_emul/DR-KQEWmL /mnt/pmem_emul/DR-KqjYmf /mnt/pmem_emul/DR-KqKqlV /mnt/pmem_emul/DR-kqLPJ0 /mnt/pmem_emul/DR-kQOIq5 /mnt/pmem_emul/DR-KrcOwc /mnt/pmem_emul/DR-KrzyEf /mnt/pmem_emul/DR-kSjIdm /mnt/pmem_emul/DR-KsKavO /mnt/pmem_emul/DR-KultMz /mnt/pmem_emul/DR-KvM6GK /mnt/pmem_emul/DR-KY9i9y /mnt/pmem_emul/DR-KYz6qu /mnt/pmem_emul/DR-kZ7Il8 /mnt/pmem_emul/DR-KZjtpW /mnt/pmem_emul/DR-m0rHtt /mnt/pmem_emul/DR-M1WLi5 /mnt/pmem_emul/DR-M53pPH /mnt/pmem_emul/DR-M6tFUz /mnt/pmem_emul/DR-mAdgH2 /mnt/pmem_emul/DR-mbhA9y /mnt/pmem_emul/DR-MccIis /mnt/pmem_emul/DR-Mcercq /mnt/pmem_emul/DR-MDcqyR /mnt/pmem_emul/DR-mfa2JH /mnt/pmem_emul/DR-mfmMXo /mnt/pmem_emul/DR-mh7e0j /mnt/pmem_emul/DR-mhEAsN /mnt/pmem_emul/DR-mhsDTM /mnt/pmem_emul/DR-mIBk1O /mnt/pmem_emul/DR-MJN1af /mnt/pmem_emul/DR-mKUlyo /mnt/pmem_emul/DR-ml5tKz /mnt/pmem_emul/DR-MllG3F /mnt/pmem_emul/DR-mLxsl6 /mnt/pmem_emul/DR-Moeool /mnt/pmem_emul/DR-mOhVgM /mnt/pmem_emul/DR-Mp1IQa /mnt/pmem_emul/DR-mpD7SE /mnt/pmem_emul/DR-mPhl5b /mnt/pmem_emul/DR-MRhxl0 /mnt/pmem_emul/DR-msCAmk /mnt/pmem_emul/DR-MsGNE9 /mnt/pmem_emul/DR-MUePmO /mnt/pmem_emul/DR-MuRTVh /mnt/pmem_emul/DR-mUy3k1 /mnt/pmem_emul/DR-MWoKSu /mnt/pmem_emul/DR-mWwGY1 /mnt/pmem_emul/DR-mx5IvC /mnt/pmem_emul/DR-my5dwk /mnt/pmem_emul/DR-mY65aK /mnt/pmem_emul/DR-O0ing1 /mnt/pmem_emul/DR-O0Pj5V /mnt/pmem_emul/DR-O3gFVl /mnt/pmem_emul/DR-o44eZR /mnt/pmem_emul/DR-O5GeMi /mnt/pmem_emul/DR-o5MQzq /mnt/pmem_emul/DR-o7H9do /mnt/pmem_emul/DR-ob0wpf /mnt/pmem_emul/DR-obnLSp /mnt/pmem_emul/DR-Oc2YNZ /mnt/pmem_emul/DR-ocNgdw /mnt/pmem_emul/DR-ODKC6U /mnt/pmem_emul/DR-OdxglY /mnt/pmem_emul/DR-oeU13V /mnt/pmem_emul/DR-oFfUho /mnt/pmem_emul/DR-oGcjg2 /mnt/pmem_emul/DR-Oh7EY3 /mnt/pmem_emul/DR-OHdng6 /mnt/pmem_emul/DR-oJcE3X /mnt/pmem_emul/DR-OjDKor /mnt/pmem_emul/DR-OKB1Tv /mnt/pmem_emul/DR-oKVbEr /mnt/pmem_emul/DR-omPRex /mnt/pmem_emul/DR-ONBoXJ /mnt/pmem_emul/DR-OncZI7 /mnt/pmem_emul/DR-oNhWGM /mnt/pmem_emul/DR-OnoW4I /mnt/pmem_emul/DR-op7YMN /mnt/pmem_emul/DR-OpdKG2 /mnt/pmem_emul/DR-oQNE7o /mnt/pmem_emul/DR-oTCH2P /mnt/pmem_emul/DR-OtYwIm /mnt/pmem_emul/DR-ov0W3W /mnt/pmem_emul/DR-OVER-w3A3Iu /mnt/pmem_emul/DR-Ow2lbZ /mnt/pmem_emul/DR-Owa25p /mnt/pmem_emul/DR-oxJGaI /mnt/pmem_emul/DR-Oy5Xmo /mnt/pmem_emul/DR-OYOcJb /mnt/pmem_emul/DR-OYvHB7 /mnt/pmem_emul/DR-Q2caiH /mnt/pmem_emul/DR-Q37SsA /mnt/pmem_emul/DR-Q7ahdi /mnt/pmem_emul/DR-Q93DnB /mnt/pmem_emul/DR-Q9yExk /mnt/pmem_emul/DR-QApx94 /mnt/pmem_emul/DR-qB1Paq /mnt/pmem_emul/DR-qbEivL /mnt/pmem_emul/DR-QbyZxp /mnt/pmem_emul/DR-QF9szN /mnt/pmem_emul/DR-QfAfBh /mnt/pmem_emul/DR-qg8gRm /mnt/pmem_emul/DR-QHZTwl /mnt/pmem_emul/DR-qJqlyd /mnt/pmem_emul/DR-QJU8i7 /mnt/pmem_emul/DR-qKBngX /mnt/pmem_emul/DR-qkO2aM /mnt/pmem_emul/DR-qkTpxT /mnt/pmem_emul/DR-ql4Iyu /mnt/pmem_emul/DR-qLJFwr /mnt/pmem_emul/DR-QnR7rF /mnt/pmem_emul/DR-QPIqc7 /mnt/pmem_emul/DR-qqQzaR /mnt/pmem_emul/DR-qqT4gI /mnt/pmem_emul/DR-qUWyRY /mnt/pmem_emul/DR-QXQdci /mnt/pmem_emul/DR-S2QW17 /mnt/pmem_emul/DR-s2StBP /mnt/pmem_emul/DR-S2VRtn /mnt/pmem_emul/DR-s71qPP /mnt/pmem_emul/DR-s7RIjv /mnt/pmem_emul/DR-S8OTlg /mnt/pmem_emul/DR-s9d51V /mnt/pmem_emul/DR-s9vgB8 /mnt/pmem_emul/DR-s9zIF4 /mnt/pmem_emul/DR-SaWHb3 /mnt/pmem_emul/DR-sbj7YO /mnt/pmem_emul/DR-sCJKbW /mnt/pmem_emul/DR-sDjm9v /mnt/pmem_emul/DR-sDWKFb /mnt/pmem_emul/DR-SEh17e /mnt/pmem_emul/DR-seu8ja /mnt/pmem_emul/DR-SGSkBh /mnt/pmem_emul/DR-SH7wbr /mnt/pmem_emul/DR-sHFVlK /mnt/pmem_emul/DR-SkH1yJ /mnt/pmem_emul/DR-SKKvst /mnt/pmem_emul/DR-SkmXU7 /mnt/pmem_emul/DR-sKpXQ2 /mnt/pmem_emul/DR-sktX0b /mnt/pmem_emul/DR-Sl6ac4 /mnt/pmem_emul/DR-Sn6yME /mnt/pmem_emul/DR-sN7cIe /mnt/pmem_emul/DR-SoSXaL /mnt/pmem_emul/DR-SQbImQ /mnt/pmem_emul/DR-sqiPCE /mnt/pmem_emul/DR-SSOlv2 /mnt/pmem_emul/DR-sT3UQA /mnt/pmem_emul/DR-STqEl5 /mnt/pmem_emul/DR-svCm2X /mnt/pmem_emul/DR-svlnSQ /mnt/pmem_emul/DR-SWlQVu /mnt/pmem_emul/DR-sWrBZC /mnt/pmem_emul/DR-sXj4zl /mnt/pmem_emul/DR-syZFD5 /mnt/pmem_emul/DR-sz1dTG /mnt/pmem_emul/DR-SZ8i30 /mnt/pmem_emul/DR-U1MVx6 /mnt/pmem_emul/DR-u2UGx5 /mnt/pmem_emul/DR-U3lWyP /mnt/pmem_emul/DR-U5EgmL /mnt/pmem_emul/DR-U5r951 /mnt/pmem_emul/DR-U7yZCT /mnt/pmem_emul/DR-uARY48 /mnt/pmem_emul/DR-uC2VgT /mnt/pmem_emul/DR-uCktQZ /mnt/pmem_emul/DR-uDIKAN /mnt/pmem_emul/DR-uDlWg9 /mnt/pmem_emul/DR-uekAxE /mnt/pmem_emul/DR-uF6cOZ /mnt/pmem_emul/DR-UFx9D7 /mnt/pmem_emul/DR-uG2lbJ /mnt/pmem_emul/DR-uHsKe0 /mnt/pmem_emul/DR-UirGpc /mnt/pmem_emul/DR-uiyVDS /mnt/pmem_emul/DR-UjDzg0 /mnt/pmem_emul/DR-UjZWx1 /mnt/pmem_emul/DR-umIbmS /mnt/pmem_emul/DR-UMpn98 /mnt/pmem_emul/DR-UNURJG /mnt/pmem_emul/DR-UP9ZAK /mnt/pmem_emul/DR-uQbr1D /mnt/pmem_emul/DR-UQGgqa /mnt/pmem_emul/DR-Ura2rc /mnt/pmem_emul/DR-urZIya /mnt/pmem_emul/DR-uSD7Ym /mnt/pmem_emul/DR-uSEbKs /mnt/pmem_emul/DR-utBVKN /mnt/pmem_emul/DR-utNDIY /mnt/pmem_emul/DR-UUfmgh /mnt/pmem_emul/DR-uuFz5H /mnt/pmem_emul/DR-UUl2oK /mnt/pmem_emul/DR-uVblUy /mnt/pmem_emul/DR-UWfLo5 /mnt/pmem_emul/DR-uwiqIS /mnt/pmem_emul/DR-uWPbVA /mnt/pmem_emul/DR-Uybn0N /mnt/pmem_emul/DR-UzVSIE /mnt/pmem_emul/DR-w6n6nf /mnt/pmem_emul/DR-w777IS /mnt/pmem_emul/DR-w7KFZq /mnt/pmem_emul/DR-W8Fhsa /mnt/pmem_emul/DR-w8UfUR /mnt/pmem_emul/DR-W9uvCJ /mnt/pmem_emul/DR-WaRAiS /mnt/pmem_emul/DR-wB0v4N /mnt/pmem_emul/DR-wBmACx /mnt/pmem_emul/DR-WClp87 /mnt/pmem_emul/DR-WG9dA3 /mnt/pmem_emul/DR-wGizYj /mnt/pmem_emul/DR-wh0A9O /mnt/pmem_emul/DR-whiZ0n /mnt/pmem_emul/DR-WhxQld /mnt/pmem_emul/DR-Wj6t0F /mnt/pmem_emul/DR-wKaJax /mnt/pmem_emul/DR-WkASiw /mnt/pmem_emul/DR-wKEMDS /mnt/pmem_emul/DR-WKkBmf /mnt/pmem_emul/DR-WlrtaQ /mnt/pmem_emul/DR-wmvtPN /mnt/pmem_emul/DR-WmW4Jz /mnt/pmem_emul/DR-wNGaNs /mnt/pmem_emul/DR-WNOOsX /mnt/pmem_emul/DR-WpCI31 /mnt/pmem_emul/DR-WpEMsa /mnt/pmem_emul/DR-Wqxipv /mnt/pmem_emul/DR-WRsQHK /mnt/pmem_emul/DR-Ws7ZWz /mnt/pmem_emul/DR-WsBhgv /mnt/pmem_emul/DR-wSBrhC /mnt/pmem_emul/DR-wSvxGh /mnt/pmem_emul/DR-WT81pM /mnt/pmem_emul/DR-WT9rL4 /mnt/pmem_emul/DR-WU0Sqt /mnt/pmem_emul/DR-wuGDVU /mnt/pmem_emul/DR-wulvAp /mnt/pmem_emul/DR-WVMcfr /mnt/pmem_emul/DR-wY4xsV /mnt/pmem_emul/DR-WyqtQT /mnt/pmem_emul/DR-Wz0Y7v /mnt/pmem_emul/DR-WZmK77 /mnt/pmem_emul/DR-y0g39i /mnt/pmem_emul/DR-Y2Cw2z /mnt/pmem_emul/DR-y5clQR /mnt/pmem_emul/DR-y7rvC1 /mnt/pmem_emul/DR-y84lqa /mnt/pmem_emul/DR-yaCxer /mnt/pmem_emul/DR-YAO1c7 /mnt/pmem_emul/DR-yc1l2i /mnt/pmem_emul/DR-YCmSBd /mnt/pmem_emul/DR-Yg57a1 /mnt/pmem_emul/DR-YHZZa3 /mnt/pmem_emul/DR-YinnE6 /mnt/pmem_emul/DR-yIRTp1 /mnt/pmem_emul/DR-YJFCVu /mnt/pmem_emul/DR-YJNAeD /mnt/pmem_emul/DR-yMkOPr /mnt/pmem_emul/DR-yN0f4y /mnt/pmem_emul/DR-YnXR5S /mnt/pmem_emul/DR-yOIMax /mnt/pmem_emul/DR-yrFRQD /mnt/pmem_emul/DR-yT1h78 /mnt/pmem_emul/DR-YtJu6v /mnt/pmem_emul/DR-ytv3wv /mnt/pmem_emul/DR-yugtSr /mnt/pmem_emul/DR-yUlOqe /mnt/pmem_emul/DR-Yvb9hj /mnt/pmem_emul/DR-YVv4OY /mnt/pmem_emul/DR-YwcyGW /mnt/pmem_emul/DR-YxoXxb /mnt/pmem_emul/DR-yzTdYb /mnt/pmem_emul/DR-yzzSWA /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunB
++ setup=posix_boost
++ run_id=1
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunB
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunB
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunB/run1
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunB/run1': No such file or directory
++ date
+Fri Feb 23 23:41:57 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunB/run1
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214417): _hub_init2: START
+NVP_MSG (214417): init_logs: Initializing append and op log
+NVP_MSG (214417): _nvp_init2: dr fd = 5, start addr = 0x7F9A6BE00000
+NVP_MSG (214417): _nvp_init2: dr fd = 6, start addr = 0x7F9A61C00000
+NVP_MSG (214417): _nvp_init2: dr fd = 7, start addr = 0x7F9A57A00000
+NVP_MSG (214417): _nvp_init2: dr fd = 8, start addr = 0x7F9A4D800000
+NVP_MSG (214417): _nvp_init2: dr fd = 9, start addr = 0x7F9A43600000
+NVP_MSG (214417): _nvp_init2: dr fd = 10, start addr = 0x7F9A39400000
+NVP_MSG (214417): _nvp_init2: dr fd = 11, start addr = 0x7F9A2F200000
+NVP_MSG (214417): _nvp_init2: dr fd = 12, start addr = 0x7F9A25000000
+NVP_MSG (214417): _nvp_init2: dr fd = 13, start addr = 0x7F9A1AE00000
+NVP_MSG (214417): _nvp_init2: dr fd = 14, start addr = 0x7F9A10C00000
+NVP_MSG (214417): _nvp_init2: dr fd = 15, start addr = 0x7F9A0E200000
+NVP_MSG (214417): _nvp_init2: Large regions set
+NVP_MSG (214417): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214417): _nvp_init2: Tbl mmaps set
+NVP_MSG (214417): _nvp_init2: Global locks created
+NVP_MSG (214417): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214417): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:41:58 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214417): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214417): Does not support mmap, use posix instead.
+NVP_MSG (214417): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-007443 is opened O_WRONLY.
+NVP_MSG (214417): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 4749739, D = 0, I = 0, U = 250261, S = 0
+LevelDB/WiscKey splitup: P = 250261, G = 5000000, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 57.140 seconds
+Thread 0: Total data: YCSB = 4.400803 GB, HyperLevelDB = 4.614764 GB
+Thread 0: Ops/s = 85.454 Kops/s
+Thread 0: YCSB throughput = 78.866742 MB/s
+Thread 0: HyperLevelDB throughput = 82.701147 MB/s
+memtable_read: timing = 2274200578 nanoseconds
+imm_memtable_read: timing = 28643170 nanoseconds
+file_read: timing = 13522405398 nanoseconds
+file_open_during_read: timing = 24043290700 nanoseconds
+file_close_during_read: timing = 25974615225 nanoseconds
+get_files: timing = 1680061147 nanoseconds
+after_get_files: timing = 49186611243 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 39854794707 nanoseconds
+read_block: timing = 65580731444 nanoseconds
+insert_block_cache: timing = 1143626401 nanoseconds
+new_iterator: timing = 275510818 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       144
+  1        1        4         1      137       224
+  2       10      102        23     5104      5038
+  3       68      988        25     6281      6263
+  4      274     4319         9     2229      2229
+
+ycsb         :      11.758 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 2274200578 nanoseconds
+imm_memtable_read: timing = 28643170 nanoseconds
+file_read: timing = 13522410937 nanoseconds
+file_open_during_read: timing = 24043315134 nanoseconds
+file_close_during_read: timing = 25974644890 nanoseconds
+get_files: timing = 1680061147 nanoseconds
+after_get_files: timing = 49186611243 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 39854794707 nanoseconds
+read_block: timing = 65580793434 nanoseconds
+insert_block_cache: timing = 1143626492 nanoseconds
+new_iterator: timing = 275511006 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       144
+  1        1        4         1      137       224
+  2       10      102        23     5104      5038
+  3       68      988        25     6281      6263
+  4      274     4319         9     2229      2229
+
+printdb      :      16.000 micros/op;
+NVP_MSG (214417): exit handler
+NVP_MSG (214417): Exit: print stats
+NVP_MSG (214417): ====================== NVP IO stats: ======================
+NVP_MSG (214417): open 3491021, close 3490395, async close 0
+NVP_MSG (214417): mmap 512, unlink 1241, stat 1241
+NVP_MSG (214417): dr mmap 126, dr mmap critical path 0
+NVP_MSG (214417): fsync 1723, appendfsync: count 1320 size 0 average 0
+NVP_MSG (214417): READ: count 6548638, size 28610687276, average 4368
+NVP_MSG (214417): WRITE: count 3622578, size 14966577990, average 4131
+NVP_MSG (214417): memcpy READ: count 6414822, size 27955860798, average 4358
+NVP_MSG (214417): anon READ: count 0, size 0, average 0
+NVP_MSG (214417): memcpy WRITE: count 3619369, size 14973647130, average 4137
+NVP_MSG (214417): anon WRITE: count 3619237, size 14973555945, average 4137
+NVP_MSG (214417): posix READ: count 116703, size 574065124, average 4919
+NVP_MSG (214417): posix WRITE: count 3382, size 359592, average 106
+NVP_MSG (214417): write extends 3619501, total 3619732
+NVP_MSG (214417): MFENCE: count 0
+NVP_MSG (214417): CLFLUSHOPT: count 0
+NVP_MSG (214417): NON_TEMPORAL_WRITES: count 3575392, size 14865194742, average 4157
+NVP_MSG (214417): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214417): TOTAL SYSCALLS (open + close + read + write + fsync): count 7101501
+NVP_MSG (214417): calling cleanup
+NVP_MSG (214417): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:42:58 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-0dtI9G /mnt/pmem_emul/DR-0HBQ2B /mnt/pmem_emul/DR-0KlW3x /mnt/pmem_emul/DR-0SJJxi /mnt/pmem_emul/DR-2mrVrn /mnt/pmem_emul/DR-3syYeI /mnt/pmem_emul/DR-4kgBxV /mnt/pmem_emul/DR-57y61I /mnt/pmem_emul/DR-5QtpXF /mnt/pmem_emul/DR-5sPrpE /mnt/pmem_emul/DR-6xZcHU /mnt/pmem_emul/DR-7dnQ9Q /mnt/pmem_emul/DR-7taw7z /mnt/pmem_emul/DR-8l4s6I /mnt/pmem_emul/DR-8lxmsE /mnt/pmem_emul/DR-9N804W /mnt/pmem_emul/DR-9oYO15 /mnt/pmem_emul/DR-aBdHaz /mnt/pmem_emul/DR-AgwJqk /mnt/pmem_emul/DR-ayFRny /mnt/pmem_emul/DR-bBwaIS /mnt/pmem_emul/DR-Bc6oJI /mnt/pmem_emul/DR-BcN8ar /mnt/pmem_emul/DR-BW5vnj /mnt/pmem_emul/DR-cfK8x2 /mnt/pmem_emul/DR-cfNs2N /mnt/pmem_emul/DR-Cqxrm0 /mnt/pmem_emul/DR-dnhxWq /mnt/pmem_emul/DR-Dy5He5 /mnt/pmem_emul/DR-ED7MLS /mnt/pmem_emul/DR-eLOb0a /mnt/pmem_emul/DR-EPeouY /mnt/pmem_emul/DR-eVsIl8 /mnt/pmem_emul/DR-EZeqaG /mnt/pmem_emul/DR-FHzNKQ /mnt/pmem_emul/DR-fnaexA /mnt/pmem_emul/DR-frHBaC /mnt/pmem_emul/DR-g1vVUa /mnt/pmem_emul/DR-gF1wZP /mnt/pmem_emul/DR-GlQsaE /mnt/pmem_emul/DR-GpoJRW /mnt/pmem_emul/DR-GU6uTK /mnt/pmem_emul/DR-H8z2w3 /mnt/pmem_emul/DR-h9MEJJ /mnt/pmem_emul/DR-hEvVA7 /mnt/pmem_emul/DR-HpqrGy /mnt/pmem_emul/DR-hs81Xy /mnt/pmem_emul/DR-hUYu4Q /mnt/pmem_emul/DR-i4Rez1 /mnt/pmem_emul/DR-i6aS1E /mnt/pmem_emul/DR-iTg2Ii /mnt/pmem_emul/DR-IvlXvW /mnt/pmem_emul/DR-Iz18nE /mnt/pmem_emul/DR-Je037J /mnt/pmem_emul/DR-JJPtba /mnt/pmem_emul/DR-JMyjlG /mnt/pmem_emul/DR-jUC0n0 /mnt/pmem_emul/DR-kG8oUv /mnt/pmem_emul/DR-kI5m4s /mnt/pmem_emul/DR-kiXq5B /mnt/pmem_emul/DR-klCfdT /mnt/pmem_emul/DR-kyexPK /mnt/pmem_emul/DR-L0CSUW /mnt/pmem_emul/DR-L0QZfy /mnt/pmem_emul/DR-l3WFFe /mnt/pmem_emul/DR-LAQ5Ey /mnt/pmem_emul/DR-lf19Mw /mnt/pmem_emul/DR-Lhc4f2 /mnt/pmem_emul/DR-Lr4yJe /mnt/pmem_emul/DR-LybfSF /mnt/pmem_emul/DR-MaZece /mnt/pmem_emul/DR-MBDidN /mnt/pmem_emul/DR-MCu8Uc /mnt/pmem_emul/DR-mGnRvJ /mnt/pmem_emul/DR-mKTyIU /mnt/pmem_emul/DR-mQEFMX /mnt/pmem_emul/DR-NYGhai /mnt/pmem_emul/DR-o1DB96 /mnt/pmem_emul/DR-oi8Kt9 /mnt/pmem_emul/DR-Oo6cOj /mnt/pmem_emul/DR-oo9tcW /mnt/pmem_emul/DR-OVER-YSsJ68 /mnt/pmem_emul/DR-pA9hOS /mnt/pmem_emul/DR-PFsUVq /mnt/pmem_emul/DR-plbvId /mnt/pmem_emul/DR-pQMjFY /mnt/pmem_emul/DR-Qbv5An /mnt/pmem_emul/DR-qDqDrA /mnt/pmem_emul/DR-QEbiCk /mnt/pmem_emul/DR-QGB9KU /mnt/pmem_emul/DR-QpW8UG /mnt/pmem_emul/DR-QqS9Vz /mnt/pmem_emul/DR-qYDfUj /mnt/pmem_emul/DR-RA99zg /mnt/pmem_emul/DR-raWAT5 /mnt/pmem_emul/DR-rDonWX /mnt/pmem_emul/DR-rQRax4 /mnt/pmem_emul/DR-RT7uYK /mnt/pmem_emul/DR-s7FCUe /mnt/pmem_emul/DR-SJ3uvm /mnt/pmem_emul/DR-SMgLwN /mnt/pmem_emul/DR-sNIxNX /mnt/pmem_emul/DR-sr3ZTw /mnt/pmem_emul/DR-TpCflt /mnt/pmem_emul/DR-u7qhfL /mnt/pmem_emul/DR-UEDX4s /mnt/pmem_emul/DR-uFwznf /mnt/pmem_emul/DR-UMeqBb /mnt/pmem_emul/DR-V2KIYx /mnt/pmem_emul/DR-v94YPx /mnt/pmem_emul/DR-VfWx9q /mnt/pmem_emul/DR-vMU0ru /mnt/pmem_emul/DR-Vs3J0j /mnt/pmem_emul/DR-vzrw3x /mnt/pmem_emul/DR-wJ2O0n /mnt/pmem_emul/DR-X1GSyS /mnt/pmem_emul/DR-x69WLl /mnt/pmem_emul/DR-XCbiBk /mnt/pmem_emul/DR-xDgZNg /mnt/pmem_emul/DR-XK1iZe /mnt/pmem_emul/DR-Xt6lX3 /mnt/pmem_emul/DR-XVM9Qb /mnt/pmem_emul/DR-yRQxkx /mnt/pmem_emul/DR-ZgabPI /mnt/pmem_emul/DR-ZnDGzr /mnt/pmem_emul/DR-ztafHH /mnt/pmem_emul/DR-zzY1yp /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunC
++ setup=posix_boost
++ run_id=1
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunC
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunC
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunC/run1
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunC/run1': No such file or directory
++ date
+Fri Feb 23 23:43:15 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunC/run1
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214443): _hub_init2: START
+NVP_MSG (214443): init_logs: Initializing append and op log
+NVP_MSG (214443): _nvp_init2: dr fd = 5, start addr = 0x7FAEEAE00000
+NVP_MSG (214443): _nvp_init2: dr fd = 6, start addr = 0x7FAEE0C00000
+NVP_MSG (214443): _nvp_init2: dr fd = 7, start addr = 0x7FAED6A00000
+NVP_MSG (214443): _nvp_init2: dr fd = 8, start addr = 0x7FAECC800000
+NVP_MSG (214443): _nvp_init2: dr fd = 9, start addr = 0x7FAEC2600000
+NVP_MSG (214443): _nvp_init2: dr fd = 10, start addr = 0x7FAEB8400000
+NVP_MSG (214443): _nvp_init2: dr fd = 11, start addr = 0x7FAEAE200000
+NVP_MSG (214443): _nvp_init2: dr fd = 12, start addr = 0x7FAEA4000000
+NVP_MSG (214443): _nvp_init2: dr fd = 13, start addr = 0x7FAE99E00000
+NVP_MSG (214443): _nvp_init2: dr fd = 14, start addr = 0x7FAE8FC00000
+NVP_MSG (214443): _nvp_init2: dr fd = 15, start addr = 0x7FAE8D200000
+NVP_MSG (214443): _nvp_init2: Large regions set
+NVP_MSG (214443): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214443): _nvp_init2: Tbl mmaps set
+NVP_MSG (214443): _nvp_init2: Global locks created
+NVP_MSG (214443): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214443): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:43:16 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214443): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214443): Does not support mmap, use posix instead.
+NVP_MSG (214443): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-008685 is opened O_WRONLY.
+NVP_MSG (214443): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 5000000, D = 0, I = 0, U = 0, S = 0
+LevelDB/WiscKey splitup: P = 0, G = 5000000, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 46.510 seconds
+Thread 0: Total data: YCSB = 4.969936 GB, HyperLevelDB = 4.969936 GB
+Thread 0: Ops/s = 104.985 Kops/s
+Thread 0: YCSB throughput = 109.422748 MB/s
+Thread 0: HyperLevelDB throughput = 109.422748 MB/s
+memtable_read: timing = 127280015 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 12502894650 nanoseconds
+file_open_during_read: timing = 14283732457 nanoseconds
+file_close_during_read: timing = 17052252226 nanoseconds
+get_files: timing = 1381284599 nanoseconds
+after_get_files: timing = 42799749746 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 36558353210 nanoseconds
+read_block: timing = 45216878074 nanoseconds
+insert_block_cache: timing = 1092253085 nanoseconds
+new_iterator: timing = 287021961 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0         3
+  1        0        0         0        7         5
+  2        0        0         0       91        90
+  3        0        0         4     1219      1202
+  4      338     5262        25     6496      6361
+
+ycsb         :       9.623 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 127280015 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 12502894650 nanoseconds
+file_open_during_read: timing = 14283732457 nanoseconds
+file_close_during_read: timing = 17052252226 nanoseconds
+get_files: timing = 1381284599 nanoseconds
+after_get_files: timing = 42799749746 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 36558353210 nanoseconds
+read_block: timing = 45216878074 nanoseconds
+insert_block_cache: timing = 1092253085 nanoseconds
+new_iterator: timing = 287021961 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0         3
+  1        0        0         0        7         5
+  2        0        0         0       91        90
+  3        0        0         4     1219      1202
+  4      338     5262        25     6496      6361
+
+printdb      :      14.000 micros/op;
+NVP_MSG (214443): exit handler
+NVP_MSG (214443): Exit: print stats
+NVP_MSG (214443): ====================== NVP IO stats: ======================
+NVP_MSG (214443): open 2380672, close 2381660, async close 0
+NVP_MSG (214443): mmap 708, unlink 541, stat 541
+NVP_MSG (214443): dr mmap 63, dr mmap critical path 0
+NVP_MSG (214443): fsync 711, appendfsync: count 555 size 0 average 0
+NVP_MSG (214443): READ: count 5716075, size 25024020074, average 4377
+NVP_MSG (214443): WRITE: count 1825358, size 8034106627, average 4401
+NVP_MSG (214443): memcpy READ: count 5629258, size 24571684294, average 4364
+NVP_MSG (214443): anon READ: count 0, size 0, average 0
+NVP_MSG (214443): memcpy WRITE: count 1823810, size 8033933010, average 4405
+NVP_MSG (214443): anon WRITE: count 1823810, size 8033933010, average 4405
+NVP_MSG (214443): posix READ: count 76483, size 399419919, average 5222
+NVP_MSG (214443): posix WRITE: count 1548, size 173617, average 112
+NVP_MSG (214443): write extends 1823810, total 1823810
+NVP_MSG (214443): MFENCE: count 0
+NVP_MSG (214443): CLFLUSHOPT: count 0
+NVP_MSG (214443): NON_TEMPORAL_WRITES: count 1823810, size 8033933010, average 4405
+NVP_MSG (214443): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214443): TOTAL SYSCALLS (open + close + read + write + fsync): count 4840363
+NVP_MSG (214443): calling cleanup
+NVP_MSG (214443): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:44:04 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-0cgOdM /mnt/pmem_emul/DR-0YhUGc /mnt/pmem_emul/DR-1fG8cB /mnt/pmem_emul/DR-226wvK /mnt/pmem_emul/DR-23ydFq /mnt/pmem_emul/DR-2dwZrG /mnt/pmem_emul/DR-3AtBUq /mnt/pmem_emul/DR-4HAOO9 /mnt/pmem_emul/DR-627QxZ /mnt/pmem_emul/DR-6RofRs /mnt/pmem_emul/DR-7bqsCx /mnt/pmem_emul/DR-946dgP /mnt/pmem_emul/DR-AtU8dO /mnt/pmem_emul/DR-CdiYDR /mnt/pmem_emul/DR-crFEWJ /mnt/pmem_emul/DR-CTIZEJ /mnt/pmem_emul/DR-dR9FBQ /mnt/pmem_emul/DR-emiskI /mnt/pmem_emul/DR-Es4twi /mnt/pmem_emul/DR-fa9uJ7 /mnt/pmem_emul/DR-fjXdAc /mnt/pmem_emul/DR-G9VAIc /mnt/pmem_emul/DR-gMvbaF /mnt/pmem_emul/DR-HMZErU /mnt/pmem_emul/DR-IP4qBj /mnt/pmem_emul/DR-J5KEUH /mnt/pmem_emul/DR-jetGSj /mnt/pmem_emul/DR-jFHovt /mnt/pmem_emul/DR-Jirtur /mnt/pmem_emul/DR-JliCtX /mnt/pmem_emul/DR-Jw2lvL /mnt/pmem_emul/DR-kFiZX1 /mnt/pmem_emul/DR-M1fSrT /mnt/pmem_emul/DR-m4vOaT /mnt/pmem_emul/DR-m80zm0 /mnt/pmem_emul/DR-mo8N0A /mnt/pmem_emul/DR-n8OcQ1 /mnt/pmem_emul/DR-n8RmnZ /mnt/pmem_emul/DR-ncSmCM /mnt/pmem_emul/DR-NCTDtW /mnt/pmem_emul/DR-NohZZz /mnt/pmem_emul/DR-oPyWTg /mnt/pmem_emul/DR-OVER-6qVbUv /mnt/pmem_emul/DR-P45Lyi /mnt/pmem_emul/DR-pCcs2R /mnt/pmem_emul/DR-Qp0oig /mnt/pmem_emul/DR-qXkJpC /mnt/pmem_emul/DR-rZ8Tna /mnt/pmem_emul/DR-s6wrGH /mnt/pmem_emul/DR-uMsIdm /mnt/pmem_emul/DR-uxOkgq /mnt/pmem_emul/DR-V4kibK /mnt/pmem_emul/DR-Vjqf43 /mnt/pmem_emul/DR-VKcYMI /mnt/pmem_emul/DR-vXTP3L /mnt/pmem_emul/DR-xbADWa /mnt/pmem_emul/DR-xI84QM /mnt/pmem_emul/DR-xjTYJ1 /mnt/pmem_emul/DR-Xo0I0c /mnt/pmem_emul/DR-YjjZ9i /mnt/pmem_emul/DR-yKIa5J /mnt/pmem_emul/DR-YVNAGd /mnt/pmem_emul/DR-zwchhP /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunF
++ setup=posix_boost
++ run_id=1
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunF
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunF
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunF/run1
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunF/run1': No such file or directory
++ date
+Fri Feb 23 23:44:21 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunF/run1
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214468): _hub_init2: START
+NVP_MSG (214468): init_logs: Initializing append and op log
+NVP_MSG (214468): _nvp_init2: dr fd = 5, start addr = 0x7F9A62000000
+NVP_MSG (214468): _nvp_init2: dr fd = 6, start addr = 0x7F9A57E00000
+NVP_MSG (214468): _nvp_init2: dr fd = 7, start addr = 0x7F9A4DC00000
+NVP_MSG (214468): _nvp_init2: dr fd = 8, start addr = 0x7F9A43A00000
+NVP_MSG (214468): _nvp_init2: dr fd = 9, start addr = 0x7F9A39800000
+NVP_MSG (214468): _nvp_init2: dr fd = 10, start addr = 0x7F9A2F600000
+NVP_MSG (214468): _nvp_init2: dr fd = 11, start addr = 0x7F9A25400000
+NVP_MSG (214468): _nvp_init2: dr fd = 12, start addr = 0x7F9A1B200000
+NVP_MSG (214468): _nvp_init2: dr fd = 13, start addr = 0x7F9A11000000
+NVP_MSG (214468): _nvp_init2: dr fd = 14, start addr = 0x7F9A06E00000
+NVP_MSG (214468): _nvp_init2: dr fd = 15, start addr = 0x7F9A04400000
+NVP_MSG (214468): _nvp_init2: Large regions set
+NVP_MSG (214468): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214468): _nvp_init2: Tbl mmaps set
+NVP_MSG (214468): _nvp_init2: Global locks created
+NVP_MSG (214468): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214468): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:44:22 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214468): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214468): Does not support mmap, use posix instead.
+NVP_MSG (214468): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-009205 is opened O_WRONLY.
+NVP_MSG (214468): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 7500020 operations.
+Thread 0: Replaying trace ...
+
+... finished 7500000 ops
+
+Thread 0: Done replaying 7500020 operations.
+YCSB splitup: R = 5000000, D = 0, I = 0, U = 2500020, S = 0
+LevelDB/WiscKey splitup: P = 2500020, G = 7500020, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 106.460 seconds
+Thread 0: Total data: YCSB = 4.163892 GB, HyperLevelDB = 6.301294 GB
+Thread 0: Ops/s = 68.798 Kops/s
+Thread 0: YCSB throughput = 40.050892 MB/s
+Thread 0: HyperLevelDB throughput = 60.609754 MB/s
+memtable_read: timing = 2346135850 nanoseconds
+imm_memtable_read: timing = 75806829 nanoseconds
+file_read: timing = 14042272078 nanoseconds
+file_open_during_read: timing = 39986091682 nanoseconds
+file_close_during_read: timing = 44113956672 nanoseconds
+get_files: timing = 1538797313 nanoseconds
+after_get_files: timing = 52992398768 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 41275249159 nanoseconds
+read_block: timing = 100134684446 nanoseconds
+insert_block_cache: timing = 1065616053 nanoseconds
+new_iterator: timing = 300671440 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        3       12         5        0      2490
+  1        3       27        15     3230      2493
+  2       16      189        56    10277     10024
+  3       76     1045        29     5766      5539
+  4      338     5262         0        0         0
+
+ycsb         :      14.538 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 2346135850 nanoseconds
+imm_memtable_read: timing = 75806829 nanoseconds
+file_read: timing = 14042282246 nanoseconds
+file_open_during_read: timing = 39986117811 nanoseconds
+file_close_during_read: timing = 44113994661 nanoseconds
+get_files: timing = 1538797313 nanoseconds
+after_get_files: timing = 52992398768 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 41275249159 nanoseconds
+read_block: timing = 100134777245 nanoseconds
+insert_block_cache: timing = 1065616171 nanoseconds
+new_iterator: timing = 300671698 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        3       12         5        0      2490
+  1        3       27        15     3230      2493
+  2       16      189        56    10277     10024
+  3       76     1045        29     5766      5539
+  4      338     5262         0        0         0
+
+printdb      :      12.000 micros/op;
+NVP_MSG (214468): exit handler
+NVP_MSG (214468): Exit: print stats
+NVP_MSG (214468): ====================== NVP IO stats: ======================
+NVP_MSG (214468): open 6464566, close 6462473, async close 0
+NVP_MSG (214468): mmap 482, unlink 2970, stat 2970
+NVP_MSG (214468): dr mmap 183, dr mmap critical path 0
+NVP_MSG (214468): fsync 4406, appendfsync: count 3186 size 0 average 0
+NVP_MSG (214468): READ: count 7472508, size 32064157838, average 4290
+NVP_MSG (214468): WRITE: count 7636026, size 24155421406, average 3163
+NVP_MSG (214468): memcpy READ: count 7327503, size 31374417452, average 4281
+NVP_MSG (214468): anon READ: count 0, size 0, average 0
+NVP_MSG (214468): memcpy WRITE: count 7629778, size 24255876095, average 3179
+NVP_MSG (214468): anon WRITE: count 7628542, size 24254836876, average 3179
+NVP_MSG (214468): posix READ: count 131114, size 633285686, average 4830
+NVP_MSG (214468): posix WRITE: count 8157, size 757851, average 92
+NVP_MSG (214468): write extends 7631283, total 7633479
+NVP_MSG (214468): MFENCE: count 0
+NVP_MSG (214468): CLFLUSHOPT: count 0
+NVP_MSG (214468): NON_TEMPORAL_WRITES: count 7139191, size 23033322327, average 3226
+NVP_MSG (214468): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214468): TOTAL SYSCALLS (open + close + read + write + fsync): count 13066310
+NVP_MSG (214468): calling cleanup
+NVP_MSG (214468): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:46:13 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-1DKkti /mnt/pmem_emul/DR-1eFTIC /mnt/pmem_emul/DR-1ML26f /mnt/pmem_emul/DR-1P7glL /mnt/pmem_emul/DR-3D2yTV /mnt/pmem_emul/DR-3HHMFQ /mnt/pmem_emul/DR-3MrllZ /mnt/pmem_emul/DR-3v48b4 /mnt/pmem_emul/DR-58nBO0 /mnt/pmem_emul/DR-5ARBgt /mnt/pmem_emul/DR-5BBzoC /mnt/pmem_emul/DR-5Df52W /mnt/pmem_emul/DR-5iP4Cs /mnt/pmem_emul/DR-5JL3Lh /mnt/pmem_emul/DR-5L6mzo /mnt/pmem_emul/DR-5PjTa4 /mnt/pmem_emul/DR-5SHiNa /mnt/pmem_emul/DR-5sXpWZ /mnt/pmem_emul/DR-5uB1BG /mnt/pmem_emul/DR-5ypKX0 /mnt/pmem_emul/DR-74nM0F /mnt/pmem_emul/DR-7AlyIj /mnt/pmem_emul/DR-7G7YFC /mnt/pmem_emul/DR-7mDKIM /mnt/pmem_emul/DR-7mEZyd /mnt/pmem_emul/DR-7Otbzt /mnt/pmem_emul/DR-7qdVCt /mnt/pmem_emul/DR-7v1D0p /mnt/pmem_emul/DR-7XuVap /mnt/pmem_emul/DR-7za361 /mnt/pmem_emul/DR-95aJji /mnt/pmem_emul/DR-97gPdM /mnt/pmem_emul/DR-9ESbcO /mnt/pmem_emul/DR-9grp9W /mnt/pmem_emul/DR-9iM4AO /mnt/pmem_emul/DR-9kpw3L /mnt/pmem_emul/DR-9nVA7h /mnt/pmem_emul/DR-9rqPKV /mnt/pmem_emul/DR-9sc3hN /mnt/pmem_emul/DR-9yUVyh /mnt/pmem_emul/DR-BAXO4Y /mnt/pmem_emul/DR-bG8SQi /mnt/pmem_emul/DR-BNgNib /mnt/pmem_emul/DR-BUaQlN /mnt/pmem_emul/DR-BXfk8l /mnt/pmem_emul/DR-bzwdiM /mnt/pmem_emul/DR-d24nUH /mnt/pmem_emul/DR-d3R3M1 /mnt/pmem_emul/DR-d6XGpW /mnt/pmem_emul/DR-d8GK4M /mnt/pmem_emul/DR-DEx2bT /mnt/pmem_emul/DR-dGFsOZ /mnt/pmem_emul/DR-dkM0Xn /mnt/pmem_emul/DR-dWnQ1e /mnt/pmem_emul/DR-dytkG3 /mnt/pmem_emul/DR-dYzVqh /mnt/pmem_emul/DR-Dzzc44 /mnt/pmem_emul/DR-f37mVt /mnt/pmem_emul/DR-fDejRj /mnt/pmem_emul/DR-FJk3ek /mnt/pmem_emul/DR-FlWQo7 /mnt/pmem_emul/DR-fM9He0 /mnt/pmem_emul/DR-FMeduE /mnt/pmem_emul/DR-FmUycQ /mnt/pmem_emul/DR-FN3Rke /mnt/pmem_emul/DR-FOGLRr /mnt/pmem_emul/DR-FpR7Fr /mnt/pmem_emul/DR-FrGFmQ /mnt/pmem_emul/DR-fsv6nY /mnt/pmem_emul/DR-ftFlLy /mnt/pmem_emul/DR-fUbhYt /mnt/pmem_emul/DR-h2tvVm /mnt/pmem_emul/DR-h7Crey /mnt/pmem_emul/DR-H8qBLF /mnt/pmem_emul/DR-HAa8lp /mnt/pmem_emul/DR-HFuF0e /mnt/pmem_emul/DR-HGw1Fo /mnt/pmem_emul/DR-Hh38Ib /mnt/pmem_emul/DR-hig0Oh /mnt/pmem_emul/DR-hKjztC /mnt/pmem_emul/DR-hLZJnx /mnt/pmem_emul/DR-hmHkZb /mnt/pmem_emul/DR-Hn0NG4 /mnt/pmem_emul/DR-hzEJF6 /mnt/pmem_emul/DR-HZNxNl /mnt/pmem_emul/DR-j2heeR /mnt/pmem_emul/DR-j7q7Iv /mnt/pmem_emul/DR-JbAOxM /mnt/pmem_emul/DR-Jcc0m2 /mnt/pmem_emul/DR-Jh5dnc /mnt/pmem_emul/DR-Jiis3c /mnt/pmem_emul/DR-jm9cHO /mnt/pmem_emul/DR-JPkKCN /mnt/pmem_emul/DR-JWalbU /mnt/pmem_emul/DR-jYjjKI /mnt/pmem_emul/DR-JYw5QI /mnt/pmem_emul/DR-l9RRXv /mnt/pmem_emul/DR-lCOVA6 /mnt/pmem_emul/DR-ld5jZS /mnt/pmem_emul/DR-legnyz /mnt/pmem_emul/DR-LekPyL /mnt/pmem_emul/DR-LGPJoA /mnt/pmem_emul/DR-LISebr /mnt/pmem_emul/DR-Lmcy2t /mnt/pmem_emul/DR-logmFB /mnt/pmem_emul/DR-LqxMX8 /mnt/pmem_emul/DR-lugdMp /mnt/pmem_emul/DR-lUnY2l /mnt/pmem_emul/DR-LY3PtT /mnt/pmem_emul/DR-LZMUgG /mnt/pmem_emul/DR-N3Ei8P /mnt/pmem_emul/DR-N7bscg /mnt/pmem_emul/DR-Ndbuc3 /mnt/pmem_emul/DR-NITdM8 /mnt/pmem_emul/DR-nJburq /mnt/pmem_emul/DR-NOngMO /mnt/pmem_emul/DR-nqteoO /mnt/pmem_emul/DR-NRc6a7 /mnt/pmem_emul/DR-nSjSFL /mnt/pmem_emul/DR-NtAjcS /mnt/pmem_emul/DR-ntCX2U /mnt/pmem_emul/DR-OVER-FBvTxn /mnt/pmem_emul/DR-P5vAnh /mnt/pmem_emul/DR-p6kSjm /mnt/pmem_emul/DR-Pa7nq3 /mnt/pmem_emul/DR-pciXOf /mnt/pmem_emul/DR-PGegAR /mnt/pmem_emul/DR-pPjmd5 /mnt/pmem_emul/DR-ppVvzr /mnt/pmem_emul/DR-pQPHSt /mnt/pmem_emul/DR-PQV6QX /mnt/pmem_emul/DR-pShXUo /mnt/pmem_emul/DR-PwFFFh /mnt/pmem_emul/DR-pWXdn1 /mnt/pmem_emul/DR-PXPGul /mnt/pmem_emul/DR-r7qeZr /mnt/pmem_emul/DR-RApzEU /mnt/pmem_emul/DR-rdSrai /mnt/pmem_emul/DR-RGw3Rw /mnt/pmem_emul/DR-rSSFS7 /mnt/pmem_emul/DR-rSuFoI /mnt/pmem_emul/DR-rvjBsf /mnt/pmem_emul/DR-TeFMYI /mnt/pmem_emul/DR-TjZ9kJ /mnt/pmem_emul/DR-tLMtDA /mnt/pmem_emul/DR-tPy1sG /mnt/pmem_emul/DR-tQZaci /mnt/pmem_emul/DR-tR38Ki /mnt/pmem_emul/DR-tRcIhv /mnt/pmem_emul/DR-ttbm9c /mnt/pmem_emul/DR-tUGRaj /mnt/pmem_emul/DR-tWTbzq /mnt/pmem_emul/DR-TxZmuT /mnt/pmem_emul/DR-TylbnO /mnt/pmem_emul/DR-V6MjUT /mnt/pmem_emul/DR-V9oenN /mnt/pmem_emul/DR-vch2Rv /mnt/pmem_emul/DR-vhRAHX /mnt/pmem_emul/DR-Vm4rvs /mnt/pmem_emul/DR-Vmz3IL /mnt/pmem_emul/DR-VNm4s6 /mnt/pmem_emul/DR-VP1IOV /mnt/pmem_emul/DR-VWe8Tk /mnt/pmem_emul/DR-VzWRxJ /mnt/pmem_emul/DR-x4Vpvb /mnt/pmem_emul/DR-XcjgAE /mnt/pmem_emul/DR-XL0QZi /mnt/pmem_emul/DR-xluoU7 /mnt/pmem_emul/DR-Xq0el8 /mnt/pmem_emul/DR-XVJ3qG /mnt/pmem_emul/DR-xwNBT7 /mnt/pmem_emul/DR-xWPfHE /mnt/pmem_emul/DR-xy3B4y /mnt/pmem_emul/DR-xyunpT /mnt/pmem_emul/DR-z0SVDQ /mnt/pmem_emul/DR-Z3lbGu /mnt/pmem_emul/DR-ZddCvh /mnt/pmem_emul/DR-ZH6r87 /mnt/pmem_emul/DR-ZkrA9R /mnt/pmem_emul/DR-ZMzugB /mnt/pmem_emul/DR-ZR2pjz /mnt/pmem_emul/DR-zsc6lQ /mnt/pmem_emul/DR-ZtIbRU /mnt/pmem_emul/DR-ZYyeko /mnt/pmem_emul/DR-Zzdq7F /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunD
++ setup=posix_boost
++ run_id=1
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunD
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunD
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunD/run1
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunD/run1': No such file or directory
++ date
+Fri Feb 23 23:46:30 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunD/run1
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214492): _hub_init2: START
+NVP_MSG (214492): init_logs: Initializing append and op log
+NVP_MSG (214492): _nvp_init2: dr fd = 5, start addr = 0x7F6401C00000
+NVP_MSG (214492): _nvp_init2: dr fd = 6, start addr = 0x7F63F7A00000
+NVP_MSG (214492): _nvp_init2: dr fd = 7, start addr = 0x7F63ED800000
+NVP_MSG (214492): _nvp_init2: dr fd = 8, start addr = 0x7F63E3600000
+NVP_MSG (214492): _nvp_init2: dr fd = 9, start addr = 0x7F63D9400000
+NVP_MSG (214492): _nvp_init2: dr fd = 10, start addr = 0x7F63CF200000
+NVP_MSG (214492): _nvp_init2: dr fd = 11, start addr = 0x7F63C5000000
+NVP_MSG (214492): _nvp_init2: dr fd = 12, start addr = 0x7F63BAE00000
+NVP_MSG (214492): _nvp_init2: dr fd = 13, start addr = 0x7F63B0C00000
+NVP_MSG (214492): _nvp_init2: dr fd = 14, start addr = 0x7F63A6A00000
+NVP_MSG (214492): _nvp_init2: dr fd = 15, start addr = 0x7F63A4000000
+NVP_MSG (214492): _nvp_init2: Large regions set
+NVP_MSG (214492): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214492): _nvp_init2: Tbl mmaps set
+NVP_MSG (214492): _nvp_init2: Global locks created
+NVP_MSG (214492): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214492): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:46:31 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214492): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214492): Does not support mmap, use posix instead.
+NVP_MSG (214492): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-012275 is opened O_WRONLY.
+NVP_MSG (214492): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 4749979, D = 0, I = 250021, U = 0, S = 0
+LevelDB/WiscKey splitup: P = 250021, G = 4749979, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 38.040 seconds
+Thread 0: Total data: YCSB = 4.801509 GB, HyperLevelDB = 4.801509 GB
+Thread 0: Ops/s = 128.362 Kops/s
+Thread 0: YCSB throughput = 129.253553 MB/s
+Thread 0: HyperLevelDB throughput = 129.253553 MB/s
+memtable_read: timing = 2205926346 nanoseconds
+imm_memtable_read: timing = 52925689 nanoseconds
+file_read: timing = 9573327443 nanoseconds
+file_open_during_read: timing = 14830625002 nanoseconds
+file_close_during_read: timing = 16134489409 nanoseconds
+get_files: timing = 858900935 nanoseconds
+after_get_files: timing = 31482634788 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 25892365578 nanoseconds
+read_block: timing = 41801817972 nanoseconds
+insert_block_cache: timing = 753960938 nanoseconds
+new_iterator: timing = 187551937 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       207
+  1        1        4         1      267       318
+  2        8       95        12     3315      3308
+  3       78      997        16     4465      4396
+  4      337     5263         9     2441      2083
+
+ycsb         :       7.937 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 2205926346 nanoseconds
+imm_memtable_read: timing = 52925689 nanoseconds
+file_read: timing = 9573334847 nanoseconds
+file_open_during_read: timing = 14830671702 nanoseconds
+file_close_during_read: timing = 16134520243 nanoseconds
+get_files: timing = 858900935 nanoseconds
+after_get_files: timing = 31482634788 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 25892365578 nanoseconds
+read_block: timing = 41801940473 nanoseconds
+insert_block_cache: timing = 753961054 nanoseconds
+new_iterator: timing = 187552137 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       207
+  1        1        4         1      267       318
+  2        8       95        12     3315      3308
+  3       78      997        16     4465      4396
+  4      337     5263         9     2441      2083
+
+printdb      :      14.000 micros/op;
+NVP_MSG (214492): exit handler
+NVP_MSG (214492): Exit: print stats
+NVP_MSG (214492): ====================== NVP IO stats: ======================
+NVP_MSG (214492): open 2239892, close 2239446, async close 0
+NVP_MSG (214492): mmap 490, unlink 1005, stat 1005
+NVP_MSG (214492): dr mmap 89, dr mmap critical path 0
+NVP_MSG (214492): fsync 1320, appendfsync: count 1055 size 0 average 0
+NVP_MSG (214492): READ: count 4606892, size 20065444211, average 4355
+NVP_MSG (214492): WRITE: count 2766689, size 11146928838, average 4028
+NVP_MSG (214492): memcpy READ: count 4410192, size 19134521325, average 4338
+NVP_MSG (214492): anon READ: count 0, size 0, average 0
+NVP_MSG (214492): memcpy WRITE: count 2764410, size 11154553140, average 4035
+NVP_MSG (214492): anon WRITE: count 2764325, size 11154460590, average 4035
+NVP_MSG (214492): posix READ: count 184343, size 869732129, average 4718
+NVP_MSG (214492): posix WRITE: count 2675, size 291688, average 109
+NVP_MSG (214492): write extends 2764545, total 2764866
+NVP_MSG (214492): MFENCE: count 0
+NVP_MSG (214492): CLFLUSHOPT: count 0
+NVP_MSG (214492): NON_TEMPORAL_WRITES: count 2713570, size 11028729747, average 4064
+NVP_MSG (214492): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214492): TOTAL SYSCALLS (open + close + read + write + fsync): count 4666356
+NVP_MSG (214492): calling cleanup
+NVP_MSG (214492): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:47:11 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-0c8w2k /mnt/pmem_emul/DR-0e8qhq /mnt/pmem_emul/DR-0KiHJB /mnt/pmem_emul/DR-2cKKDk /mnt/pmem_emul/DR-4eFRWG /mnt/pmem_emul/DR-4Qv4z7 /mnt/pmem_emul/DR-4RxUzP /mnt/pmem_emul/DR-6Wscxh /mnt/pmem_emul/DR-8iz1rn /mnt/pmem_emul/DR-8JuDK7 /mnt/pmem_emul/DR-8Jyb57 /mnt/pmem_emul/DR-8qn085 /mnt/pmem_emul/DR-a1gZJ8 /mnt/pmem_emul/DR-A5m1im /mnt/pmem_emul/DR-ACTVlR /mnt/pmem_emul/DR-AHmbdt /mnt/pmem_emul/DR-AqCRYI /mnt/pmem_emul/DR-atZISC /mnt/pmem_emul/DR-AWap79 /mnt/pmem_emul/DR-aWROER /mnt/pmem_emul/DR-CDVUDk /mnt/pmem_emul/DR-CefqKN /mnt/pmem_emul/DR-CFEdjc /mnt/pmem_emul/DR-cFU6sJ /mnt/pmem_emul/DR-CkWiWn /mnt/pmem_emul/DR-cp12cw /mnt/pmem_emul/DR-cxntSJ /mnt/pmem_emul/DR-E6fpVh /mnt/pmem_emul/DR-e7qWKn /mnt/pmem_emul/DR-efn0cr /mnt/pmem_emul/DR-EkXTrT /mnt/pmem_emul/DR-eOHxxs /mnt/pmem_emul/DR-et2XKI /mnt/pmem_emul/DR-G45Dz3 /mnt/pmem_emul/DR-Gah6Wf /mnt/pmem_emul/DR-gdSX32 /mnt/pmem_emul/DR-Gj6avF /mnt/pmem_emul/DR-gK1cA7 /mnt/pmem_emul/DR-glSec7 /mnt/pmem_emul/DR-gRFKUY /mnt/pmem_emul/DR-guWoEf /mnt/pmem_emul/DR-I7WRmz /mnt/pmem_emul/DR-iEfL9B /mnt/pmem_emul/DR-iONxEE /mnt/pmem_emul/DR-IrdwOh /mnt/pmem_emul/DR-IssDnC /mnt/pmem_emul/DR-Iv6ZmE /mnt/pmem_emul/DR-k3j49P /mnt/pmem_emul/DR-KCTjUB /mnt/pmem_emul/DR-KJhb7r /mnt/pmem_emul/DR-kSbAVn /mnt/pmem_emul/DR-M8IWEB /mnt/pmem_emul/DR-MOAVq8 /mnt/pmem_emul/DR-mPsPFo /mnt/pmem_emul/DR-MTl5SV /mnt/pmem_emul/DR-otCxS0 /mnt/pmem_emul/DR-OVER-KfG3sh /mnt/pmem_emul/DR-OZgrXj /mnt/pmem_emul/DR-Q7Ivzs /mnt/pmem_emul/DR-QA7thz /mnt/pmem_emul/DR-QBKVFI /mnt/pmem_emul/DR-QlKtDh /mnt/pmem_emul/DR-qlwiiC /mnt/pmem_emul/DR-qNJ1XQ /mnt/pmem_emul/DR-QsT326 /mnt/pmem_emul/DR-QV6HCI /mnt/pmem_emul/DR-S7mnz5 /mnt/pmem_emul/DR-sIWE5r /mnt/pmem_emul/DR-SKXBlb /mnt/pmem_emul/DR-sOlnkx /mnt/pmem_emul/DR-sPhHbj /mnt/pmem_emul/DR-SSqaqS /mnt/pmem_emul/DR-SyTVrq /mnt/pmem_emul/DR-ULeLUe /mnt/pmem_emul/DR-upI4Jb /mnt/pmem_emul/DR-UrII3i /mnt/pmem_emul/DR-w3enHu /mnt/pmem_emul/DR-Wldqli /mnt/pmem_emul/DR-wmn2ph /mnt/pmem_emul/DR-WW0pRq /mnt/pmem_emul/DR-WXVNNg /mnt/pmem_emul/DR-Y2AnLA /mnt/pmem_emul/DR-Y4N1v7 /mnt/pmem_emul/DR-y6xO2o /mnt/pmem_emul/DR-YaQfop /mnt/pmem_emul/DR-YhvbsF /mnt/pmem_emul/DR-yj7RID /mnt/pmem_emul/DR-YRC278 /mnt/pmem_emul/DR-YxTSXS /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=LoadA
++ setup=posix_boost
++ run_id=2
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ load_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo ----------------------- LevelDB YCSB Load ---------------------------
+----------------------- LevelDB YCSB Load ---------------------------
++ rm -rf /mnt/pmem_emul/leveldbtest-1000
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run2
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run2': No such file or directory
++ date
+Fri Feb 23 23:47:28 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=0 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run2
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214522): _hub_init2: START
+NVP_MSG (214522): init_logs: Initializing append and op log
+NVP_MSG (214522): _nvp_init2: dr fd = 5, start addr = 0x7F9738000000
+NVP_MSG (214522): _nvp_init2: dr fd = 6, start addr = 0x7F972DE00000
+NVP_MSG (214522): _nvp_init2: dr fd = 7, start addr = 0x7F9723C00000
+NVP_MSG (214522): _nvp_init2: dr fd = 8, start addr = 0x7F9719A00000
+NVP_MSG (214522): _nvp_init2: dr fd = 9, start addr = 0x7F970F800000
+NVP_MSG (214522): _nvp_init2: dr fd = 10, start addr = 0x7F9705600000
+NVP_MSG (214522): _nvp_init2: dr fd = 11, start addr = 0x7F96FB400000
+NVP_MSG (214522): _nvp_init2: dr fd = 12, start addr = 0x7F96F1200000
+NVP_MSG (214522): _nvp_init2: dr fd = 13, start addr = 0x7F96E7000000
+NVP_MSG (214522): _nvp_init2: dr fd = 14, start addr = 0x7F96DCE00000
+NVP_MSG (214522): _nvp_init2: dr fd = 15, start addr = 0x7F96DA400000
+NVP_MSG (214522): _nvp_init2: Large regions set
+NVP_MSG (214522): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214522): _nvp_init2: Tbl mmaps set
+NVP_MSG (214522): _nvp_init2: Global locks created
+NVP_MSG (214522): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214522): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:47:29 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214522): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214522): Does not support mmap, use posix instead.
+NVP_MSG (214522): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000001 is opened O_WRONLY.
+NVP_MSG (214522): Does not support mmap, use posix instead.
+NVP_MSG (214522): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000002 is opened O_WRONLY.
+NVP_MSG (214522): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 0, D = 0, I = 5000000, U = 0, S = 0
+LevelDB/WiscKey splitup: P = 5000000, G = 0, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 284.462 seconds
+Thread 0: Total data: YCSB = 5.042551 GB, HyperLevelDB = 5.042551 GB
+Thread 0: Ops/s = 17.165 Kops/s
+Thread 0: YCSB throughput = 18.152050 MB/s
+Thread 0: HyperLevelDB throughput = 18.152050 MB/s
+memtable_read: timing = 0 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 20680772287 nanoseconds
+file_open_during_read: timing = 60510005671 nanoseconds
+file_close_during_read: timing = 76870104949 nanoseconds
+get_files: timing = 0 nanoseconds
+after_get_files: timing = 0 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 0 nanoseconds
+read_block: timing = 159945560176 nanoseconds
+insert_block_cache: timing = 275522785 nanoseconds
+new_iterator: timing = 558620189 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        7       28        10        0      5266
+  1        4       54        33     7561      7562
+  2       17      193       108    24996     24997
+  3      136     2041       129    29060     29058
+  4      187     2951         4      834       834
+
+ycsb         :      57.276 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 0 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 20680781779 nanoseconds
+file_open_during_read: timing = 60510023166 nanoseconds
+file_close_during_read: timing = 76870134987 nanoseconds
+get_files: timing = 0 nanoseconds
+after_get_files: timing = 0 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 0 nanoseconds
+read_block: timing = 159945624104 nanoseconds
+insert_block_cache: timing = 275522877 nanoseconds
+new_iterator: timing = 558620373 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        7       28        10        0      5266
+  1        4       54        33     7561      7562
+  2       17      193       108    24996     24997
+  3      136     2041       129    29060     29058
+  4      187     2951         4      834       834
+
+printdb      :      17.000 micros/op;
+NVP_MSG (214522): exit handler
+NVP_MSG (214522): Exit: print stats
+NVP_MSG (214522): ====================== NVP IO stats: ======================
+NVP_MSG (214522): open 12875837, close 12875641, async close 0
+NVP_MSG (214522): mmap 591, unlink 7128, stat 7128
+NVP_MSG (214522): dr mmap 591, dr mmap critical path 0
+NVP_MSG (214522): fsync 10974, appendfsync: count 7844 size 0 average 0
+NVP_MSG (214522): READ: count 14839653, size 65570775861, average 4418
+NVP_MSG (214522): WRITE: count 21238516, size 76213755967, average 3588
+NVP_MSG (214522): memcpy READ: count 14839653, size 65570775820, average 4418
+NVP_MSG (214522): anon READ: count 0, size 0, average 0
+NVP_MSG (214522): memcpy WRITE: count 21224071, size 76496727995, average 3604
+NVP_MSG (214522): anon WRITE: count 21220326, size 76491577572, average 3604
+NVP_MSG (214522): posix READ: count 1, size 41, average 41
+NVP_MSG (214522): posix WRITE: count 19993, size 1853207, average 92
+NVP_MSG (214522): write extends 21226500, total 21234509
+NVP_MSG (214522): MFENCE: count 0
+NVP_MSG (214522): CLFLUSHOPT: count 0
+NVP_MSG (214522): NON_TEMPORAL_WRITES: count 19951014, size 73117292728, average 3664
+NVP_MSG (214522): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214522): TOTAL SYSCALLS (open + close + read + write + fsync): count 25771472
+NVP_MSG (214522): calling cleanup
+NVP_MSG (214522): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:52:16 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-00B1sn /mnt/pmem_emul/DR-04OVBg /mnt/pmem_emul/DR-09ibXu /mnt/pmem_emul/DR-0Es9Lx /mnt/pmem_emul/DR-0GtFug /mnt/pmem_emul/DR-0IhGUT /mnt/pmem_emul/DR-0KOi4b /mnt/pmem_emul/DR-0lpERh /mnt/pmem_emul/DR-0mJX3l /mnt/pmem_emul/DR-0Mz8Ii /mnt/pmem_emul/DR-0PqWR3 /mnt/pmem_emul/DR-0Svzsz /mnt/pmem_emul/DR-0V91Uw /mnt/pmem_emul/DR-0votnE /mnt/pmem_emul/DR-0XGwVh /mnt/pmem_emul/DR-0XHwQO /mnt/pmem_emul/DR-0YFqFn /mnt/pmem_emul/DR-0Yx1aB /mnt/pmem_emul/DR-20Dtxn /mnt/pmem_emul/DR-21qGA5 /mnt/pmem_emul/DR-21SVWU /mnt/pmem_emul/DR-24Nszw /mnt/pmem_emul/DR-273xS4 /mnt/pmem_emul/DR-28dQg9 /mnt/pmem_emul/DR-2Awa9q /mnt/pmem_emul/DR-2edCoA /mnt/pmem_emul/DR-2F06Wx /mnt/pmem_emul/DR-2fgqLR /mnt/pmem_emul/DR-2KeHxw /mnt/pmem_emul/DR-2l1m6l /mnt/pmem_emul/DR-2m03yw /mnt/pmem_emul/DR-2noDIK /mnt/pmem_emul/DR-2NX9s0 /mnt/pmem_emul/DR-2PV7wS /mnt/pmem_emul/DR-2Qer1f /mnt/pmem_emul/DR-2saIkm /mnt/pmem_emul/DR-2TPAnO /mnt/pmem_emul/DR-2vMwuz /mnt/pmem_emul/DR-2W7oca /mnt/pmem_emul/DR-2ZcmK6 /mnt/pmem_emul/DR-2zd4dS /mnt/pmem_emul/DR-41AmRw /mnt/pmem_emul/DR-41TIC7 /mnt/pmem_emul/DR-45wWa3 /mnt/pmem_emul/DR-468aOK /mnt/pmem_emul/DR-47G2yJ /mnt/pmem_emul/DR-4AdF7l /mnt/pmem_emul/DR-4C5M9U /mnt/pmem_emul/DR-4CQWrL /mnt/pmem_emul/DR-4ghQEf /mnt/pmem_emul/DR-4n1gkA /mnt/pmem_emul/DR-4NPI9e /mnt/pmem_emul/DR-4oaXAT /mnt/pmem_emul/DR-4px2G3 /mnt/pmem_emul/DR-4QNBN2 /mnt/pmem_emul/DR-4ri8ZZ /mnt/pmem_emul/DR-4Su87x /mnt/pmem_emul/DR-4WoWUe /mnt/pmem_emul/DR-4Y14Ud /mnt/pmem_emul/DR-4zLsOj /mnt/pmem_emul/DR-60cXZs /mnt/pmem_emul/DR-629142 /mnt/pmem_emul/DR-62sTwN /mnt/pmem_emul/DR-63y9HR /mnt/pmem_emul/DR-64ILYG /mnt/pmem_emul/DR-6aRCx4 /mnt/pmem_emul/DR-6EU1w9 /mnt/pmem_emul/DR-6FTwAM /mnt/pmem_emul/DR-6gb23D /mnt/pmem_emul/DR-6GPleA /mnt/pmem_emul/DR-6LN7rE /mnt/pmem_emul/DR-6ln906 /mnt/pmem_emul/DR-6MfqcY /mnt/pmem_emul/DR-6mRYY1 /mnt/pmem_emul/DR-6mXg1m /mnt/pmem_emul/DR-6NYguI /mnt/pmem_emul/DR-6nz5lH /mnt/pmem_emul/DR-6owps5 /mnt/pmem_emul/DR-6OxfJj /mnt/pmem_emul/DR-6T3OfJ /mnt/pmem_emul/DR-6v66ob /mnt/pmem_emul/DR-6VAApM /mnt/pmem_emul/DR-6WQebl /mnt/pmem_emul/DR-6XQEBm /mnt/pmem_emul/DR-84w80C /mnt/pmem_emul/DR-860ZrK /mnt/pmem_emul/DR-89oU2V /mnt/pmem_emul/DR-8abOuQ /mnt/pmem_emul/DR-8gKlXa /mnt/pmem_emul/DR-8hGxOK /mnt/pmem_emul/DR-8JR2Fr /mnt/pmem_emul/DR-8nIZ6N /mnt/pmem_emul/DR-8qBPyQ /mnt/pmem_emul/DR-8tfhu5 /mnt/pmem_emul/DR-8uVP1s /mnt/pmem_emul/DR-8VqWfG /mnt/pmem_emul/DR-8yBXwU /mnt/pmem_emul/DR-8zM9IR /mnt/pmem_emul/DR-A1OKES /mnt/pmem_emul/DR-a2FzVn /mnt/pmem_emul/DR-A7TZd5 /mnt/pmem_emul/DR-a8Nn4I /mnt/pmem_emul/DR-a9kDiL /mnt/pmem_emul/DR-aaWZoJ /mnt/pmem_emul/DR-AAyH1E /mnt/pmem_emul/DR-ABou9e /mnt/pmem_emul/DR-aCkdpL /mnt/pmem_emul/DR-aClitP /mnt/pmem_emul/DR-AdEAWP /mnt/pmem_emul/DR-AdM6hB /mnt/pmem_emul/DR-aF5G4A /mnt/pmem_emul/DR-Afoscf /mnt/pmem_emul/DR-aGa4a6 /mnt/pmem_emul/DR-ahlaYF /mnt/pmem_emul/DR-AJWCv7 /mnt/pmem_emul/DR-akh6GN /mnt/pmem_emul/DR-AknJ29 /mnt/pmem_emul/DR-al3Uio /mnt/pmem_emul/DR-ALYkDb /mnt/pmem_emul/DR-Ap58zH /mnt/pmem_emul/DR-aP9G6D /mnt/pmem_emul/DR-Aq3h3K /mnt/pmem_emul/DR-as0Xru /mnt/pmem_emul/DR-AuWfTB /mnt/pmem_emul/DR-Aw1dXg /mnt/pmem_emul/DR-aW2O0b /mnt/pmem_emul/DR-C05PRG /mnt/pmem_emul/DR-c09OAx /mnt/pmem_emul/DR-caj3Mz /mnt/pmem_emul/DR-cbFimS /mnt/pmem_emul/DR-CbnsZV /mnt/pmem_emul/DR-cc6PLj /mnt/pmem_emul/DR-CChnvP /mnt/pmem_emul/DR-CCRRNr /mnt/pmem_emul/DR-CDEoC9 /mnt/pmem_emul/DR-CDLPiF /mnt/pmem_emul/DR-CdRIFU /mnt/pmem_emul/DR-cEBjCs /mnt/pmem_emul/DR-cEhiHe /mnt/pmem_emul/DR-CeiSQa /mnt/pmem_emul/DR-cfVzhf /mnt/pmem_emul/DR-cfXF6Q /mnt/pmem_emul/DR-CG2Hrf /mnt/pmem_emul/DR-cgubUX /mnt/pmem_emul/DR-CGzeGD /mnt/pmem_emul/DR-cIY1NE /mnt/pmem_emul/DR-cJwWBy /mnt/pmem_emul/DR-CjYDJr /mnt/pmem_emul/DR-clCOw5 /mnt/pmem_emul/DR-CLhk0A /mnt/pmem_emul/DR-clznKI /mnt/pmem_emul/DR-cNfzFT /mnt/pmem_emul/DR-cnSEy5 /mnt/pmem_emul/DR-CO2M0p /mnt/pmem_emul/DR-Coomeq /mnt/pmem_emul/DR-coxFaa /mnt/pmem_emul/DR-Ct6m45 /mnt/pmem_emul/DR-cWWvXP /mnt/pmem_emul/DR-cwZI8O /mnt/pmem_emul/DR-cXeAHB /mnt/pmem_emul/DR-CzLXCF /mnt/pmem_emul/DR-eb5jJz /mnt/pmem_emul/DR-EBLI58 /mnt/pmem_emul/DR-EBRpHO /mnt/pmem_emul/DR-eBYfyJ /mnt/pmem_emul/DR-echeON /mnt/pmem_emul/DR-eCqJ0E /mnt/pmem_emul/DR-ecrB0Y /mnt/pmem_emul/DR-edg4Xv /mnt/pmem_emul/DR-EdtxB1 /mnt/pmem_emul/DR-eebQcD /mnt/pmem_emul/DR-EEfepE /mnt/pmem_emul/DR-EetbtF /mnt/pmem_emul/DR-ef4VQ4 /mnt/pmem_emul/DR-ef9hWk /mnt/pmem_emul/DR-EGFnr4 /mnt/pmem_emul/DR-eGNCSw /mnt/pmem_emul/DR-eGOdsd /mnt/pmem_emul/DR-EHmvAq /mnt/pmem_emul/DR-EI25sG /mnt/pmem_emul/DR-EKbyx0 /mnt/pmem_emul/DR-eLhGM0 /mnt/pmem_emul/DR-Elin0Y /mnt/pmem_emul/DR-elKR7x /mnt/pmem_emul/DR-ElQ1XU /mnt/pmem_emul/DR-ElTVqt /mnt/pmem_emul/DR-EM3aGN /mnt/pmem_emul/DR-eNADpN /mnt/pmem_emul/DR-eNDfLT /mnt/pmem_emul/DR-EnOU1R /mnt/pmem_emul/DR-Eo6bwH /mnt/pmem_emul/DR-eoeQwF /mnt/pmem_emul/DR-eq7Nrw /mnt/pmem_emul/DR-erhy8E /mnt/pmem_emul/DR-ESsmYs /mnt/pmem_emul/DR-ET5G71 /mnt/pmem_emul/DR-eT9XDW /mnt/pmem_emul/DR-ETUELF /mnt/pmem_emul/DR-eVj1Bt /mnt/pmem_emul/DR-EYEhJ8 /mnt/pmem_emul/DR-EyEHmH /mnt/pmem_emul/DR-G26Dch /mnt/pmem_emul/DR-G2Amya /mnt/pmem_emul/DR-G3jtXF /mnt/pmem_emul/DR-g6Ng26 /mnt/pmem_emul/DR-g7WWOd /mnt/pmem_emul/DR-G8s0BV /mnt/pmem_emul/DR-ga9Awf /mnt/pmem_emul/DR-gaSImZ /mnt/pmem_emul/DR-GCePun /mnt/pmem_emul/DR-gcHsIo /mnt/pmem_emul/DR-get5Gl /mnt/pmem_emul/DR-Ghi7gT /mnt/pmem_emul/DR-Gj8sdo /mnt/pmem_emul/DR-gjisu8 /mnt/pmem_emul/DR-gJNf3D /mnt/pmem_emul/DR-GLBNkY /mnt/pmem_emul/DR-gLTosn /mnt/pmem_emul/DR-GmhHui /mnt/pmem_emul/DR-GMIyRg /mnt/pmem_emul/DR-gmrkGp /mnt/pmem_emul/DR-GneRTz /mnt/pmem_emul/DR-GNfP6X /mnt/pmem_emul/DR-gni78j /mnt/pmem_emul/DR-GoA3aC /mnt/pmem_emul/DR-GoiVRJ /mnt/pmem_emul/DR-GPs4uN /mnt/pmem_emul/DR-gQd1HC /mnt/pmem_emul/DR-gQptRa /mnt/pmem_emul/DR-GRBBgg /mnt/pmem_emul/DR-GSqBOo /mnt/pmem_emul/DR-gSxdPh /mnt/pmem_emul/DR-gt9vAH /mnt/pmem_emul/DR-GuazYX /mnt/pmem_emul/DR-GULUVn /mnt/pmem_emul/DR-gv9VE7 /mnt/pmem_emul/DR-gYP5Q6 /mnt/pmem_emul/DR-GzVOmG /mnt/pmem_emul/DR-i323uX /mnt/pmem_emul/DR-I5bTbx /mnt/pmem_emul/DR-i5xCJz /mnt/pmem_emul/DR-i7ezux /mnt/pmem_emul/DR-i7FILp /mnt/pmem_emul/DR-i9VWIT /mnt/pmem_emul/DR-IAJufF /mnt/pmem_emul/DR-IbWdZK /mnt/pmem_emul/DR-IBYMyn /mnt/pmem_emul/DR-ic5ZfJ /mnt/pmem_emul/DR-ICQlVU /mnt/pmem_emul/DR-IDk3EL /mnt/pmem_emul/DR-iENQ67 /mnt/pmem_emul/DR-igRy31 /mnt/pmem_emul/DR-iH7YRw /mnt/pmem_emul/DR-iHmZnX /mnt/pmem_emul/DR-IhwAw9 /mnt/pmem_emul/DR-IKHwdg /mnt/pmem_emul/DR-IljoYG /mnt/pmem_emul/DR-iMejor /mnt/pmem_emul/DR-INIG2R /mnt/pmem_emul/DR-iOjZ0s /mnt/pmem_emul/DR-iPMJzN /mnt/pmem_emul/DR-IpxckD /mnt/pmem_emul/DR-iQH6tw /mnt/pmem_emul/DR-IQxeU5 /mnt/pmem_emul/DR-iRqFsW /mnt/pmem_emul/DR-IsQTKx /mnt/pmem_emul/DR-ISWa85 /mnt/pmem_emul/DR-ivDDVD /mnt/pmem_emul/DR-IvyzYZ /mnt/pmem_emul/DR-iWdNFZ /mnt/pmem_emul/DR-ixRd7n /mnt/pmem_emul/DR-IYgOMG /mnt/pmem_emul/DR-IZak2A /mnt/pmem_emul/DR-k1SJVh /mnt/pmem_emul/DR-K6RI7P /mnt/pmem_emul/DR-k7I9Ny /mnt/pmem_emul/DR-K8XaJG /mnt/pmem_emul/DR-KaIElH /mnt/pmem_emul/DR-KASWfl /mnt/pmem_emul/DR-kaYDWX /mnt/pmem_emul/DR-Kb04dI /mnt/pmem_emul/DR-kDhWVq /mnt/pmem_emul/DR-KfPthZ /mnt/pmem_emul/DR-kHGy6G /mnt/pmem_emul/DR-kimbkO /mnt/pmem_emul/DR-kIXrw3 /mnt/pmem_emul/DR-Kjuczc /mnt/pmem_emul/DR-KjUkzA /mnt/pmem_emul/DR-kKrJHi /mnt/pmem_emul/DR-kL0FmE /mnt/pmem_emul/DR-kldSSn /mnt/pmem_emul/DR-KLLjKm /mnt/pmem_emul/DR-Km5uMA /mnt/pmem_emul/DR-KnI6wP /mnt/pmem_emul/DR-KobHZH /mnt/pmem_emul/DR-KpgRlE /mnt/pmem_emul/DR-KPQSln /mnt/pmem_emul/DR-kpWNS4 /mnt/pmem_emul/DR-KqRtG6 /mnt/pmem_emul/DR-kR0Md4 /mnt/pmem_emul/DR-KR1DJ4 /mnt/pmem_emul/DR-krEFzG /mnt/pmem_emul/DR-KRrVDc /mnt/pmem_emul/DR-kTPXlx /mnt/pmem_emul/DR-KUqOBu /mnt/pmem_emul/DR-KVdsXC /mnt/pmem_emul/DR-kxcDdd /mnt/pmem_emul/DR-KxS1fS /mnt/pmem_emul/DR-kYTpsg /mnt/pmem_emul/DR-KzvP0L /mnt/pmem_emul/DR-M06PMt /mnt/pmem_emul/DR-M0URpo /mnt/pmem_emul/DR-M0Z7p4 /mnt/pmem_emul/DR-m2SPJP /mnt/pmem_emul/DR-M3LthC /mnt/pmem_emul/DR-M3VxOo /mnt/pmem_emul/DR-m3xz4N /mnt/pmem_emul/DR-M7NNyH /mnt/pmem_emul/DR-M7wH1G /mnt/pmem_emul/DR-m81Dxy /mnt/pmem_emul/DR-m9J91f /mnt/pmem_emul/DR-maTT5V /mnt/pmem_emul/DR-MBBte5 /mnt/pmem_emul/DR-MBFi58 /mnt/pmem_emul/DR-mF6VE7 /mnt/pmem_emul/DR-mfs2zi /mnt/pmem_emul/DR-mgLHm8 /mnt/pmem_emul/DR-MgsDX7 /mnt/pmem_emul/DR-mHsIkd /mnt/pmem_emul/DR-MJ1aft /mnt/pmem_emul/DR-mJBPcC /mnt/pmem_emul/DR-MkV8U2 /mnt/pmem_emul/DR-MlrRON /mnt/pmem_emul/DR-mn6JuZ /mnt/pmem_emul/DR-Mook80 /mnt/pmem_emul/DR-mp6mvq /mnt/pmem_emul/DR-mquSpz /mnt/pmem_emul/DR-Mr1VOp /mnt/pmem_emul/DR-mrhbtu /mnt/pmem_emul/DR-Ms2ihf /mnt/pmem_emul/DR-mVbu4k /mnt/pmem_emul/DR-mVvvsT /mnt/pmem_emul/DR-MWpTBH /mnt/pmem_emul/DR-MxbjTu /mnt/pmem_emul/DR-mxdwuN /mnt/pmem_emul/DR-mxFpUi /mnt/pmem_emul/DR-Mycjg7 /mnt/pmem_emul/DR-Mz2Z9Q /mnt/pmem_emul/DR-o88kIr /mnt/pmem_emul/DR-O8kG0T /mnt/pmem_emul/DR-O9qKte /mnt/pmem_emul/DR-oAf2Rj /mnt/pmem_emul/DR-oapo9d /mnt/pmem_emul/DR-OBIK4n /mnt/pmem_emul/DR-oDCrsh /mnt/pmem_emul/DR-oEUFIg /mnt/pmem_emul/DR-OhCXmB /mnt/pmem_emul/DR-OHVeI9 /mnt/pmem_emul/DR-oiL5Nu /mnt/pmem_emul/DR-oIlfW4 /mnt/pmem_emul/DR-OjhVNH /mnt/pmem_emul/DR-oJtvxL /mnt/pmem_emul/DR-OJVrw1 /mnt/pmem_emul/DR-OLKHlL /mnt/pmem_emul/DR-oNmFoj /mnt/pmem_emul/DR-OOaIrR /mnt/pmem_emul/DR-OOdd86 /mnt/pmem_emul/DR-OOSDKZ /mnt/pmem_emul/DR-opBPpq /mnt/pmem_emul/DR-oPnkDD /mnt/pmem_emul/DR-OqlF1K /mnt/pmem_emul/DR-oqYJzm /mnt/pmem_emul/DR-ov6p0l /mnt/pmem_emul/DR-OVER-0GPnP6 /mnt/pmem_emul/DR-oVpMLp /mnt/pmem_emul/DR-oWVYmu /mnt/pmem_emul/DR-OXgVav /mnt/pmem_emul/DR-oY2R1G /mnt/pmem_emul/DR-oz0fWe /mnt/pmem_emul/DR-q19T7Q /mnt/pmem_emul/DR-q2Jnmo /mnt/pmem_emul/DR-q2Rkxw /mnt/pmem_emul/DR-q4atIe /mnt/pmem_emul/DR-q8czlV /mnt/pmem_emul/DR-QbxlOW /mnt/pmem_emul/DR-QDLgJH /mnt/pmem_emul/DR-qedTR3 /mnt/pmem_emul/DR-qeKwXy /mnt/pmem_emul/DR-qGNbBv /mnt/pmem_emul/DR-Qiipp6 /mnt/pmem_emul/DR-qirBKd /mnt/pmem_emul/DR-qmefiV /mnt/pmem_emul/DR-QMRfjK /mnt/pmem_emul/DR-qMzTvU /mnt/pmem_emul/DR-qN39Ic /mnt/pmem_emul/DR-QNAUNF /mnt/pmem_emul/DR-QNVuhw /mnt/pmem_emul/DR-qNwvgm /mnt/pmem_emul/DR-qNxFE4 /mnt/pmem_emul/DR-QplxUv /mnt/pmem_emul/DR-qpubWL /mnt/pmem_emul/DR-QPvWQu /mnt/pmem_emul/DR-qQ7Lv5 /mnt/pmem_emul/DR-qqNURt /mnt/pmem_emul/DR-qQr6f7 /mnt/pmem_emul/DR-QrKCF0 /mnt/pmem_emul/DR-QtbHem /mnt/pmem_emul/DR-qTcQHe /mnt/pmem_emul/DR-Qu4xhY /mnt/pmem_emul/DR-QU7ugz /mnt/pmem_emul/DR-qUZrUS /mnt/pmem_emul/DR-QVmSew /mnt/pmem_emul/DR-QVQmfz /mnt/pmem_emul/DR-qWDElH /mnt/pmem_emul/DR-qXqss6 /mnt/pmem_emul/DR-Qyal9x /mnt/pmem_emul/DR-QYF2Vm /mnt/pmem_emul/DR-QYWZ69 /mnt/pmem_emul/DR-QZtgOC /mnt/pmem_emul/DR-s2IqxH /mnt/pmem_emul/DR-s3gaF1 /mnt/pmem_emul/DR-S4pnWg /mnt/pmem_emul/DR-S619FG /mnt/pmem_emul/DR-S6aOZw /mnt/pmem_emul/DR-s9uYRZ /mnt/pmem_emul/DR-SAw8Pq /mnt/pmem_emul/DR-sc939O /mnt/pmem_emul/DR-ScspdH /mnt/pmem_emul/DR-SDKYvv /mnt/pmem_emul/DR-SDYZR5 /mnt/pmem_emul/DR-se46la /mnt/pmem_emul/DR-SFaozG /mnt/pmem_emul/DR-sGOCWw /mnt/pmem_emul/DR-SH3eET /mnt/pmem_emul/DR-sHaIr7 /mnt/pmem_emul/DR-SJ0qB5 /mnt/pmem_emul/DR-sKaUt2 /mnt/pmem_emul/DR-skFaKx /mnt/pmem_emul/DR-sKNwgv /mnt/pmem_emul/DR-slwyB9 /mnt/pmem_emul/DR-sM6LJM /mnt/pmem_emul/DR-smy62j /mnt/pmem_emul/DR-sN4EGe /mnt/pmem_emul/DR-SnoI6u /mnt/pmem_emul/DR-Soi5tm /mnt/pmem_emul/DR-SQZdf7 /mnt/pmem_emul/DR-ssCtCU /mnt/pmem_emul/DR-SSJnXF /mnt/pmem_emul/DR-sSNeY5 /mnt/pmem_emul/DR-SsxKpG /mnt/pmem_emul/DR-ST251N /mnt/pmem_emul/DR-stNYjz /mnt/pmem_emul/DR-sug0ww /mnt/pmem_emul/DR-SUzH8c /mnt/pmem_emul/DR-sVH1cy /mnt/pmem_emul/DR-SvNreQ /mnt/pmem_emul/DR-svQCdX /mnt/pmem_emul/DR-Sw6qp3 /mnt/pmem_emul/DR-sXUCfc /mnt/pmem_emul/DR-sXxkoa /mnt/pmem_emul/DR-syeHW0 /mnt/pmem_emul/DR-syujU3 /mnt/pmem_emul/DR-Sz6Tcn /mnt/pmem_emul/DR-szB7S3 /mnt/pmem_emul/DR-SZFPyu /mnt/pmem_emul/DR-U02pEa /mnt/pmem_emul/DR-u3Lznx /mnt/pmem_emul/DR-u4Fwi2 /mnt/pmem_emul/DR-u5YJaA /mnt/pmem_emul/DR-u7CE9g /mnt/pmem_emul/DR-ubAwmb /mnt/pmem_emul/DR-UbBhhy /mnt/pmem_emul/DR-UC3yyt /mnt/pmem_emul/DR-uDHSA2 /mnt/pmem_emul/DR-UdNrJs /mnt/pmem_emul/DR-UdWy9F /mnt/pmem_emul/DR-UEf1ci /mnt/pmem_emul/DR-uEfAoz /mnt/pmem_emul/DR-UeSDja /mnt/pmem_emul/DR-uEwbBB /mnt/pmem_emul/DR-UfHp66 /mnt/pmem_emul/DR-ufsgPm /mnt/pmem_emul/DR-UGub8Q /mnt/pmem_emul/DR-UiGZ4T /mnt/pmem_emul/DR-uJ5Ea2 /mnt/pmem_emul/DR-ujtbP0 /mnt/pmem_emul/DR-uJugzS /mnt/pmem_emul/DR-uNnGZd /mnt/pmem_emul/DR-unYgQO /mnt/pmem_emul/DR-uo1eoX /mnt/pmem_emul/DR-UoELIF /mnt/pmem_emul/DR-uPnOfA /mnt/pmem_emul/DR-Uq2R5H /mnt/pmem_emul/DR-UqQiwM /mnt/pmem_emul/DR-UsNB0M /mnt/pmem_emul/DR-UtDrJ8 /mnt/pmem_emul/DR-uUVflr /mnt/pmem_emul/DR-Uv6imw /mnt/pmem_emul/DR-uVJNvv /mnt/pmem_emul/DR-uWzk7S /mnt/pmem_emul/DR-uXHlN8 /mnt/pmem_emul/DR-UytdPU /mnt/pmem_emul/DR-uyx0tk /mnt/pmem_emul/DR-uZiQIy /mnt/pmem_emul/DR-uzK8bX /mnt/pmem_emul/DR-uZqlt5 /mnt/pmem_emul/DR-w0hbJf /mnt/pmem_emul/DR-w1BZCP /mnt/pmem_emul/DR-W1fQaP /mnt/pmem_emul/DR-w4SVrX /mnt/pmem_emul/DR-W5JqOR /mnt/pmem_emul/DR-W7YUQr /mnt/pmem_emul/DR-wAeiAO /mnt/pmem_emul/DR-WBuSzo /mnt/pmem_emul/DR-WcdguW /mnt/pmem_emul/DR-WCJbhO /mnt/pmem_emul/DR-wdxMXL /mnt/pmem_emul/DR-weMulb /mnt/pmem_emul/DR-Wemxtm /mnt/pmem_emul/DR-wfcpo3 /mnt/pmem_emul/DR-WfkEcQ /mnt/pmem_emul/DR-WIGMme /mnt/pmem_emul/DR-wjmzr9 /mnt/pmem_emul/DR-WjYja0 /mnt/pmem_emul/DR-Wk0qkO /mnt/pmem_emul/DR-WlbW2D /mnt/pmem_emul/DR-wLqruC /mnt/pmem_emul/DR-wLz10k /mnt/pmem_emul/DR-wMUlrp /mnt/pmem_emul/DR-wnAUSR /mnt/pmem_emul/DR-wO98IH /mnt/pmem_emul/DR-WOc9a6 /mnt/pmem_emul/DR-WOumMC /mnt/pmem_emul/DR-wPCEgv /mnt/pmem_emul/DR-wPEEBM /mnt/pmem_emul/DR-WPjiq4 /mnt/pmem_emul/DR-Wr7zOz /mnt/pmem_emul/DR-wReFnb /mnt/pmem_emul/DR-wrHRMt /mnt/pmem_emul/DR-WV1cgC /mnt/pmem_emul/DR-WVNqmM /mnt/pmem_emul/DR-wvutKr /mnt/pmem_emul/DR-wW0XKo /mnt/pmem_emul/DR-WWpwrE /mnt/pmem_emul/DR-WxcyWu /mnt/pmem_emul/DR-WxLobI /mnt/pmem_emul/DR-wXS6N1 /mnt/pmem_emul/DR-Wy1jmY /mnt/pmem_emul/DR-wYTo6P /mnt/pmem_emul/DR-wZ4iHV /mnt/pmem_emul/DR-wzI1s1 /mnt/pmem_emul/DR-Y0XTiX /mnt/pmem_emul/DR-y1JDg3 /mnt/pmem_emul/DR-Y3PmMy /mnt/pmem_emul/DR-y4ZYj1 /mnt/pmem_emul/DR-y53f4N /mnt/pmem_emul/DR-y7gzB9 /mnt/pmem_emul/DR-Y7QaHj /mnt/pmem_emul/DR-y9EmNa /mnt/pmem_emul/DR-y9mK9g /mnt/pmem_emul/DR-yeSmEe /mnt/pmem_emul/DR-YftWIO /mnt/pmem_emul/DR-yfz05n /mnt/pmem_emul/DR-YgQdJx /mnt/pmem_emul/DR-Yjj3Br /mnt/pmem_emul/DR-YjUCsV /mnt/pmem_emul/DR-yl96NK /mnt/pmem_emul/DR-yMLlKb /mnt/pmem_emul/DR-yMuaO0 /mnt/pmem_emul/DR-Yo7Anu /mnt/pmem_emul/DR-yoemVT /mnt/pmem_emul/DR-YPAdGc /mnt/pmem_emul/DR-YpN0CO /mnt/pmem_emul/DR-Ypu25c /mnt/pmem_emul/DR-YQbef9 /mnt/pmem_emul/DR-YrirDd /mnt/pmem_emul/DR-ySJeo0 /mnt/pmem_emul/DR-ySmaOG /mnt/pmem_emul/DR-YSMN8a /mnt/pmem_emul/DR-YT8Zkd /mnt/pmem_emul/DR-YThMKS /mnt/pmem_emul/DR-YTjmq1 /mnt/pmem_emul/DR-YUNFLo /mnt/pmem_emul/DR-YVe3N4 /mnt/pmem_emul/DR-yvq3Am /mnt/pmem_emul/DR-yw4gIK /mnt/pmem_emul/DR-ywmE7G /mnt/pmem_emul/DR-ywWB1O /mnt/pmem_emul/DR-Yyk6dv /mnt/pmem_emul/DR-Yyp9j8 /mnt/pmem_emul/DR-YYqx8J /mnt/pmem_emul/DR-YYT1rR /mnt/pmem_emul/DR-yZ8RtW /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunB
++ setup=posix_boost
++ run_id=2
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunB
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runb_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunB
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunB/run2
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunB/run2': No such file or directory
++ date
+Fri Feb 23 23:52:33 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunB/run2
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214549): _hub_init2: START
+NVP_MSG (214549): init_logs: Initializing append and op log
+NVP_MSG (214549): _nvp_init2: dr fd = 5, start addr = 0x7F5945800000
+NVP_MSG (214549): _nvp_init2: dr fd = 6, start addr = 0x7F593B600000
+NVP_MSG (214549): _nvp_init2: dr fd = 7, start addr = 0x7F5931400000
+NVP_MSG (214549): _nvp_init2: dr fd = 8, start addr = 0x7F5927200000
+NVP_MSG (214549): _nvp_init2: dr fd = 9, start addr = 0x7F591D000000
+NVP_MSG (214549): _nvp_init2: dr fd = 10, start addr = 0x7F5912E00000
+NVP_MSG (214549): _nvp_init2: dr fd = 11, start addr = 0x7F5908C00000
+NVP_MSG (214549): _nvp_init2: dr fd = 12, start addr = 0x7F58FEA00000
+NVP_MSG (214549): _nvp_init2: dr fd = 13, start addr = 0x7F58F4800000
+NVP_MSG (214549): _nvp_init2: dr fd = 14, start addr = 0x7F58EA600000
+NVP_MSG (214549): _nvp_init2: dr fd = 15, start addr = 0x7F58E7C00000
+NVP_MSG (214549): _nvp_init2: Large regions set
+NVP_MSG (214549): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214549): _nvp_init2: Tbl mmaps set
+NVP_MSG (214549): _nvp_init2: Global locks created
+NVP_MSG (214549): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214549): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:52:35 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214549): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214549): Does not support mmap, use posix instead.
+NVP_MSG (214549): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-007484 is opened O_WRONLY.
+NVP_MSG (214549): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 4749739, D = 0, I = 0, U = 250261, S = 0
+LevelDB/WiscKey splitup: P = 250261, G = 5000000, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 55.936 seconds
+Thread 0: Total data: YCSB = 4.403539 GB, HyperLevelDB = 4.617501 GB
+Thread 0: Ops/s = 87.294 Kops/s
+Thread 0: YCSB throughput = 80.614661 MB/s
+Thread 0: HyperLevelDB throughput = 84.531613 MB/s
+memtable_read: timing = 2234874640 nanoseconds
+imm_memtable_read: timing = 28128703 nanoseconds
+file_read: timing = 13506465461 nanoseconds
+file_open_during_read: timing = 22881867197 nanoseconds
+file_close_during_read: timing = 24708126299 nanoseconds
+get_files: timing = 1646477568 nanoseconds
+after_get_files: timing = 48081872094 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 38888432857 nanoseconds
+read_block: timing = 63198885316 nanoseconds
+insert_block_cache: timing = 1128957248 nanoseconds
+new_iterator: timing = 272933244 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       152
+  1        1        4         1      155       232
+  2       10       94        20     4788      4725
+  3       69     1000        26     6805      6787
+  4      275     4317         9     2336      2335
+
+ycsb         :      11.519 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 2234874640 nanoseconds
+imm_memtable_read: timing = 28128703 nanoseconds
+file_read: timing = 13506469593 nanoseconds
+file_open_during_read: timing = 22881885016 nanoseconds
+file_close_during_read: timing = 24708151331 nanoseconds
+get_files: timing = 1646477568 nanoseconds
+after_get_files: timing = 48081872094 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 38888432857 nanoseconds
+read_block: timing = 63198932930 nanoseconds
+insert_block_cache: timing = 1128957315 nanoseconds
+new_iterator: timing = 272933387 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       152
+  1        1        4         1      155       232
+  2       10       94        20     4788      4725
+  3       69     1000        26     6805      6787
+  4      275     4317         9     2336      2335
+
+printdb      :      14.000 micros/op;
+NVP_MSG (214549): exit handler
+NVP_MSG (214549): Exit: print stats
+NVP_MSG (214549): ====================== NVP IO stats: ======================
+NVP_MSG (214549): open 3371073, close 3370228, async close 0
+NVP_MSG (214549): mmap 481, unlink 1271, stat 1271
+NVP_MSG (214549): dr mmap 121, dr mmap critical path 0
+NVP_MSG (214549): fsync 1773, appendfsync: count 1362 size 0 average 0
+NVP_MSG (214549): READ: count 6614832, size 28908334322, average 4370
+NVP_MSG (214549): WRITE: count 3688358, size 15259885690, average 4137
+NVP_MSG (214549): memcpy READ: count 6472374, size 28215327380, average 4359
+NVP_MSG (214549): anon READ: count 0, size 0, average 0
+NVP_MSG (214549): memcpy WRITE: count 3685136, size 15267384426, average 4142
+NVP_MSG (214549): anon WRITE: count 3685026, size 15267308141, average 4143
+NVP_MSG (214549): posix READ: count 126044, size 614995573, average 4879
+NVP_MSG (214549): posix WRITE: count 3469, size 369508, average 106
+NVP_MSG (214549): write extends 3685278, total 3685477
+NVP_MSG (214549): MFENCE: count 0
+NVP_MSG (214549): CLFLUSHOPT: count 0
+NVP_MSG (214549): NON_TEMPORAL_WRITES: count 3639457, size 15155065341, average 4164
+NVP_MSG (214549): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214549): TOTAL SYSCALLS (open + close + read + write + fsync): count 6870814
+NVP_MSG (214549): calling cleanup
+NVP_MSG (214549): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:53:32 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-12m3N0 /mnt/pmem_emul/DR-17nnkB /mnt/pmem_emul/DR-1IEzvb /mnt/pmem_emul/DR-35k7ic /mnt/pmem_emul/DR-3nItqE /mnt/pmem_emul/DR-3UBuw5 /mnt/pmem_emul/DR-4juVDF /mnt/pmem_emul/DR-4r1N5f /mnt/pmem_emul/DR-5CE6Rl /mnt/pmem_emul/DR-6b2fwx /mnt/pmem_emul/DR-7fEG8J /mnt/pmem_emul/DR-8oEhtR /mnt/pmem_emul/DR-99hOBd /mnt/pmem_emul/DR-9J5t1J /mnt/pmem_emul/DR-9kzE83 /mnt/pmem_emul/DR-A7ApDu /mnt/pmem_emul/DR-a8GAbr /mnt/pmem_emul/DR-AIlZXw /mnt/pmem_emul/DR-Ar8bjA /mnt/pmem_emul/DR-AzS6kL /mnt/pmem_emul/DR-bNaSP1 /mnt/pmem_emul/DR-bqckCF /mnt/pmem_emul/DR-C8I2bx /mnt/pmem_emul/DR-CctHZv /mnt/pmem_emul/DR-cmy7zb /mnt/pmem_emul/DR-cRJZvC /mnt/pmem_emul/DR-dYBrj3 /mnt/pmem_emul/DR-dYfqy4 /mnt/pmem_emul/DR-E0tdsb /mnt/pmem_emul/DR-E76Eiw /mnt/pmem_emul/DR-ebIFpd /mnt/pmem_emul/DR-EizSxp /mnt/pmem_emul/DR-EpBYqA /mnt/pmem_emul/DR-ErbLMv /mnt/pmem_emul/DR-EVSTHY /mnt/pmem_emul/DR-EWre8G /mnt/pmem_emul/DR-ezz6bM /mnt/pmem_emul/DR-FioUxx /mnt/pmem_emul/DR-FjFWWv /mnt/pmem_emul/DR-FqIBgF /mnt/pmem_emul/DR-g42L7S /mnt/pmem_emul/DR-gDKBOO /mnt/pmem_emul/DR-GJe2e6 /mnt/pmem_emul/DR-h5rcdd /mnt/pmem_emul/DR-hDs3aa /mnt/pmem_emul/DR-hIr0ZB /mnt/pmem_emul/DR-hTH6p0 /mnt/pmem_emul/DR-i37K99 /mnt/pmem_emul/DR-J0OJC2 /mnt/pmem_emul/DR-jBTx1o /mnt/pmem_emul/DR-JCFLMk /mnt/pmem_emul/DR-JGCihP /mnt/pmem_emul/DR-JlN3eI /mnt/pmem_emul/DR-jLSbIA /mnt/pmem_emul/DR-k3eDsM /mnt/pmem_emul/DR-KaWfiA /mnt/pmem_emul/DR-lA9Fyw /mnt/pmem_emul/DR-le570m /mnt/pmem_emul/DR-lF69MA /mnt/pmem_emul/DR-LlOczl /mnt/pmem_emul/DR-LOPzcM /mnt/pmem_emul/DR-mQkSsp /mnt/pmem_emul/DR-mYZvoi /mnt/pmem_emul/DR-NdxEFT /mnt/pmem_emul/DR-nmDBvM /mnt/pmem_emul/DR-nPLQet /mnt/pmem_emul/DR-ntmNFQ /mnt/pmem_emul/DR-NwrPVj /mnt/pmem_emul/DR-o5UPzB /mnt/pmem_emul/DR-OEJK5h /mnt/pmem_emul/DR-oHUXRT /mnt/pmem_emul/DR-oM4gJ0 /mnt/pmem_emul/DR-OVER-7PMmV3 /mnt/pmem_emul/DR-P5pLyI /mnt/pmem_emul/DR-pgdD2a /mnt/pmem_emul/DR-pYAArw /mnt/pmem_emul/DR-QJkI8A /mnt/pmem_emul/DR-r9ma7d /mnt/pmem_emul/DR-Rf2Pcn /mnt/pmem_emul/DR-rul0J7 /mnt/pmem_emul/DR-S3JjLt /mnt/pmem_emul/DR-S7zRWU /mnt/pmem_emul/DR-s8NTfN /mnt/pmem_emul/DR-Srxuec /mnt/pmem_emul/DR-STU4q7 /mnt/pmem_emul/DR-SWsbAD /mnt/pmem_emul/DR-T4UqMu /mnt/pmem_emul/DR-T53VeP /mnt/pmem_emul/DR-tdNI09 /mnt/pmem_emul/DR-TFzUW0 /mnt/pmem_emul/DR-TLnYYz /mnt/pmem_emul/DR-u8SSjb /mnt/pmem_emul/DR-ufdMbX /mnt/pmem_emul/DR-uhn0ah /mnt/pmem_emul/DR-USgwTx /mnt/pmem_emul/DR-uYzhVq /mnt/pmem_emul/DR-v57iAA /mnt/pmem_emul/DR-Vi5YIy /mnt/pmem_emul/DR-VMCYsq /mnt/pmem_emul/DR-W2omiV /mnt/pmem_emul/DR-whrimR /mnt/pmem_emul/DR-wjGQMd /mnt/pmem_emul/DR-wJU71V /mnt/pmem_emul/DR-wMmRsN /mnt/pmem_emul/DR-xE0E3q /mnt/pmem_emul/DR-xI1LPj /mnt/pmem_emul/DR-XjDc1H /mnt/pmem_emul/DR-xTeNHe /mnt/pmem_emul/DR-xx8ez0 /mnt/pmem_emul/DR-y90OGp /mnt/pmem_emul/DR-yeOx6g /mnt/pmem_emul/DR-ykMa8z /mnt/pmem_emul/DR-YkOlwX /mnt/pmem_emul/DR-YlhIzj /mnt/pmem_emul/DR-YnGtEU /mnt/pmem_emul/DR-YQsOWN /mnt/pmem_emul/DR-yUkqID /mnt/pmem_emul/DR-YZMPPF /mnt/pmem_emul/DR-ZEjYsA /mnt/pmem_emul/DR-ZFzFuT /mnt/pmem_emul/DR-ZjYUp4 /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunC
++ setup=posix_boost
++ run_id=2
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunC
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runc_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunC
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunC/run2
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunC/run2': No such file or directory
++ date
+Fri Feb 23 23:53:49 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunC/run2
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214574): _hub_init2: START
+NVP_MSG (214574): init_logs: Initializing append and op log
+NVP_MSG (214574): _nvp_init2: dr fd = 5, start addr = 0x7FB3BDA00000
+NVP_MSG (214574): _nvp_init2: dr fd = 6, start addr = 0x7FB3B3800000
+NVP_MSG (214574): _nvp_init2: dr fd = 7, start addr = 0x7FB3A9600000
+NVP_MSG (214574): _nvp_init2: dr fd = 8, start addr = 0x7FB39F400000
+NVP_MSG (214574): _nvp_init2: dr fd = 9, start addr = 0x7FB395200000
+NVP_MSG (214574): _nvp_init2: dr fd = 10, start addr = 0x7FB38B000000
+NVP_MSG (214574): _nvp_init2: dr fd = 11, start addr = 0x7FB380E00000
+NVP_MSG (214574): _nvp_init2: dr fd = 12, start addr = 0x7FB376C00000
+NVP_MSG (214574): _nvp_init2: dr fd = 13, start addr = 0x7FB36CA00000
+NVP_MSG (214574): _nvp_init2: dr fd = 14, start addr = 0x7FB362800000
+NVP_MSG (214574): _nvp_init2: dr fd = 15, start addr = 0x7FB35FE00000
+NVP_MSG (214574): _nvp_init2: Large regions set
+NVP_MSG (214574): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214574): _nvp_init2: Tbl mmaps set
+NVP_MSG (214574): _nvp_init2: Global locks created
+NVP_MSG (214574): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214574): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:53:51 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214574): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214574): Does not support mmap, use posix instead.
+NVP_MSG (214574): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-008767 is opened O_WRONLY.
+NVP_MSG (214574): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 5000000, D = 0, I = 0, U = 0, S = 0
+LevelDB/WiscKey splitup: P = 0, G = 5000000, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 47.184 seconds
+Thread 0: Total data: YCSB = 4.969936 GB, HyperLevelDB = 4.969936 GB
+Thread 0: Ops/s = 103.485 Kops/s
+Thread 0: YCSB throughput = 107.859513 MB/s
+Thread 0: HyperLevelDB throughput = 107.859513 MB/s
+memtable_read: timing = 131992520 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 12533229972 nanoseconds
+file_open_during_read: timing = 14237375803 nanoseconds
+file_close_during_read: timing = 17095977538 nanoseconds
+get_files: timing = 1407505158 nanoseconds
+after_get_files: timing = 43410396518 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 36988039314 nanoseconds
+read_block: timing = 45247881987 nanoseconds
+insert_block_cache: timing = 1113013103 nanoseconds
+new_iterator: timing = 289395870 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0         3
+  1        0        0         0        7         5
+  2        0        0         0       99        98
+  3        0        0         3     1065      1046
+  4      346     5262        24     6323      6188
+
+ycsb         :       9.825 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 131992520 nanoseconds
+imm_memtable_read: timing = 0 nanoseconds
+file_read: timing = 12533229972 nanoseconds
+file_open_during_read: timing = 14237375803 nanoseconds
+file_close_during_read: timing = 17095977538 nanoseconds
+get_files: timing = 1407505158 nanoseconds
+after_get_files: timing = 43410396518 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 36988039314 nanoseconds
+read_block: timing = 45247881987 nanoseconds
+insert_block_cache: timing = 1113013103 nanoseconds
+new_iterator: timing = 289395870 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0         3
+  1        0        0         0        7         5
+  2        0        0         0       99        98
+  3        0        0         3     1065      1046
+  4      346     5262        24     6323      6188
+
+printdb      :      15.000 micros/op;
+NVP_MSG (214574): exit handler
+NVP_MSG (214574): Exit: print stats
+NVP_MSG (214574): ====================== NVP IO stats: ======================
+NVP_MSG (214574): open 2348574, close 2349437, async close 0
+NVP_MSG (214574): mmap 695, unlink 529, stat 529
+NVP_MSG (214574): dr mmap 67, dr mmap critical path 0
+NVP_MSG (214574): fsync 690, appendfsync: count 544 size 0 average 0
+NVP_MSG (214574): READ: count 5639824, size 24689423549, average 4377
+NVP_MSG (214574): WRITE: count 1748730, size 7697272890, average 4401
+NVP_MSG (214574): memcpy READ: count 5540305, size 24183787977, average 4365
+NVP_MSG (214574): anon READ: count 0, size 0, average 0
+NVP_MSG (214574): memcpy WRITE: count 1747220, size 7697103193, average 4405
+NVP_MSG (214574): anon WRITE: count 1747220, size 7697103193, average 4405
+NVP_MSG (214574): posix READ: count 89625, size 455619504, average 5083
+NVP_MSG (214574): posix WRITE: count 1510, size 169697, average 112
+NVP_MSG (214574): write extends 1747220, total 1747220
+NVP_MSG (214574): MFENCE: count 0
+NVP_MSG (214574): CLFLUSHOPT: count 0
+NVP_MSG (214574): NON_TEMPORAL_WRITES: count 1747220, size 7697103193, average 4405
+NVP_MSG (214574): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214574): TOTAL SYSCALLS (open + close + read + write + fsync): count 4789146
+NVP_MSG (214574): calling cleanup
+NVP_MSG (214574): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:54:40 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-00b9uF /mnt/pmem_emul/DR-04egVD /mnt/pmem_emul/DR-09kwig /mnt/pmem_emul/DR-0nAHyk /mnt/pmem_emul/DR-0rXASx /mnt/pmem_emul/DR-29KA6J /mnt/pmem_emul/DR-49reuW /mnt/pmem_emul/DR-4jjCzg /mnt/pmem_emul/DR-6zxnXb /mnt/pmem_emul/DR-8Em5oc /mnt/pmem_emul/DR-8JXq0z /mnt/pmem_emul/DR-8mKf1W /mnt/pmem_emul/DR-a6Da4b /mnt/pmem_emul/DR-aeJECb /mnt/pmem_emul/DR-aT4Wa4 /mnt/pmem_emul/DR-AYvlaf /mnt/pmem_emul/DR-CCIHGn /mnt/pmem_emul/DR-cQ4ns1 /mnt/pmem_emul/DR-CSyuFs /mnt/pmem_emul/DR-eIbdrh /mnt/pmem_emul/DR-G7PdHb /mnt/pmem_emul/DR-gKEtmO /mnt/pmem_emul/DR-gxL7sY /mnt/pmem_emul/DR-gzYCLO /mnt/pmem_emul/DR-IcPYLK /mnt/pmem_emul/DR-ItxdRd /mnt/pmem_emul/DR-IZb5el /mnt/pmem_emul/DR-K7ZX1G /mnt/pmem_emul/DR-KcFsJj /mnt/pmem_emul/DR-KKI9et /mnt/pmem_emul/DR-kStFWr /mnt/pmem_emul/DR-KyDN2z /mnt/pmem_emul/DR-MF2bRh /mnt/pmem_emul/DR-mP0l2c /mnt/pmem_emul/DR-MVFyS3 /mnt/pmem_emul/DR-OaCidY /mnt/pmem_emul/DR-Oi1sS1 /mnt/pmem_emul/DR-oMoOfH /mnt/pmem_emul/DR-OVER-8AGm0i /mnt/pmem_emul/DR-QCMmna /mnt/pmem_emul/DR-QMXNsl /mnt/pmem_emul/DR-S6DDRe /mnt/pmem_emul/DR-SAPtmq /mnt/pmem_emul/DR-sB203t /mnt/pmem_emul/DR-SQ3MOJ /mnt/pmem_emul/DR-SXlcbv /mnt/pmem_emul/DR-SZQVWS /mnt/pmem_emul/DR-uh4uqD /mnt/pmem_emul/DR-UKKafo /mnt/pmem_emul/DR-UNkU89 /mnt/pmem_emul/DR-UONC3f /mnt/pmem_emul/DR-uZgi3z /mnt/pmem_emul/DR-w3h8NA /mnt/pmem_emul/DR-wcnDZS /mnt/pmem_emul/DR-wdlUUC /mnt/pmem_emul/DR-WeB0Fm /mnt/pmem_emul/DR-WFq32u /mnt/pmem_emul/DR-wg4DJb /mnt/pmem_emul/DR-wJowJf /mnt/pmem_emul/DR-wRAJSC /mnt/pmem_emul/DR-wTox1B /mnt/pmem_emul/DR-wVdwZ6 /mnt/pmem_emul/DR-y5nvSV /mnt/pmem_emul/DR-YcT0dS /mnt/pmem_emul/DR-yMbkEm /mnt/pmem_emul/DR-YtUWsU /mnt/pmem_emul/DR-YXBGdV /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunF
++ setup=posix_boost
++ run_id=2
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunF
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/runf_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunF
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunF/run2
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunF/run2': No such file or directory
++ date
+Fri Feb 23 23:54:57 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunF/run2
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214599): _hub_init2: START
+NVP_MSG (214599): init_logs: Initializing append and op log
+NVP_MSG (214599): _nvp_init2: dr fd = 5, start addr = 0x7F69E5C00000
+NVP_MSG (214599): _nvp_init2: dr fd = 6, start addr = 0x7F69DBA00000
+NVP_MSG (214599): _nvp_init2: dr fd = 7, start addr = 0x7F69D1800000
+NVP_MSG (214599): _nvp_init2: dr fd = 8, start addr = 0x7F69C7600000
+NVP_MSG (214599): _nvp_init2: dr fd = 9, start addr = 0x7F69BD400000
+NVP_MSG (214599): _nvp_init2: dr fd = 10, start addr = 0x7F69B3200000
+NVP_MSG (214599): _nvp_init2: dr fd = 11, start addr = 0x7F69A9000000
+NVP_MSG (214599): _nvp_init2: dr fd = 12, start addr = 0x7F699EE00000
+NVP_MSG (214599): _nvp_init2: dr fd = 13, start addr = 0x7F6994C00000
+NVP_MSG (214599): _nvp_init2: dr fd = 14, start addr = 0x7F698AA00000
+NVP_MSG (214599): _nvp_init2: dr fd = 15, start addr = 0x7F6988000000
+NVP_MSG (214599): _nvp_init2: Large regions set
+NVP_MSG (214599): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214599): _nvp_init2: Tbl mmaps set
+NVP_MSG (214599): _nvp_init2: Global locks created
+NVP_MSG (214599): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214599): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:54:58 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214599): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214599): Does not support mmap, use posix instead.
+NVP_MSG (214599): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-009272 is opened O_WRONLY.
+NVP_MSG (214599): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 7500020 operations.
+Thread 0: Replaying trace ...
+
+... finished 7500000 ops
+
+Thread 0: Done replaying 7500020 operations.
+YCSB splitup: R = 5000000, D = 0, I = 0, U = 2500020, S = 0
+LevelDB/WiscKey splitup: P = 2500020, G = 7500020, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 107.207 seconds
+Thread 0: Total data: YCSB = 4.167363 GB, HyperLevelDB = 6.304766 GB
+Thread 0: Ops/s = 68.319 Kops/s
+Thread 0: YCSB throughput = 39.805144 MB/s
+Thread 0: HyperLevelDB throughput = 60.220838 MB/s
+memtable_read: timing = 2383500335 nanoseconds
+imm_memtable_read: timing = 77358104 nanoseconds
+file_read: timing = 14271191682 nanoseconds
+file_open_during_read: timing = 40409215735 nanoseconds
+file_close_during_read: timing = 44662752186 nanoseconds
+get_files: timing = 1586089334 nanoseconds
+after_get_files: timing = 54082991260 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 42132198539 nanoseconds
+read_block: timing = 101361653812 nanoseconds
+insert_block_cache: timing = 1087876678 nanoseconds
+new_iterator: timing = 306364639 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        7       28         5        0      2493
+  1        2       19        15     3231      2495
+  2       17      201        57    10330     10077
+  3       75     1035        29     5560      5339
+  4      346     5262         0        0         0
+
+ycsb         :      14.715 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 2383500335 nanoseconds
+imm_memtable_read: timing = 77358104 nanoseconds
+file_read: timing = 14271199839 nanoseconds
+file_open_during_read: timing = 40409255441 nanoseconds
+file_close_during_read: timing = 44662783555 nanoseconds
+get_files: timing = 1586089334 nanoseconds
+after_get_files: timing = 54082991260 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 42132198539 nanoseconds
+read_block: timing = 101361734324 nanoseconds
+insert_block_cache: timing = 1087876778 nanoseconds
+new_iterator: timing = 306364875 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        7       28         5        0      2493
+  1        2       19        15     3231      2495
+  2       17      201        57    10330     10077
+  3       75     1035        29     5560      5339
+  4      346     5262         0        0         0
+
+printdb      :      16.000 micros/op;
+NVP_MSG (214599): exit handler
+NVP_MSG (214599): Exit: print stats
+NVP_MSG (214599): ====================== NVP IO stats: ======================
+NVP_MSG (214599): open 6432807, close 6430885, async close 0
+NVP_MSG (214599): mmap 502, unlink 2938, stat 2938
+NVP_MSG (214599): dr mmap 201, dr mmap critical path 0
+NVP_MSG (214599): fsync 4367, appendfsync: count 3161 size 0 average 0
+NVP_MSG (214599): READ: count 7442860, size 31937635007, average 4291
+NVP_MSG (214599): WRITE: count 7605617, size 24027730566, average 3159
+NVP_MSG (214599): memcpy READ: count 7292265, size 31222974884, average 4281
+NVP_MSG (214599): anon READ: count 0, size 0, average 0
+NVP_MSG (214599): memcpy WRITE: count 7599462, size 24124138672, average 3174
+NVP_MSG (214599): anon WRITE: count 7598533, size 24123319906, average 3174
+NVP_MSG (214599): posix READ: count 136099, size 655538684, average 4816
+NVP_MSG (214599): posix WRITE: count 8077, size 750509, average 92
+NVP_MSG (214599): write extends 7601188, total 7603656
+NVP_MSG (214599): MFENCE: count 0
+NVP_MSG (214599): CLFLUSHOPT: count 0
+NVP_MSG (214599): NON_TEMPORAL_WRITES: count 7114603, size 22923378842, average 3222
+NVP_MSG (214599): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214599): TOTAL SYSCALLS (open + close + read + write + fsync): count 13007868
+NVP_MSG (214599): calling cleanup
+NVP_MSG (214599): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:56:48 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-062PIi /mnt/pmem_emul/DR-07U8QY /mnt/pmem_emul/DR-0uitxl /mnt/pmem_emul/DR-1jjn99 /mnt/pmem_emul/DR-1kb0DO /mnt/pmem_emul/DR-1LjT5L /mnt/pmem_emul/DR-1r7bu5 /mnt/pmem_emul/DR-1Zmo83 /mnt/pmem_emul/DR-20oNd2 /mnt/pmem_emul/DR-2RCsJf /mnt/pmem_emul/DR-2vqWUe /mnt/pmem_emul/DR-2vWA4Q /mnt/pmem_emul/DR-2ZBhfp /mnt/pmem_emul/DR-3t57mJ /mnt/pmem_emul/DR-4ap5JV /mnt/pmem_emul/DR-4leZFy /mnt/pmem_emul/DR-4YHS9e /mnt/pmem_emul/DR-5xH4S6 /mnt/pmem_emul/DR-6KyoWq /mnt/pmem_emul/DR-6rTz5k /mnt/pmem_emul/DR-7CFXdx /mnt/pmem_emul/DR-7TnrVM /mnt/pmem_emul/DR-82Q6iQ /mnt/pmem_emul/DR-8av10k /mnt/pmem_emul/DR-8KwjYn /mnt/pmem_emul/DR-8MlS2I /mnt/pmem_emul/DR-8uQls7 /mnt/pmem_emul/DR-96yjaP /mnt/pmem_emul/DR-9bgM0E /mnt/pmem_emul/DR-9bnrsw /mnt/pmem_emul/DR-9eBAwY /mnt/pmem_emul/DR-9VvVzb /mnt/pmem_emul/DR-9wmSQw /mnt/pmem_emul/DR-AzvNur /mnt/pmem_emul/DR-bBm27f /mnt/pmem_emul/DR-biFMMo /mnt/pmem_emul/DR-BkkTBi /mnt/pmem_emul/DR-bLP9rX /mnt/pmem_emul/DR-bP24cK /mnt/pmem_emul/DR-BS0tcD /mnt/pmem_emul/DR-btgXbD /mnt/pmem_emul/DR-C8vuQl /mnt/pmem_emul/DR-CeOkIc /mnt/pmem_emul/DR-CfpRxA /mnt/pmem_emul/DR-Cl2uaq /mnt/pmem_emul/DR-cLjlL4 /mnt/pmem_emul/DR-CogOkq /mnt/pmem_emul/DR-D2VfMf /mnt/pmem_emul/DR-DgJrXU /mnt/pmem_emul/DR-Dhhsqo /mnt/pmem_emul/DR-DNvvVD /mnt/pmem_emul/DR-dV2fVB /mnt/pmem_emul/DR-e3lccV /mnt/pmem_emul/DR-E6EMgd /mnt/pmem_emul/DR-E8DaxH /mnt/pmem_emul/DR-EB5MJ7 /mnt/pmem_emul/DR-Ef2WHp /mnt/pmem_emul/DR-ENq1M1 /mnt/pmem_emul/DR-Eo2TdW /mnt/pmem_emul/DR-esqtlQ /mnt/pmem_emul/DR-EWZTCt /mnt/pmem_emul/DR-EzWTbM /mnt/pmem_emul/DR-f5VK1N /mnt/pmem_emul/DR-f6oTun /mnt/pmem_emul/DR-f8W7YR /mnt/pmem_emul/DR-FcKbBc /mnt/pmem_emul/DR-FHAPXY /mnt/pmem_emul/DR-FJuMgi /mnt/pmem_emul/DR-focpoB /mnt/pmem_emul/DR-Foi3Rr /mnt/pmem_emul/DR-FPM6LH /mnt/pmem_emul/DR-G7hWEI /mnt/pmem_emul/DR-gaB09O /mnt/pmem_emul/DR-gdKxHo /mnt/pmem_emul/DR-gIUXNl /mnt/pmem_emul/DR-GLLSqZ /mnt/pmem_emul/DR-gLQo4Q /mnt/pmem_emul/DR-gzDjgu /mnt/pmem_emul/DR-hG8Xgm /mnt/pmem_emul/DR-hMIgSj /mnt/pmem_emul/DR-HtuQup /mnt/pmem_emul/DR-HUTdWc /mnt/pmem_emul/DR-hxhE93 /mnt/pmem_emul/DR-hXsv7n /mnt/pmem_emul/DR-HZaZ0j /mnt/pmem_emul/DR-hzWB1A /mnt/pmem_emul/DR-ibXF0I /mnt/pmem_emul/DR-Idy1Ng /mnt/pmem_emul/DR-iiGUvf /mnt/pmem_emul/DR-iRZlX8 /mnt/pmem_emul/DR-jfltKt /mnt/pmem_emul/DR-JJNItA /mnt/pmem_emul/DR-JtS0md /mnt/pmem_emul/DR-jX0cWG /mnt/pmem_emul/DR-k3Lz5p /mnt/pmem_emul/DR-kBQrWh /mnt/pmem_emul/DR-KEqkJ2 /mnt/pmem_emul/DR-kH4os5 /mnt/pmem_emul/DR-kHo27E /mnt/pmem_emul/DR-Kiu7Mc /mnt/pmem_emul/DR-kR4PSR /mnt/pmem_emul/DR-L04Hs7 /mnt/pmem_emul/DR-ldZsWp /mnt/pmem_emul/DR-Lrg92A /mnt/pmem_emul/DR-lrQvsZ /mnt/pmem_emul/DR-LzlcLB /mnt/pmem_emul/DR-M0jWMI /mnt/pmem_emul/DR-m24EnG /mnt/pmem_emul/DR-m7sxYj /mnt/pmem_emul/DR-MDczFH /mnt/pmem_emul/DR-mE7e8l /mnt/pmem_emul/DR-mOsXws /mnt/pmem_emul/DR-mqcLfF /mnt/pmem_emul/DR-MRoDhA /mnt/pmem_emul/DR-n6uTTz /mnt/pmem_emul/DR-nbqaDh /mnt/pmem_emul/DR-nDa9Zd /mnt/pmem_emul/DR-NM2n8v /mnt/pmem_emul/DR-Noto88 /mnt/pmem_emul/DR-OKn3NK /mnt/pmem_emul/DR-OVER-2saQ8B /mnt/pmem_emul/DR-P0qr6Z /mnt/pmem_emul/DR-p2K0eb /mnt/pmem_emul/DR-PDYLgG /mnt/pmem_emul/DR-PFpZNU /mnt/pmem_emul/DR-pJLmIt /mnt/pmem_emul/DR-PqA7SB /mnt/pmem_emul/DR-PWidDc /mnt/pmem_emul/DR-pXvKRB /mnt/pmem_emul/DR-PZxcJq /mnt/pmem_emul/DR-q2WHv7 /mnt/pmem_emul/DR-q4vdD1 /mnt/pmem_emul/DR-QAJxGE /mnt/pmem_emul/DR-QHyTd6 /mnt/pmem_emul/DR-qLAhFc /mnt/pmem_emul/DR-qLKDih /mnt/pmem_emul/DR-qMwWZc /mnt/pmem_emul/DR-QMY2sc /mnt/pmem_emul/DR-Qr7ek7 /mnt/pmem_emul/DR-QVhOrx /mnt/pmem_emul/DR-qVqF0N /mnt/pmem_emul/DR-qxCnzn /mnt/pmem_emul/DR-r5XPPH /mnt/pmem_emul/DR-r9u4kP /mnt/pmem_emul/DR-REEvbl /mnt/pmem_emul/DR-rkhC2m /mnt/pmem_emul/DR-rKo8Rp /mnt/pmem_emul/DR-rmyuOy /mnt/pmem_emul/DR-rWb3Jt /mnt/pmem_emul/DR-RWQ3wj /mnt/pmem_emul/DR-SgCe12 /mnt/pmem_emul/DR-SkBSVj /mnt/pmem_emul/DR-Snv70v /mnt/pmem_emul/DR-sq7oz0 /mnt/pmem_emul/DR-SRY9og /mnt/pmem_emul/DR-sYNRgf /mnt/pmem_emul/DR-T993PG /mnt/pmem_emul/DR-TfU89P /mnt/pmem_emul/DR-THq6ZP /mnt/pmem_emul/DR-TpGsgQ /mnt/pmem_emul/DR-TsbruZ /mnt/pmem_emul/DR-TYDvq7 /mnt/pmem_emul/DR-tYfMvY /mnt/pmem_emul/DR-u7AoWa /mnt/pmem_emul/DR-uJFkoA /mnt/pmem_emul/DR-uJg4Lo /mnt/pmem_emul/DR-UvbbXR /mnt/pmem_emul/DR-v3OvZY /mnt/pmem_emul/DR-v87L3d /mnt/pmem_emul/DR-vEIIzh /mnt/pmem_emul/DR-vLjaEN /mnt/pmem_emul/DR-vTDzXw /mnt/pmem_emul/DR-vtV0BL /mnt/pmem_emul/DR-VtvjNS /mnt/pmem_emul/DR-vU26gd /mnt/pmem_emul/DR-W64KV8 /mnt/pmem_emul/DR-W8dDSk /mnt/pmem_emul/DR-WgLhNZ /mnt/pmem_emul/DR-wgOwqJ /mnt/pmem_emul/DR-wJnmM4 /mnt/pmem_emul/DR-WnyO8M /mnt/pmem_emul/DR-WobEfK /mnt/pmem_emul/DR-wqbUu1 /mnt/pmem_emul/DR-WTLG7I /mnt/pmem_emul/DR-wtOvE9 /mnt/pmem_emul/DR-Wwf83H /mnt/pmem_emul/DR-x5awBg /mnt/pmem_emul/DR-x8A3XT /mnt/pmem_emul/DR-Xc3rJS /mnt/pmem_emul/DR-YbhHob /mnt/pmem_emul/DR-YfkToc /mnt/pmem_emul/DR-YNbH4l /mnt/pmem_emul/DR-YWw1WO /mnt/pmem_emul/DR-yZEzmb /mnt/pmem_emul/DR-Z1Di7X /mnt/pmem_emul/DR-zkMBhy /mnt/pmem_emul/DR-zlynAm /mnt/pmem_emul/DR-zmvJKB /mnt/pmem_emul/DR-Znrorv /mnt/pmem_emul/DR-zqBAF6 /mnt/pmem_emul/DR-zqRmi3 /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=RunD
++ setup=posix_boost
++ run_id=2
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/RunD
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ run_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ echo ----------------------- LevelDB YCSB Run ---------------------------
+----------------------- LevelDB YCSB Run ---------------------------
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/rund_5M_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/RunD
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/RunD/run2
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/RunD/run2': No such file or directory
++ date
+Fri Feb 23 23:57:06 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/RunD/run2
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214623): _hub_init2: START
+NVP_MSG (214623): init_logs: Initializing append and op log
+NVP_MSG (214623): _nvp_init2: dr fd = 5, start addr = 0x7FE206600000
+NVP_MSG (214623): _nvp_init2: dr fd = 6, start addr = 0x7FE1FC400000
+NVP_MSG (214623): _nvp_init2: dr fd = 7, start addr = 0x7FE1F2200000
+NVP_MSG (214623): _nvp_init2: dr fd = 8, start addr = 0x7FE1E8000000
+NVP_MSG (214623): _nvp_init2: dr fd = 9, start addr = 0x7FE1DDE00000
+NVP_MSG (214623): _nvp_init2: dr fd = 10, start addr = 0x7FE1D3C00000
+NVP_MSG (214623): _nvp_init2: dr fd = 11, start addr = 0x7FE1C9A00000
+NVP_MSG (214623): _nvp_init2: dr fd = 12, start addr = 0x7FE1BF800000
+NVP_MSG (214623): _nvp_init2: dr fd = 13, start addr = 0x7FE1B5600000
+NVP_MSG (214623): _nvp_init2: dr fd = 14, start addr = 0x7FE1AB400000
+NVP_MSG (214623): _nvp_init2: dr fd = 15, start addr = 0x7FE1A8A00000
+NVP_MSG (214623): _nvp_init2: Large regions set
+NVP_MSG (214623): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214623): _nvp_init2: Tbl mmaps set
+NVP_MSG (214623): _nvp_init2: Global locks created
+NVP_MSG (214623): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214623): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:57:07 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214623): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214623): Does not support mmap, use posix instead.
+NVP_MSG (214623): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-012316 is opened O_WRONLY.
+NVP_MSG (214623): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+... finished 5000000 ops
+
+Thread 0: Done replaying 5000000 operations.
+YCSB splitup: R = 4749979, D = 0, I = 250021, U = 0, S = 0
+LevelDB/WiscKey splitup: P = 250021, G = 4749979, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 40.114 seconds
+Thread 0: Total data: YCSB = 4.804748 GB, HyperLevelDB = 4.804748 GB
+Thread 0: Ops/s = 121.723 Kops/s
+Thread 0: YCSB throughput = 122.651279 MB/s
+Thread 0: HyperLevelDB throughput = 122.651279 MB/s
+memtable_read: timing = 2203705613 nanoseconds
+imm_memtable_read: timing = 51844078 nanoseconds
+file_read: timing = 9562344463 nanoseconds
+file_open_during_read: timing = 16931928752 nanoseconds
+file_close_during_read: timing = 18367048719 nanoseconds
+get_files: timing = 866776738 nanoseconds
+after_get_files: timing = 33590613570 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 28050452415 nanoseconds
+read_block: timing = 46139844481 nanoseconds
+insert_block_cache: timing = 752710140 nanoseconds
+new_iterator: timing = 189271685 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       223
+  1        1        4         1      225       254
+  2        9       98        17     4052      4046
+  3       77      989        13     3698      3623
+  4      344     5263        10     2430      2069
+
+ycsb         :       8.353 micros/op;
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+memtable_read: timing = 2203705613 nanoseconds
+imm_memtable_read: timing = 51844078 nanoseconds
+file_read: timing = 9562354457 nanoseconds
+file_open_during_read: timing = 16931928879 nanoseconds
+file_close_during_read: timing = 18367048837 nanoseconds
+get_files: timing = 866776738 nanoseconds
+after_get_files: timing = 33590613570 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 28050452415 nanoseconds
+read_block: timing = 46139866718 nanoseconds
+insert_block_cache: timing = 752710256 nanoseconds
+new_iterator: timing = 189271922 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0       223
+  1        1        4         1      225       254
+  2        9       98        17     4052      4046
+  3       77      989        13     3698      3623
+  4      344     5263        10     2430      2069
+
+printdb      :      14.000 micros/op;
+NVP_MSG (214623): exit handler
+NVP_MSG (214623): Exit: print stats
+NVP_MSG (214623): ====================== NVP IO stats: ======================
+NVP_MSG (214623): open 2519075, close 2519748, async close 0
+NVP_MSG (214623): mmap 504, unlink 999, stat 999
+NVP_MSG (214623): dr mmap 86, dr mmap critical path 0
+NVP_MSG (214623): fsync 1332, appendfsync: count 1042 size 0 average 0
+NVP_MSG (214623): READ: count 4573783, size 19940251106, average 4359
+NVP_MSG (214623): WRITE: count 2730540, size 11012221921, average 4032
+NVP_MSG (214623): memcpy READ: count 4389876, size 19067642141, average 4343
+NVP_MSG (214623): anon READ: count 0, size 0, average 0
+NVP_MSG (214623): memcpy WRITE: count 2728078, size 11020142634, average 4039
+NVP_MSG (214623): anon WRITE: count 2727931, size 11020017953, average 4039
+NVP_MSG (214623): posix READ: count 172338, size 819040675, average 4752
+NVP_MSG (214623): posix WRITE: count 2680, size 293101, average 109
+NVP_MSG (214623): write extends 2728200, total 2728395
+NVP_MSG (214623): MFENCE: count 0
+NVP_MSG (214623): CLFLUSHOPT: count 0
+NVP_MSG (214623): NON_TEMPORAL_WRITES: count 2680415, size 10902277183, average 4067
+NVP_MSG (214623): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (214623): TOTAL SYSCALLS (open + close + read + write + fsync): count 5213841
+NVP_MSG (214623): calling cleanup
+NVP_MSG (214623): nvp_cleanup: Done Cleaning up
++ date
+Fri Feb 23 23:57:50 PST 2018
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ rm /mnt/pmem_emul/append.log /mnt/pmem_emul/DR-0mUvOz /mnt/pmem_emul/DR-0UF33q /mnt/pmem_emul/DR-1DNNyX /mnt/pmem_emul/DR-1PUkyH /mnt/pmem_emul/DR-2zbvxy /mnt/pmem_emul/DR-3GYDzz /mnt/pmem_emul/DR-3Hvz7Z /mnt/pmem_emul/DR-3tHTFe /mnt/pmem_emul/DR-4DNDqB /mnt/pmem_emul/DR-4GMwhY /mnt/pmem_emul/DR-5aUCb2 /mnt/pmem_emul/DR-5tWyRd /mnt/pmem_emul/DR-6Oh3ac /mnt/pmem_emul/DR-7lPGl4 /mnt/pmem_emul/DR-7PXC3a /mnt/pmem_emul/DR-7Z4CTP /mnt/pmem_emul/DR-82ep2D /mnt/pmem_emul/DR-8du4BM /mnt/pmem_emul/DR-8KXCWq /mnt/pmem_emul/DR-8ySIpR /mnt/pmem_emul/DR-9fKcyl /mnt/pmem_emul/DR-9Qbbku /mnt/pmem_emul/DR-a9hJh5 /mnt/pmem_emul/DR-AnoXSW /mnt/pmem_emul/DR-ATvFdj /mnt/pmem_emul/DR-AxaqZO /mnt/pmem_emul/DR-bcZQrF /mnt/pmem_emul/DR-BnJ20M /mnt/pmem_emul/DR-buys84 /mnt/pmem_emul/DR-cFMEu8 /mnt/pmem_emul/DR-cHtdCI /mnt/pmem_emul/DR-cTWQMj /mnt/pmem_emul/DR-dEWOig /mnt/pmem_emul/DR-DvbsVW /mnt/pmem_emul/DR-Ehdv3y /mnt/pmem_emul/DR-eSCR2K /mnt/pmem_emul/DR-EY7G3t /mnt/pmem_emul/DR-fAhtc9 /mnt/pmem_emul/DR-FKbxzm /mnt/pmem_emul/DR-GmtqSh /mnt/pmem_emul/DR-hc2tuu /mnt/pmem_emul/DR-ICKTVA /mnt/pmem_emul/DR-iY2eVY /mnt/pmem_emul/DR-j4EyIY /mnt/pmem_emul/DR-j6zgLq /mnt/pmem_emul/DR-Kbdqfq /mnt/pmem_emul/DR-KCz0CX /mnt/pmem_emul/DR-kdRYs6 /mnt/pmem_emul/DR-Lq2XrF /mnt/pmem_emul/DR-Lu1yhF /mnt/pmem_emul/DR-M8QJTe /mnt/pmem_emul/DR-MiYdwd /mnt/pmem_emul/DR-mU8cMR /mnt/pmem_emul/DR-n4en2o /mnt/pmem_emul/DR-n7FP1e /mnt/pmem_emul/DR-ndpcCr /mnt/pmem_emul/DR-oHm1z5 /mnt/pmem_emul/DR-oqB0G8 /mnt/pmem_emul/DR-OVER-zOyaz3 /mnt/pmem_emul/DR-p6upA3 /mnt/pmem_emul/DR-PBYk87 /mnt/pmem_emul/DR-PuEvMk /mnt/pmem_emul/DR-PvggH8 /mnt/pmem_emul/DR-Qqbk5r /mnt/pmem_emul/DR-qYhL0x /mnt/pmem_emul/DR-qzVCbG /mnt/pmem_emul/DR-RdcQaA /mnt/pmem_emul/DR-rvQvH9 /mnt/pmem_emul/DR-sOetfc /mnt/pmem_emul/DR-sTwP2m /mnt/pmem_emul/DR-taVI8E /mnt/pmem_emul/DR-tB7nvO /mnt/pmem_emul/DR-TezaRi /mnt/pmem_emul/DR-TwuLqG /mnt/pmem_emul/DR-u8NPu5 /mnt/pmem_emul/DR-VfX681 /mnt/pmem_emul/DR-vGNIvT /mnt/pmem_emul/DR-vYxjKq /mnt/pmem_emul/DR-WC09Ni /mnt/pmem_emul/DR-WJ8PDH /mnt/pmem_emul/DR-woQfSy /mnt/pmem_emul/DR-xs241c /mnt/pmem_emul/DR-xTD4Zc /mnt/pmem_emul/DR-Y5pqQU /mnt/pmem_emul/DR-YqTIiQ /mnt/pmem_emul/DR-YwKJVZ /mnt/pmem_emul/DR-Z1fxEB /mnt/pmem_emul/leveldbtest-1000 /mnt/pmem_emul/operation.log
+rm: cannot remove '/mnt/pmem_emul/leveldbtest-1000': Is a directory
++ sleep 5
++ cd /root/sanidhya/x/pmboost-test/scripts/ycsb
++ workload=LoadA
++ setup=posix_boost
++ run_id=3
+++ pwd
++ current_dir=/root/sanidhya/x/pmboost-test/scripts/ycsb
+++ readlink -f ../../leveldb
++ leveldb_dir=/root/sanidhya/x/pmboost-test/leveldb
++ leveldb_build_dir=/root/sanidhya/x/pmboost-test/leveldb/build
++ database_dir=/mnt/pmem_emul/leveldbtest-1000
++ workload_dir=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads
++ pmem_dir=/mnt/pmem_emul
+++ readlink -f ../../results
++ result_dir=/root/sanidhya/x/pmboost-test/results
++ boost_results=/root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
+++ readlink -f ../../boost-ycsb
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb
++ '[' posix_boost == boost ']'
++ '[' posix_boost == sync_boost ']'
+++ readlink -f ../../boost-ycsb-posix
++ boost_dir=/root/sanidhya/x/pmboost-test/boost-ycsb-posix
++ ulimit -c unlimited
++ echo Sleeping for 5 seconds . .
+Sleeping for 5 seconds . .
++ sleep 5
++ case "$workload" in
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ load_workload /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ tracefile=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo ----------------------- LevelDB YCSB Load ---------------------------
+----------------------- LevelDB YCSB Load ---------------------------
++ rm -rf /mnt/pmem_emul/leveldbtest-1000
++ export trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ trace_file=/root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ echo Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
+Trace file is /root/sanidhya/x/pmboost-test/leveldb/ycsb_workloads/loada_5M
++ mkdir -p /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA
++ rm /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run3
+rm: cannot remove '/root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run3': No such file or directory
++ date
+Fri Feb 23 23:58:07 PST 2018
++ /root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh -p /root/sanidhya/x/pmboost-test/boost-ycsb-posix -t nvp_nvp.tree /root/sanidhya/x/pmboost-test/leveldb/build/db_bench --use_existing_db=0 --benchmarks=ycsb,stats,printdb --db=/mnt/pmem_emul/leveldbtest-1000 --threads=1 --open_files=1000
++ tee /root/sanidhya/x/pmboost-test/results/posix_boost/LoadA/run3
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (214652): _hub_init2: START
+NVP_MSG (214652): init_logs: Initializing append and op log
+NVP_MSG (214652): _nvp_init2: dr fd = 5, start addr = 0x7F9CAC600000
+NVP_MSG (214652): _nvp_init2: dr fd = 6, start addr = 0x7F9CA2400000
+NVP_MSG (214652): _nvp_init2: dr fd = 7, start addr = 0x7F9C98200000
+NVP_MSG (214652): _nvp_init2: dr fd = 8, start addr = 0x7F9C8E000000
+NVP_MSG (214652): _nvp_init2: dr fd = 9, start addr = 0x7F9C83E00000
+NVP_MSG (214652): _nvp_init2: dr fd = 10, start addr = 0x7F9C79C00000
+NVP_MSG (214652): _nvp_init2: dr fd = 11, start addr = 0x7F9C6FA00000
+NVP_MSG (214652): _nvp_init2: dr fd = 12, start addr = 0x7F9C65800000
+NVP_MSG (214652): _nvp_init2: dr fd = 13, start addr = 0x7F9C5B600000
+NVP_MSG (214652): _nvp_init2: dr fd = 14, start addr = 0x7F9C51400000
+NVP_MSG (214652): _nvp_init2: dr fd = 15, start addr = 0x7F9C4EA00000
+NVP_MSG (214652): _nvp_init2: Large regions set
+NVP_MSG (214652): _nvp_init2: Tbl over mmaps set
+NVP_MSG (214652): _nvp_init2: Tbl mmaps set
+NVP_MSG (214652): _nvp_init2: Global locks created
+NVP_MSG (214652): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (214652): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Fri Feb 23 23:58:08 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (214652): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (214652): Does not support mmap, use posix instead.
+NVP_MSG (214652): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000001 is opened O_WRONLY.
+NVP_MSG (214652): Does not support mmap, use posix instead.
+NVP_MSG (214652): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000002 is opened O_WRONLY.
+NVP_MSG (214652): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 5000000 operations.
+Thread 0: Replaying trace ...
+
+^C. finished 3600000 ops
+[root@JF1121-080201T ycsb]
