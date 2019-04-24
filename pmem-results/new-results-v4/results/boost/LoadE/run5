@@ -1,0 +1,37 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (193538): _hub_init2: START
+NVP_MSG (193538): _nvp_init2: dr fd = 3, start addr = 0x7F2BA6200000
+NVP_MSG (193538): _nvp_init2: dr fd = 4, start addr = 0x7F2B9C000000
+NVP_MSG (193538): _nvp_init2: dr fd = 5, start addr = 0x7F2B91E00000
+NVP_MSG (193538): _nvp_init2: dr fd = 6, start addr = 0x7F2B87C00000
+NVP_MSG (193538): _nvp_init2: dr fd = 7, start addr = 0x7F2B7DA00000
+NVP_MSG (193538): _nvp_init2: dr fd = 8, start addr = 0x7F2B73800000
+NVP_MSG (193538): _nvp_init2: dr fd = 9, start addr = 0x7F2B69600000
+NVP_MSG (193538): _nvp_init2: dr fd = 10, start addr = 0x7F2B5F400000
+NVP_MSG (193538): _nvp_init2: dr fd = 11, start addr = 0x7F2B55200000
+NVP_MSG (193538): _nvp_init2: dr fd = 12, start addr = 0x7F2B4B000000
+NVP_MSG (193538): _nvp_init2: Tbl mmaps set
+NVP_MSG (193538): _nvp_init2: Global locks created
+NVP_MSG (193538): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (193538): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Thu Feb 22 05:25:39 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (193538): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (193538): Does not support mmap, use posix instead.
+NVP_MSG (193538): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000001 is opened O_WRONLY.
+NVP_MSG (193538): Does not support mmap, use posix instead.
+NVP_MSG (193538): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000002 is opened O_WRONLY.
+NVP_MSG (193538): Does not support mmap, use posix instead.
+Thread 0: Parsing trace ...
+/root/sanidhya/x/pmboost-test/boost-ycsb-posix/run_boost.sh: line 45: 193538 Segmentation fault      (core dumped) $@

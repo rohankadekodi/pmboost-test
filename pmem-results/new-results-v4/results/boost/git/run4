@@ -1,0 +1,38 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-git
+tree = /root/sanidhya/x/pmboost-test/boost-git/bin/nvp_nvp.tree
+NVP_MSG (136739): _hub_init2: START
+NVP_MSG (136739): init_logs: Initializing append and op log
+NVP_MSG (136739): _nvp_init2: dr fd = 5, start addr = 0x7FDFAAC00000
+NVP_MSG (136739): _nvp_init2: dr fd = 6, start addr = 0x7FDFA0A00000
+NVP_MSG (136739): _nvp_init2: dr fd = 7, start addr = 0x7FDF96800000
+NVP_MSG (136739): _nvp_init2: dr fd = 8, start addr = 0x7FDF93E00000
+NVP_MSG (136739): _nvp_init2: Large regions set
+NVP_MSG (136739): _nvp_init2: Tbl over mmaps set
+NVP_MSG (136739): _nvp_init2: Tbl mmaps set
+NVP_MSG (136739): _nvp_init2: Global locks created
+NVP_MSG (136739): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (136739): _hub_init2: END
+NVP_MSG (136739): exit handler
+NVP_MSG (136739): Exit: print stats
+NVP_MSG (136739): ====================== NVP IO stats: ======================
+NVP_MSG (136739): open 640249, close 639993, async close 0
+NVP_MSG (136739): mmap 5, unlink 60682, stat 60682
+NVP_MSG (136739): dr mmap 5, dr mmap critical path 0
+NVP_MSG (136739): fsync 0, appendfsync: count 60684 size 0 average 0
+NVP_MSG (136739): READ: count 534225, size 3309829886, average 6195
+NVP_MSG (136739): WRITE: count 101436, size 290037805, average 2859
+NVP_MSG (136739): memcpy READ: count 0, size 0, average 0
+NVP_MSG (136739): anon READ: count 0, size 0, average 0
+NVP_MSG (136739): memcpy WRITE: count 101436, size 290037805, average 2859
+NVP_MSG (136739): anon WRITE: count 101436, size 290037805, average 2859
+NVP_MSG (136739): posix READ: count 534224, size 3309829886, average 6195
+NVP_MSG (136739): posix WRITE: count 0, size 0, average 0
+NVP_MSG (136739): write extends 101436, total 101436
+NVP_MSG (136739): MFENCE: count 0
+NVP_MSG (136739): CLFLUSHOPT: count 0
+NVP_MSG (136739): NON_TEMPORAL_WRITES: count 101436, size 290037805, average 2859
+NVP_MSG (136739): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (136739): TOTAL SYSCALLS (open + close + read + write + fsync): count 1814466
+NVP_MSG (136739): calling cleanup
+NVP_MSG (136739): nvp_cleanup: Done Cleaning up

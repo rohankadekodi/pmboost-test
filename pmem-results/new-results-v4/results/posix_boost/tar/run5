@@ -1,0 +1,35 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-tar-posix
+tree = /root/sanidhya/x/pmboost-test/boost-tar-posix/bin/nvp_nvp.tree
+NVP_MSG (187951): _nvp_init2: dr fd = 3, start addr = 0x7F21B2A00000
+NVP_MSG (187951): _nvp_init2: dr fd = 4, start addr = 0x7F21A8800000
+NVP_MSG (187951): _nvp_init2: dr fd = 5, start addr = 0x7F219E600000
+NVP_MSG (187951): _nvp_init2: Tbl mmaps set
+NVP_MSG (187951): _nvp_init2: Global locks created
+NVP_MSG (187951): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (187951): _hub_SHM_COPY: No such file or directory
+ASSERT FAILED ROHAN
+[01;33mNVP_ERROR[m (pid 187951): NVP_ASSERT(0) failed!
+ROHAN HERE
+NVP_MSG (187951): exit handler
+NVP_MSG (187951): Exit: print stats
+NVP_MSG (187951): ====================== NVP IO stats: ======================
+NVP_MSG (187951): open 0, close 0, async close 0
+NVP_MSG (187951): mmap 3, unlink 0, stat 0
+NVP_MSG (187951): dr mmap 3, dr mmap critical path 0
+NVP_MSG (187951): fsync 0, appendfsync: count 0 size 0 average 0
+NVP_MSG (187951): READ: count 0, size 0, average 0
+NVP_MSG (187951): WRITE: count 0, size 0, average 0
+NVP_MSG (187951): memcpy READ: count 0, size 0, average 0
+NVP_MSG (187951): anon READ: count 0, size 0, average 0
+NVP_MSG (187951): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (187951): anon WRITE: count 0, size 0, average 0
+NVP_MSG (187951): posix READ: count 0, size 0, average 0
+NVP_MSG (187951): posix WRITE: count 0, size 0, average 0
+NVP_MSG (187951): write extends 0, total 0
+NVP_MSG (187951): MFENCE: count 0
+NVP_MSG (187951): CLFLUSHOPT: count 0
+NVP_MSG (187951): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (187951): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (187951): TOTAL SYSCALLS (open + close + read + write + fsync): count 0
+NVP_MSG (187951): calling cleanup
