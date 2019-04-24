@@ -14,14 +14,14 @@
 
 // performance parameters
 /* SCM read extra latency than DRAM */
-uint32_t SCM_EXTRA_READ_LATENCY_NS = 150;
+uint32_t SCM_EXTRA_READ_LATENCY_NS = 220;
 // We assume WBARRIER LATENCY is 0 since write back queue can hide this even in 
 // power failure.
 // https://software.intel.com/en-us/blogs/2016/09/12/deprecate-pcommit-instruction
 uint32_t SCM_WBARRIER_LATENCY_NS = 0;
 
 /* SCM write bandwidth */
-uint32_t SCM_BANDWIDTH_MB = 8000;
+uint32_t SCM_BANDWIDTH_MB = 21000;
 /* DRAM system peak bandwidth */
 uint32_t DRAM_BANDWIDTH_MB = 63000;
 

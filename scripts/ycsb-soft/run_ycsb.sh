@@ -7,7 +7,7 @@ pmem_dir=/mnt/pmem_emul
 run_ycsb_boost()
 {
     fs=$1
-    for run in soft1 soft2
+    for run in soft5
     do
         sudo rm -rf $pmem_dir/*
         sudo ./run_boost.sh LoadA $fs $run

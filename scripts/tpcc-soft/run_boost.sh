@@ -15,11 +15,11 @@ tpcc_dir=`readlink -f ../../tpcc-sqlite`
 workload_dir=$tpcc_dir/database
 pmem_dir=/mnt/pmem_emul
 if [ "$fs" == "boost" ]; then
-    boost_dir=`readlink -f ../../boost-tpcc`
+    boost_dir=`readlink -f ../../boost-tpcc-softover-boost`
 elif [ "$fs" == "sync_boost" ]; then
-    boost_dir=`readlink -f ../../boost-tpcc-sync`
+    boost_dir=`readlink -f ../../boost-tpcc-softover-sync`
 else
-    boost_dir=`readlink -f ../../boost-ycsb-softover`
+    boost_dir=`readlink -f ../../boost-ycsb-softover-posix`
 fi
 result_dir=`readlink -f ../../results`
 fs_results=$result_dir/$fs/$workload

@@ -84,6 +84,8 @@ enum instrumentation_vars {
 	op_log_entry_t,
 	append_log_reinit_t,
 	remove_overlapping_entry_t,
+	device_t,
+	soft_overhead_t,
 	INSTRUMENT_NUM,
 };
 

@@ -145,7 +145,7 @@ struct full_dr {
 #define NUM_NODE_LISTS 1
 #define INIT_NUM_DR 10
 #define INIT_NUM_DR_OVER 1
-#define BG_NUM_DR 2
+#define BG_NUM_DR 1
 #define PRINT_CONTENTION_MSGS 0
 #define TOTAL_CLOSED_INODES 4096
 #define LARGE_TBL_MAX 5
