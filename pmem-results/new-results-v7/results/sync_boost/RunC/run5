@@ -1,0 +1,56 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-sync
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-sync/bin/nvp_nvp.tree
+NVP_MSG (103557): _hub_init2: START
+NVP_MSG (103557): init_logs: Initializing append and op log
+NVP_MSG (103557): _nvp_init2: dr fd = 5, start addr = 0x7F573DA6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 6, start addr = 0x7F5733A6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 7, start addr = 0x7F5729A6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 8, start addr = 0x7F571FA6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 9, start addr = 0x7F5715A6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 10, start addr = 0x7F570BA6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 11, start addr = 0x7F5701A6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 12, start addr = 0x7F56F7A6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 13, start addr = 0x7F56EDA6B000
+NVP_MSG (103557): _nvp_init2: dr fd = 14, start addr = 0x7F56E3A6B000
+NVP_MSG (103557): _nvp_init2: Tbl mmaps set
+NVP_MSG (103557): _nvp_init2: Global locks created
+NVP_MSG (103557): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (103557): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Thu Feb 22 01:17:14 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (103557): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (103557): Does not support mmap, use posix instead.
+open error: (Invalid argument: /mnt/pmem_emul/leveldbtest-1000: does not exist (create_if_missing is false))
+NVP_MSG (103557): exit handler
+NVP_MSG (103557): Exit: print stats
+NVP_MSG (103557): ====================== NVP IO stats: ======================
+NVP_MSG (103557): open 3, close 3, async close 0
+NVP_MSG (103557): mmap 10, unlink 0, stat 0
+NVP_MSG (103557): dr mmap 10, dr mmap critical path 0
+NVP_MSG (103557): fsync 0, appendfsync: count 0 size 0 average 0
+NVP_MSG (103557): READ: count 0, size 0, average 0
+NVP_MSG (103557): WRITE: count 2, size 92, average 46
+NVP_MSG (103557): memcpy READ: count 0, size 0, average 0
+NVP_MSG (103557): anon READ: count 0, size 0, average 0
+NVP_MSG (103557): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (103557): anon WRITE: count 0, size 0, average 0
+NVP_MSG (103557): posix READ: count 0, size 0, average 0
+NVP_MSG (103557): posix WRITE: count 2, size 92, average 46
+NVP_MSG (103557): write extends 0, total 0
+NVP_MSG (103557): MFENCE: count 0
+NVP_MSG (103557): CLFLUSHOPT: count 0
+NVP_MSG (103557): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (103557): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (103557): TOTAL SYSCALLS (open + close + read + write + fsync): count 8
+NVP_MSG (103557): calling cleanup
+NVP_MSG (103557): nvp_cleanup: Done Cleaning up

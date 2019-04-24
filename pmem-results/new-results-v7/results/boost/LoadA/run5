@@ -1,0 +1,41 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb/bin/nvp_nvp.tree
+NVP_MSG (103276): _hub_init2: START
+NVP_MSG (103276): init_logs: Initializing append and op log
+NVP_MSG (103276): _nvp_init2: dr fd = 5, start addr = 0x7F34EFF8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 6, start addr = 0x7F34E5F8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 7, start addr = 0x7F34DBF8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 8, start addr = 0x7F34D1F8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 9, start addr = 0x7F34C7F8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 10, start addr = 0x7F34BDF8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 11, start addr = 0x7F34B3F8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 12, start addr = 0x7F34A9F8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 13, start addr = 0x7F349FF8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 14, start addr = 0x7F3495F8D000
+NVP_MSG (103276): _nvp_init2: dr fd = 15, start addr = 0x7F349378D000
+NVP_MSG (103276): _nvp_init2: Large regions set
+NVP_MSG (103276): _nvp_init2: Tbl over mmaps set
+NVP_MSG (103276): _nvp_init2: Tbl mmaps set
+NVP_MSG (103276): _nvp_init2: Global locks created
+NVP_MSG (103276): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (103276): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Thu Feb 22 01:13:51 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (103276): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (103276): Does not support mmap, use posix instead.
+NVP_MSG (103276): File /mnt/pmem_emul/leveldbtest-1000/MANIFEST-000001 is opened O_WRONLY.
+NVP_MSG (103276): Does not support mmap, use posix instead.
+NVP_MSG (103276): dynamic_remap: len_swapped = -1. Len to swap = 16
+NVP_MSG (103276): dynamic_remap: Swap extents failed. Err = Operation not supported
+db_bench: fileops_nvp.c:790: dynamic_remap: Assertion `0' failed.
+/root/sanidhya/x/pmboost-test/boost-ycsb/run_boost.sh: line 45: 103276 Aborted                 (core dumped) $@

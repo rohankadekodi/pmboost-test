@@ -1,0 +1,55 @@
+Rohan here
+Quill path = /root/sanidhya/x/pmboost-test/boost-ycsb-posix
+tree = /root/sanidhya/x/pmboost-test/boost-ycsb-posix/bin/nvp_nvp.tree
+NVP_MSG (103764): _hub_init2: START
+NVP_MSG (103764): _nvp_init2: dr fd = 3, start addr = 0x7F6F57434000
+NVP_MSG (103764): _nvp_init2: dr fd = 4, start addr = 0x7F6F4D434000
+NVP_MSG (103764): _nvp_init2: dr fd = 5, start addr = 0x7F6F43434000
+NVP_MSG (103764): _nvp_init2: dr fd = 6, start addr = 0x7F6F39434000
+NVP_MSG (103764): _nvp_init2: dr fd = 7, start addr = 0x7F6F2F434000
+NVP_MSG (103764): _nvp_init2: dr fd = 8, start addr = 0x7F6F25434000
+NVP_MSG (103764): _nvp_init2: dr fd = 9, start addr = 0x7F6F1B434000
+NVP_MSG (103764): _nvp_init2: dr fd = 10, start addr = 0x7F6F11434000
+NVP_MSG (103764): _nvp_init2: dr fd = 11, start addr = 0x7F6F07434000
+NVP_MSG (103764): _nvp_init2: dr fd = 12, start addr = 0x7F6EFD434000
+NVP_MSG (103764): _nvp_init2: Tbl mmaps set
+NVP_MSG (103764): _nvp_init2: Global locks created
+NVP_MSG (103764): _nvp_init2: initialized environment, OPEN_MAX = 1024
+NVP_MSG (103764): _hub_init2: END
+LevelDB:    version 1.20
+Date:       Thu Feb 22 01:19:37 2018
+CPU:        96 * Genuine Intel(R) CPU 0000%@
+CPUCache:   33792 KB
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+NVP_MSG (103764): File /mnt/pmem_emul/leveldbtest-1000/LOG is opened O_WRONLY.
+NVP_MSG (103764): Does not support mmap, use posix instead.
+open error: (Invalid argument: /mnt/pmem_emul/leveldbtest-1000: does not exist (create_if_missing is false))
+NVP_MSG (103764): exit handler
+NVP_MSG (103764): Exit: print stats
+NVP_MSG (103764): ====================== NVP IO stats: ======================
+NVP_MSG (103764): open 3, close 3, async close 0
+NVP_MSG (103764): mmap 10, unlink 0, stat 0
+NVP_MSG (103764): dr mmap 10, dr mmap critical path 0
+NVP_MSG (103764): fsync 0, appendfsync: count 0 size 0 average 0
+NVP_MSG (103764): READ: count 0, size 0, average 0
+NVP_MSG (103764): WRITE: count 2, size 92, average 46
+NVP_MSG (103764): memcpy READ: count 0, size 0, average 0
+NVP_MSG (103764): anon READ: count 0, size 0, average 0
+NVP_MSG (103764): memcpy WRITE: count 0, size 0, average 0
+NVP_MSG (103764): anon WRITE: count 0, size 0, average 0
+NVP_MSG (103764): posix READ: count 0, size 0, average 0
+NVP_MSG (103764): posix WRITE: count 2, size 92, average 46
+NVP_MSG (103764): write extends 0, total 0
+NVP_MSG (103764): MFENCE: count 0
+NVP_MSG (103764): CLFLUSHOPT: count 0
+NVP_MSG (103764): NON_TEMPORAL_WRITES: count 0, size 0, average 0
+NVP_MSG (103764): TEMPORAL WRITES: count 0, size 0, average 0
+NVP_MSG (103764): TOTAL SYSCALLS (open + close + read + write + fsync): count 8
+NVP_MSG (103764): calling cleanup
+NVP_MSG (103764): nvp_cleanup: Done Cleaning up
