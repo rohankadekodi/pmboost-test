@@ -29,6 +29,7 @@ run_redis_boost()
 :'
 sudo $setup_dir/dax_config.sh
 run_redis dax
+'
 
 cd $setup_dir
 sudo ./nova_relaxed_config.sh
@@ -36,15 +37,15 @@ cd $current_dir
 run_redis relaxed_nova
 
 cd $setup_dir
-sudo ./nova_config.sh
-cd $current_dir
-run_redis nova
-
-cd $setup_dir
 sudo $setup_dir/pmfs_config.sh
 cd $current_dir
 run_redis pmfs
-'
+
+:'
+cd $setup_dir
+sudo ./nova_config.sh
+cd $current_dir
+run_redis nova
 
 sudo $setup_dir/dax_config.sh
 run_redis_boost boost
@@ -54,3 +55,4 @@ run_redis_boost sync_boost
 
 sudo $setup_dir/dax_config.sh
 run_redis_boost posix_boost
+'

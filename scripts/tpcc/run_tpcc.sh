@@ -29,6 +29,7 @@ run_tpcc_boost()
 :'
 sudo $setup_dir/dax_config.sh
 run_tpcc dax
+'
 
 cd $setup_dir
 sudo ./nova_relaxed_config.sh
@@ -36,15 +37,15 @@ cd $current_dir
 run_tpcc relaxed_nova
 
 cd $setup_dir
-sudo ./nova_config.sh
-cd $current_dir
-run_tpcc nova
-
-cd $setup_dir
 sudo $setup_dir/pmfs_config.sh
 cd $current_dir
 run_tpcc pmfs
-'
+
+:'
+cd $setup_dir
+sudo ./nova_config.sh
+cd $current_dir
+run_tpcc nova
 
 sudo $setup_dir/dax_config.sh
 run_tpcc_boost boost
@@ -54,3 +55,4 @@ run_tpcc_boost sync_boost
 
 sudo $setup_dir/dax_config.sh
 run_tpcc_boost posix_boost
+'

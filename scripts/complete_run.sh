@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Run TAR
-cd ./tar
-sudo ./run_tar.sh
-cd ..
-
 # Run git
 cd ./git
 sudo ./run_git.sh
@@ -28,4 +23,19 @@ cd ..
 # Run YCSB
 cd ./ycsb
 sudo ./run_ycsb.sh
+cd ..
+
+# Run YCSB Softover
+cd ./ycsb-soft
+sudo ./run_ycsb.sh
+cd ..
+
+# Run TPCC Softover
+cd ./tpcc-soft
+sudo ./run_tpcc.sh
+cd ..
+
+# Run Redis Softover
+cd ./redis-soft
+sudo ./run_redis.sh
 cd ..
